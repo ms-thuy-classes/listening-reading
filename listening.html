@@ -24,15 +24,16 @@ section.block{margin:36px 0;background:rgba(255,255,255,0.82);border:var(--borde
 section.block h2{font-size:clamp(1.3rem,3vw,1.8rem);font-weight:900;margin-bottom:20px;display:flex;align-items:center;gap:10px;flex-wrap:wrap}
 .section-score{margin-left:auto;background:linear-gradient(135deg,#a5d6a7,#80deea);border:var(--border);border-radius:12px;padding:6px 14px;font-weight:800;box-shadow:3px 3px 0 #2b2d42;font-size:0.9rem}
 .btn{font-family:inherit;font-weight:800;font-size:0.95rem;padding:11px 20px;border:var(--border);border-radius:14px;cursor:pointer;transition:transform 0.15s ease,box-shadow 0.15s ease;box-shadow:4px 4px 0 #2b2d42;color:var(--ink)}
-.btn:hover{transform:translate(-2px,-2px);box-shadow:6px 6px 0 #2b2d42}
-.btn:active{transform:translate(2px,2px);box-shadow:1px 1px 0 #2b2d42}
-.btn:disabled{opacity:0.5;cursor:not-allowed}
+.btn:hover:not(:disabled){transform:translate(-2px,-2px);box-shadow:6px 6px 0 #2b2d42}
+.btn:active:not(:disabled){transform:translate(2px,2px);box-shadow:1px 1px 0 #2b2d42}
+.btn:disabled{opacity:0.45;cursor:not-allowed;box-shadow:2px 2px 0 #999}
 .btn-primary{background:linear-gradient(135deg,#f48fb1,#b39ddb)}
 .btn-success{background:linear-gradient(135deg,#a5d6a7,#80deea)}
 .btn-warn{background:linear-gradient(135deg,#fff59d,#ffcc80)}
 .btn-info{background:linear-gradient(135deg,#81d4fa,#80deea)}
 .btn-group{display:flex;flex-wrap:wrap;gap:12px;margin-top:20px}
 .lazy-placeholder{text-align:center;padding:40px 20px;font-weight:700;color:#7e57c2;font-style:italic}
+.check-hint{font-size:0.78rem;color:#7e57c2;font-weight:600;margin-top:6px;font-style:italic}
 
 /* FLASHCARDS */
 .flashcard-container{position:relative;min-height:360px;display:flex;flex-direction:column;align-items:center}
@@ -50,7 +51,7 @@ section.block h2{font-size:clamp(1.3rem,3vw,1.8rem);font-weight:900;margin-botto
 .flashcard-back .meaning{font-size:1.15rem;font-weight:800;color:#1b5e20;margin-bottom:16px;line-height:1.5}
 .flashcard-back .example{font-style:italic;color:#2e7d32;font-size:0.95rem;line-height:1.6;background:rgba(255,255,255,0.5);padding:12px 16px;border-radius:12px;border:2px dashed #2e7d32;max-width:100%}
 .flashcard-nav{display:flex;align-items:center;gap:12px;margin-top:20px;flex-wrap:wrap;justify-content:center}
-.flashcard-nav button{min-width:60px;height:46px;border-radius:50%;border:var(--border);background:#fff;font-size:1.2rem;cursor:pointer;box-shadow:3px 3px 0 #2b2d42;transition:all 0.2s;display:grid;place-items:center;font-family:inherit;font-weight:800;padding:0 14px}
+.flashcard-nav button{min-width:60px;height:46px;border-radius:14px;border:var(--border);background:#fff;font-size:1.05rem;cursor:pointer;box-shadow:3px 3px 0 #2b2d42;transition:all 0.2s;display:grid;place-items:center;font-family:inherit;font-weight:800;padding:0 14px}
 .flashcard-nav button:hover{transform:translateY(-2px);box-shadow:5px 5px 0 #2b2d42}
 .flashcard-nav .counter{font-weight:800;font-size:1.1rem;min-width:80px;text-align:center}
 .flip-hint{margin-top:12px;font-size:0.85rem;color:#7e57c2;font-weight:600}
@@ -86,7 +87,7 @@ section.block h2{font-size:clamp(1.3rem,3vw,1.8rem);font-weight:900;margin-botto
 .match-item .word{font-weight:700;flex:1;font-size:0.95rem}
 .match-item select{font-family:inherit;font-weight:700;padding:6px 10px;border:2px solid #2b2d42;border-radius:10px;background:#fff;cursor:pointer;outline:none;font-size:0.9rem}
 .match-item .feedback{font-size:1.2rem;font-weight:900;min-width:24px;text-align:center}
-#matchPics{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}
+.match-pics-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}
 .pic-card{position:relative;display:flex;justify-content:center;align-items:center;padding:6px;border:3px solid #2b2d42;border-radius:14px;background:#fff;overflow:hidden;transition:all .2s}
 .pic-card .pic-letter{position:absolute;top:6px;left:6px;width:30px;height:30px;border-radius:50%;background:#c2185b;color:white;display:flex;align-items:center;justify-content:center;font-weight:900;z-index:2;font-size:0.9rem}
 .pic-card:hover{transform:translateY(-3px);box-shadow:4px 4px 0 #2b2d42}
@@ -179,8 +180,9 @@ footer .heart{color:#ec407a}
   <div class="btn-group">
     <button class="btn btn-primary" onclick="checkMatchPic()">✓ Check</button>
     <button class="btn btn-warn" onclick="resetMatchPic()">↺ Reset</button>
-    <button class="btn btn-info" onclick="showAnswersPic()">👁 Show Answers</button>
+    <button class="btn btn-info" id="showMatchPic" onclick="showAnswersPic()" disabled>👁 Show Answers</button>
   </div>
+  <div class="check-hint">💡 Bấm Check 3 lần để mở khóa Show Answers</div>
 </section>
 
 <!-- 4. MATCHING TỪ ĐỒNG NGHĨA -->
@@ -190,8 +192,9 @@ footer .heart{color:#ec407a}
   <div class="btn-group">
     <button class="btn btn-primary" onclick="checkMatchSyn()">✓ Check</button>
     <button class="btn btn-warn" onclick="resetMatchSyn()">↺ Reset</button>
-    <button class="btn btn-info" onclick="showAnswersSyn()">👁 Show Answers</button>
+    <button class="btn btn-info" id="showMatchSyn" onclick="showAnswersSyn()" disabled>👁 Show Answers</button>
   </div>
+  <div class="check-hint">💡 Bấm Check 3 lần để mở khóa Show Answers</div>
 </section>
 
 <!-- 5. TRẮC NGHIỆM CHỌN CÂU ĐÚNG -->
@@ -201,8 +204,9 @@ footer .heart{color:#ec407a}
   <div class="btn-group">
     <button class="btn btn-primary" onclick="checkMCQ()">✓ Check Answers</button>
     <button class="btn btn-warn" onclick="resetMCQ()">↺ Reset</button>
-    <button class="btn btn-info" onclick="showAnswersMCQ()">👁 Show Answers</button>
+    <button class="btn btn-info" id="showMCQ" onclick="showAnswersMCQ()" disabled>👁 Show Answers</button>
   </div>
+  <div class="check-hint">💡 Bấm Check 3 lần để mở khóa Show Answers</div>
 </section>
 
 <!-- 6. VIDEO + TRANSCRIPT -->
@@ -215,9 +219,17 @@ footer .heart{color:#ec407a}
 </main>
 <script>
 let postData=null,currentCardIndex=0,quizQuestions=[],currentQuizIndex=0,quizScore=0,quizAnswered=[],transcriptBlanks=[],matchPicAnswers=[],matchSynAnswers=[];
+let checkCounts={matchPic:0,matchSyn:0,mcq:0,transcript:0};
 const loaded={};
 const urlParams=new URLSearchParams(window.location.search);
 const postId=urlParams.get('id')||'listening-1';
+
+/* ===== CHECK 3 LẦN MỚI MỞ SHOW ANSWERS ===== */
+function trackCheck(key,btnId){
+  checkCounts[key]++;
+  if(checkCounts[key]>=3){document.getElementById(btnId).disabled=false;}
+}
+function lockShow(btnId){const b=document.getElementById(btnId);if(b)b.disabled=true;}
 
 async function loadPost(){
   try{
@@ -231,7 +243,6 @@ async function loadPost(){
   }
 }
 
-/* ===== LAZY LOAD SECTIONS ===== */
 function setupLazy(){
   const initFns={matchPic:initMatchPic,matchSyn:initMatchSyn,mcq:initMCQ,transcript:initTranscript};
   const obs=new IntersectionObserver(es=>{
@@ -263,7 +274,7 @@ function flipCard(){document.getElementById('flashcard').classList.toggle('flipp
 function nextCard(){showCard((currentCardIndex+1)%postData.vocabulary.length);}
 function prevCard(){showCard((currentCardIndex-1+postData.vocabulary.length)%postData.vocabulary.length);}
 
-/* ===== MINI-QUIZ TỰ ĐỘNG ===== */
+/* ===== MINI-QUIZ ===== */
 function initQuiz(){
   quizQuestions=generateQuizQuestions(postData.vocabulary);
   quizAnswered=new Array(quizQuestions.length).fill(false);
@@ -289,10 +300,8 @@ function generateQuizQuestions(vocabList){
       wrongPool=allWords.filter((w,idx)=>idx!==i);
     }
     const shuffled=wrongPool.sort(()=>Math.random()-0.5);
-    const wrongAnswers=shuffled.slice(0,3);
-    const options=[correctAnswer,...wrongAnswers].sort(()=>Math.random()-0.5);
-    const correctIndex=options.indexOf(correctAnswer);
-    questions.push({question:questionText,direction:isEnToVi?"🇬🇧 English → 🇻🇳 Vietnamese":"🇻🇳 Vietnamese → 🇬🇧 English",options:options,answer:correctIndex});
+    const options=[correctAnswer,...shuffled.slice(0,3)].sort(()=>Math.random()-0.5);
+    questions.push({question:questionText,direction:isEnToVi?"🇬🇧 English → 🇻🇳 Vietnamese":"🇻🇳 Vietnamese → 🇬🇧 English",options:options,answer:options.indexOf(correctAnswer)});
   });
   return questions.sort(()=>Math.random()-0.5);
 }
@@ -318,8 +327,7 @@ function answerQuiz(qIndex,optionIndex){
   if(quizAnswered[qIndex])return;
   const q=quizQuestions[qIndex];
   const fb=document.getElementById('quizFb');
-  const buttons=document.querySelectorAll('.quiz-option');
-  buttons.forEach((btn,i)=>{
+  document.querySelectorAll('.quiz-option').forEach((btn,i)=>{
     btn.style.pointerEvents='none';
     if(i===q.answer)btn.classList.add('correct');
     if(i===optionIndex&&i!==q.answer)btn.classList.add('wrong');
@@ -350,13 +358,14 @@ function initMatchPic(){
       ${items.map((w,i)=>`<div class="match-item" id="matchPicItem${i}"><span class="label">${i+1}.</span><span class="word">${w.word}</span><select id="matchPicSel${i}"><option value="">--</option>${picIndices.map(idx=>`<option value="${letterForPic[idx]}">${letterForPic[idx]}</option>`).join('')}</select><span class="feedback" id="matchPicFb${i}"></span></div>`).join('')}
     </div>
     <div class="match-col"><h3>🖼️ Pictures</h3>
-      <div id="matchPics">${picIndices.map(idx=>`<div class="pic-card"><span class="pic-letter">${letterForPic[idx]}</span><img src="${items[idx].pic}" alt="${items[idx].word}" loading="lazy" onerror="this.src='https://via.placeholder.com/200x130/b39ddb/ffffff?text=${encodeURIComponent(items[idx].word)}'"></div>`).join('')}</div>
+      <div class="match-pics-grid">${picIndices.map(idx=>`<div class="pic-card"><span class="pic-letter">${letterForPic[idx]}</span><img src="${items[idx].pic}" alt="${items[idx].word}" loading="lazy" onerror="this.src='https://via.placeholder.com/200x130/b39ddb/ffffff?text=${encodeURIComponent(items[idx].word)}'"></div>`).join('')}</div>
     </div>
   </div>`;
   document.getElementById('matchPicScore').textContent=`0 / ${items.length}`;
 }
 function checkMatchPic(){
   if(!loaded.matchPic)return;
+  trackCheck('matchPic','showMatchPic');
   const items=postData.matchingPictures||[];let correct=0;
   items.forEach((_,i)=>{
     const sel=document.getElementById('matchPicSel'+i),fb=document.getElementById('matchPicFb'+i),item=document.getElementById('matchPicItem'+i);
@@ -369,6 +378,7 @@ function checkMatchPic(){
 }
 function resetMatchPic(){
   if(!loaded.matchPic)return;
+  checkCounts.matchPic=0;lockShow('showMatchPic');
   (postData.matchingPictures||[]).forEach((_,i)=>{
     document.getElementById('matchPicSel'+i).value='';
     document.getElementById('matchPicFb'+i).textContent='';
@@ -402,6 +412,7 @@ function initMatchSyn(){
 }
 function checkMatchSyn(){
   if(!loaded.matchSyn)return;
+  trackCheck('matchSyn','showMatchSyn');
   const items=postData.matchingSynonyms||[];let correct=0;
   items.forEach((_,i)=>{
     const sel=document.getElementById('matchSynSel'+i),fb=document.getElementById('matchSynFb'+i),item=document.getElementById('matchSynItem'+i);
@@ -414,6 +425,7 @@ function checkMatchSyn(){
 }
 function resetMatchSyn(){
   if(!loaded.matchSyn)return;
+  checkCounts.matchSyn=0;lockShow('showMatchSyn');
   (postData.matchingSynonyms||[]).forEach((_,i)=>{
     document.getElementById('matchSynSel'+i).value='';
     document.getElementById('matchSynFb'+i).textContent='';
@@ -434,7 +446,7 @@ function initMCQ(){
   if(!items.length){body.innerHTML='<div class="lazy-placeholder">Không có câu hỏi</div>';return;}
   body.innerHTML=`<div class="mcq-list">${items.map((q,qi)=>`
     <div class="mcq-item"><div class="q-text">${qi+1}. ${q.q}</div>
-      <div class="mcq-options">${q.options.map((opt,oi)=>`<label class="mcq-option" data-qi="${qi}" data-oi="${oi}"><input type="radio" name="mcq${qi}" value="${oi}"/><span>${String.fromCharCode(65+oi)}. ${opt}</span></label>`).join('')}</div>
+      <div class="mcq-options">${q.options.map((opt,oi)=>`<label class="mcq-option" data-qi="${qi}"><input type="radio" name="mcq${qi}" value="${oi}"/><span>${String.fromCharCode(65+oi)}. ${opt}</span></label>`).join('')}</div>
       <div class="mcq-feedback" id="mcqFb${qi}"></div>
     </div>`).join('')}</div>`;
   document.querySelectorAll('.mcq-option input').forEach(radio=>{
@@ -448,6 +460,7 @@ function initMCQ(){
 }
 function checkMCQ(){
   if(!loaded.mcq)return;
+  trackCheck('mcq','showMCQ');
   const items=postData.mcqQuestions||[];let correct=0;
   items.forEach((q,qi)=>{
     const selected=document.querySelector(`input[name="mcq${qi}"]:checked`);
@@ -462,6 +475,7 @@ function checkMCQ(){
 }
 function resetMCQ(){
   if(!loaded.mcq)return;
+  checkCounts.mcq=0;lockShow('showMCQ');
   document.querySelectorAll('#mcqBody input[type="radio"]').forEach(r=>r.checked=false);
   document.querySelectorAll('.mcq-option').forEach(o=>o.classList.remove('selected'));
   (postData.mcqQuestions||[]).forEach((_,qi)=>{
@@ -483,14 +497,16 @@ function showAnswersMCQ(){
 function initTranscript(){
   const body=document.getElementById('transcriptBody');
   body.innerHTML=`<div class="video-layout">
-    <div class="video-col"><div class="video-wrap" id="videoWrap">${postData.youtubeVideo?`<iframe src="${postData.youtubeVideo}" title="Video" allow="accelerometer;autoplay;encrypted-media;gyroscope;picture-in-picture" allowfullscreen></iframe>`:''}</div></div>
+    <div class="video-col"><div class="video-wrap">${postData.youtubeVideo?`<iframe src="${postData.youtubeVideo}" title="Video" allow="accelerometer;autoplay;encrypted-media;gyroscope;picture-in-picture" allowfullscreen></iframe>`:''}</div></div>
     <div class="transcript-col">
       <h3 style="margin-bottom:12px;">📝 Fill in the Blanks</h3>
       <div class="transcript-scroll" id="transcriptScroll"></div>
       <div class="btn-group">
         <button class="btn btn-primary" onclick="checkTranscript()">✔ Check</button>
         <button class="btn btn-warn" onclick="resetTranscript()">🔄 Reset</button>
+        <button class="btn btn-info" id="showTranscript" onclick="showAnswersTranscript()" disabled>👁 Show Answers</button>
       </div>
+      <div class="check-hint">💡 Bấm Check 3 lần để mở khóa Show Answers</div>
     </div>
   </div>`;
   renderTranscript();
@@ -508,6 +524,7 @@ function renderTranscript(){
 }
 function checkTranscript(){
   if(!loaded.transcript)return;
+  trackCheck('transcript','showTranscript');
   let correct=0;
   document.querySelectorAll('#transcriptScroll input').forEach(inp=>{
     const bi=parseInt(inp.dataset.bi);
@@ -525,11 +542,22 @@ function checkTranscript(){
 }
 function resetTranscript(){
   if(!loaded.transcript)return;
+  checkCounts.transcript=0;lockShow('showTranscript');
   transcriptBlanks.forEach(b=>b.attempts=0);
   document.querySelectorAll('#transcriptScroll input').forEach(inp=>{inp.value='';inp.classList.remove('correct','wrong');});
   document.querySelectorAll('#transcriptScroll .blank-fb').forEach(s=>s.textContent='');
   document.querySelectorAll('#transcriptScroll .reveal').forEach(s=>s.textContent='');
   document.getElementById('transcriptScore').textContent=`0 / ${transcriptBlanks.length}`;
+  updateGlobal();
+}
+function showAnswersTranscript(){
+  if(!loaded.transcript)return;
+  transcriptBlanks.forEach((b,i)=>{
+    const inp=document.querySelector(`#transcriptScroll input[data-bi="${i}"]`);
+    if(inp){inp.value=b.answer;inp.classList.remove('wrong');inp.classList.add('correct');}
+    const reveal=document.getElementById('treveal'+i);if(reveal)reveal.textContent='';
+    const fb=document.getElementById('tfb'+i);if(fb)fb.textContent='✔';
+  });
   updateGlobal();
 }
 
@@ -546,7 +574,6 @@ function updateGlobal(){
   document.getElementById('finalScore').textContent=totalQ>0?(correct/totalQ*10).toFixed(1):'0.0';
 }
 
-/* ===== TTS ===== */
 function speakCurrent(){if(postData&&postData.vocabulary[currentCardIndex])speakWord(postData.vocabulary[currentCardIndex].word);}
 function speakWord(text){
   speechSynthesis.cancel();
