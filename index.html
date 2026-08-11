@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>🎓 Learn with Ms. Thúy - English Learning Hub</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--ink:#2b2d42;--shadow:0 10px 30px rgba(60,60,120,0.15);--shadow-lg:0 20px 50px rgba(60,60,120,0.22);--radius:22px;--border:3px solid #2b2d42}
+html{scroll-behavior:smooth}
+body{font-family:'Poppins','Segoe UI',system-ui,sans-serif;color:var(--ink);min-height:100vh;overflow-x:hidden;background:linear-gradient(120deg,#fce4ec,#e1f5fe,#fff9c4,#e0f7fa,#f3e5f5);background-size:400% 400%;animation:bgShift 22s ease infinite;padding-bottom:60px}
+@keyframes bgShift{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
+.site-header{position:sticky;top:0;z-index:100;backdrop-filter:blur(12px);background:rgba(255,255,255,0.78);border-bottom:var(--border);box-shadow:var(--shadow);padding:14px 20px}
+.header-inner{max-width:1200px;margin:0 auto;display:flex;flex-wrap:wrap;align-items:center;gap:16px;justify-content:space-between}
+.brand{display:flex;align-items:center;gap:10px;font-weight:900;font-size:1.4rem;background:linear-gradient(135deg,#7e57c2,#ec407a);-webkit-background-clip:text;background-clip:text;color:transparent;text-decoration:none}
+.brand-logo{width:46px;height:46px;border-radius:14px;background:linear-gradient(135deg,#b39ddb,#f48fb1);border:var(--border);display:grid;place-items:center;font-size:1.4rem;box-shadow:var(--shadow)}
+.search-box{display:flex;align-items:center;gap:8px;flex:1;max-width:400px}
+.search-box input{flex:1;padding:10px 16px;border:var(--border);border-radius:14px;font-family:inherit;font-weight:600;font-size:0.95rem;background:rgba(255,255,255,0.9);outline:none;transition:all 0.3s ease}
+.search-box input:focus{border-color:#7e57c2;box-shadow:0 0 0 3px rgba(126,87,194,0.2);background:#fff}
+.search-box button{padding:10px 18px;border:var(--border);border-radius:14px;background:linear-gradient(135deg,#b39ddb,#f48fb1);font-weight:800;cursor:pointer;font-family:inherit;box-shadow:3px 3px 0 #2b2d42;transition:all 0.2s}
+.search-box button:hover{transform:translate(-2px,-2px);box-shadow:5px 5px 0 #2b2d42}
+.hero{text-align:center;padding:50px 20px 30px;max-width:900px;margin:0 auto}
+.hero h1{font-size:clamp(2rem,5vw,3.2rem);font-weight:900;background:linear-gradient(135deg,#7e57c2,#ec407a,#29b6f6);-webkit-background-clip:text;background-clip:text;color:transparent;margin-bottom:12px;letter-spacing:-1px}
+.hero p{font-size:1.1rem;color:#4a4a6a;line-height:1.7}
+.tags-section{max-width:1200px;margin:0 auto 30px;padding:0 20px}
+.tags-container{display:flex;flex-wrap:wrap;gap:10px;justify-content:center}
+.tag{padding:8px 18px;border:2px solid #2b2d42;border-radius:30px;font-weight:700;font-size:0.85rem;cursor:pointer;transition:all 0.3s cubic-bezier(0.34,1.56,0.64,1);color:var(--ink);box-shadow:2px 2px 0 #2b2d42}
+.tag:hover{transform:translateY(-3px) scale(1.05);box-shadow:4px 4px 0 #2b2d42}
+.tag.active{transform:scale(1.08);box-shadow:4px 4px 0 #2b2d42}
+.tag.a1{background:linear-gradient(135deg,#c8e6c9,#a5d6a7)}.tag.a2{background:linear-gradient(135deg,#b2dfdb,#80cbc4)}
+.tag.b1{background:linear-gradient(135deg,#bbdefb,#90caf9)}.tag.b2{background:linear-gradient(135deg,#b39ddb,#ce93d8)}
+.tag.c1{background:linear-gradient(135deg,#f8bbd0,#f48fb1)}.tag.c2{background:linear-gradient(135deg,#ffcc80,#ffab91)}
+.tag.ielts{background:linear-gradient(135deg,#fff59d,#ffe082)}.tag.toeic{background:linear-gradient(135deg,#80deea,#4dd0e1)}
+.tag.all{background:linear-gradient(135deg,#e1bee7,#b39ddb)}
+.posts-section{max-width:1200px;margin:0 auto;padding:0 20px}
+.posts-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+@media(max-width:900px){.posts-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.posts-grid{grid-template-columns:1fr}}
+.post-card{background:rgba(255,255,255,0.85);border:var(--border);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);transition:all 0.35s cubic-bezier(0.34,1.56,0.64,1);cursor:pointer;text-decoration:none;color:var(--ink);display:flex;flex-direction:column}
+.post-card:hover{transform:translateY(-8px) rotate(-0.5deg);box-shadow:var(--shadow-lg)}
+.post-card .thumb{width:100%;aspect-ratio:16/9;object-fit:cover;border-bottom:var(--border)}
+.post-card .card-body{padding:18px;flex:1;display:flex;flex-direction:column}
+.post-card .card-tags{display:flex;gap:6px;margin-bottom:8px;flex-wrap:wrap}
+.post-card .card-tag{padding:3px 10px;border-radius:20px;font-size:0.72rem;font-weight:700;border:2px solid #2b2d42}
+.post-card h3{font-size:1.05rem;font-weight:800;margin-bottom:6px;line-height:1.4}
+.post-card .desc{font-size:0.88rem;color:#4a4a6a;line-height:1.5;flex:1}
+.post-card .card-meta{display:flex;align-items:center;gap:8px;margin-top:12px;font-size:0.8rem;font-weight:600;color:#7e57c2;flex-wrap:wrap}
+.post-card .layout-badge{padding:4px 10px;border-radius:8px;font-size:0.72rem;font-weight:800;background:linear-gradient(135deg,#b39ddb,#f48fb1);color:#fff;border:2px solid #2b2d42}
+.pagination{display:flex;justify-content:center;gap:8px;margin-top:40px;flex-wrap:wrap}
+.page-btn{min-width:42px;height:42px;display:grid;place-items:center;border:var(--border);border-radius:12px;font-weight:800;cursor:pointer;transition:all 0.2s;background:rgba(255,255,255,0.8);box-shadow:2px 2px 0 #2b2d42;text-decoration:none;color:var(--ink);padding:0 12px;font-family:inherit}
+.page-btn:hover{transform:translateY(-2px);box-shadow:4px 4px 0 #2b2d42}
+.page-btn.active{background:linear-gradient(135deg,#b39ddb,#f48fb1);color:#fff}
+footer{text-align:center;padding:40px 20px 10px;font-weight:700;color:#4a4a6a}
+footer .heart{color:#ec407a}
+.no-results{text-align:center;padding:60px 20px;font-size:1.1rem;color:#7e57c2;font-weight:700;grid-column:1/-1}
+::-webkit-scrollbar{width:10px;height:10px}
+::-webkit-scrollbar-track{background:rgba(255,255,255,0.3);border-radius:10px}
+::-webkit-scrollbar-thumb{background:linear-gradient(180deg,#b39ddb,#f48fb1);border-radius:10px;border:2px solid rgba(255,255,255,0.3)}
+</style>
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <a href="index.html" class="brand"><div class="brand-logo">🎓</div><span>Learn with Ms. Thúy</span></a>
+    <div class="search-box">
+      <input type="text" id="searchInput" placeholder="🔍 Tìm bài học..."/>
+      <button onclick="searchPosts()">Tìm</button>
+    </div>
+  </div>
+</header>
+<section class="hero">
+  <h1>🌈 English Learning Hub</h1>
+  <p>Luyện nghe, đọc tiếng Anh theo mọi cấp độ — từ A1 đến C2, IELTS & TOEIC.<br>Chọn bài học yêu thích và bắt đầu hành trình của bạn!</p>
+</section>
+<section class="tags-section">
+  <div class="tags-container" id="tagsContainer">
+    <span class="tag all active" data-tag="all">📚 Tất cả</span>
+    <span class="tag a1" data-tag="a1">A1</span><span class="tag a2" data-tag="a2">A2</span>
+    <span class="tag b1" data-tag="b1">B1</span><span class="tag b2" data-tag="b2">B2</span>
+    <span class="tag c1" data-tag="c1">C1</span><span class="tag c2" data-tag="c2">C2</span>
+    <span class="tag ielts" data-tag="ielts">IELTS</span><span class="tag toeic" data-tag="toeic">TOEIC</span>
+  </div>
+</section>
+<section class="posts-section">
+  <div class="posts-grid" id="postsGrid"></div>
+  <div class="pagination" id="pagination"></div>
+</section>
+<footer>Made with <span class="heart">♥</span> by Ms. Thúy · Happy Learning! 🌈</footer>
+<script>
+let allArticles=[],filteredArticles=[],currentPage=1,currentTag='all';
+const POSTS_PER_PAGE=9;
+
+async function loadArticles(){
+  try{
+    const r=await fetch('data/articles.json');
+    allArticles=await r.json();
+    filteredArticles=[...allArticles];
+    renderPosts();
+  }catch(e){
+    document.getElementById('postsGrid').innerHTML='<div class="no-results">⚠️ Không thể tải dữ liệu. Hãy mở file qua Live Server.</div>';
+  }
+}
+
+document.getElementById('tagsContainer').addEventListener('click',e=>{
+  if(!e.target.classList.contains('tag'))return;
+  document.querySelectorAll('.tag').forEach(t=>t.classList.remove('active'));
+  e.target.classList.add('active');
+  currentTag=e.target.dataset.tag;
+  currentPage=1;
+  filterAndRender();
+});
+
+document.getElementById('searchInput').addEventListener('keyup',e=>{
+  if(e.key==='Enter')searchPosts();
+});
+
+function searchPosts(){currentPage=1;filterAndRender();}
+
+function filterAndRender(){
+  const q=document.getElementById('searchInput').value.toLowerCase().trim();
+  filteredArticles=allArticles.filter(a=>{
+    const mt=currentTag==='all'||a.tags.includes(currentTag);
+    const ms=!q||a.title.toLowerCase().includes(q)||a.description.toLowerCase().includes(q)||a.tags.some(t=>t.toLowerCase().includes(q));
+    return mt&&ms;
+  });
+  renderPosts();
+}
+
+function renderPosts(){
+  const grid=document.getElementById('postsGrid');
+  const total=filteredArticles.length;
+  const totalPages=Math.ceil(total/POSTS_PER_PAGE);
+  const start=(currentPage-1)*POSTS_PER_PAGE;
+  const items=filteredArticles.slice(start,start+POSTS_PER_PAGE);
+  if(items.length===0){
+    grid.innerHTML='<div class="no-results">🔍 Không tìm thấy bài học nào.</div>';
+    document.getElementById('pagination').innerHTML='';
+    return;
+  }
+  grid.innerHTML=items.map(a=>`
+    <a href="${a.layout==='listening'?'listening':'reading'}.html?id=${a.id}" class="post-card">
+      <img class="thumb" src="${a.thumbnail}" alt="${a.title}" loading="lazy" onerror="this.src='https://via.placeholder.com/400x225/f8bbd0/2b2d42?text=Ms+Thuy'"/>
+      <div class="card-body">
+        <div class="card-tags">${a.tags.map(t=>`<span class="card-tag tag ${t}">${t.toUpperCase()}</span>`).join('')}</div>
+        <h3>${a.title}</h3>
+        <p class="desc">${a.description}</p>
+        <div class="card-meta">
+          <span class="layout-badge">${a.layout==='listening'?'🎧 Listening':'📖 Reading'}</span>
+          <span>⏱ ${a.duration||'15 min'}</span>
+          <span>📝 ${a.vocabCount||10} từ</span>
+        </div>
+      </div>
+    </a>`).join('');
+  renderPagination(totalPages);
+}
+
+function renderPagination(tp){
+  const p=document.getElementById('pagination');
+  if(tp<=1){p.innerHTML='';return;}
+  let h='';
+  if(currentPage>1)h+=`<a class="page-btn nav" onclick="goPage(${currentPage-1})">◀ Prev</a>`;
+  for(let i=1;i<=tp;i++)h+=`<a class="page-btn ${i===currentPage?'active':''}" onclick="goPage(${i})">${i}</a>`;
+  if(currentPage<tp)h+=`<a class="page-btn nav" onclick="goPage(${currentPage+1})">Next ▶</a>`;
+  p.innerHTML=h;
+}
+
+function goPage(p){
+  currentPage=p;
+  renderPosts();
+  window.scrollTo({top:document.querySelector('.posts-section').offsetTop-100,behavior:'smooth'});
+}
+
+loadArticles();
+</script>
+</body>
+</html>
