@@ -26,7 +26,7 @@ main{max-width:1400px;margin:0 auto;padding:24px 20px}
 .tool-btn{padding:8px 16px;border:var(--border);border-radius:12px;background:#fff;font-weight:700;cursor:pointer;font-family:inherit;box-shadow:3px 3px 0 #2b2d42;transition:all 0.2s;font-size:0.9rem}
 .tool-btn:hover{transform:translate(-2px,-2px);box-shadow:5px 5px 0 #2b2d42;background:linear-gradient(135deg,#e1f5fe,#f3e5f5)}
 
-/* ===== 2 CỘT + DIVIDER ===== */
+/* 2 CỘT + DIVIDER */
 .reading-layout{display:grid;grid-template-columns:calc(50% - 6px) 12px calc(50% - 6px);gap:0;align-items:start}
 .divider{background:linear-gradient(180deg,#b39ddb,#f48fb1,#80deea);border:var(--border);border-radius:8px;cursor:col-resize;position:sticky;top:90px;height:70vh;min-height:300px}
 .divider::after{content:"⋮";position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);color:#fff;font-weight:900;font-size:1.2rem}
@@ -36,6 +36,10 @@ main{max-width:1400px;margin:0 auto;padding:24px 20px}
 .pdf-frame iframe{width:100%;height:100%;border:0}
 .passage-scroll{height:100%;overflow-y:auto;padding:20px;line-height:1.9;font-size:1.02rem}
 .passage-scroll p{margin-bottom:14px;text-align:justify}
+/* ẢNH TRONG BÀI ĐỌC */
+.passage-img{margin:18px auto;text-align:center;border-radius:14px;overflow:hidden;border:var(--border);box-shadow:var(--shadow);max-width:92%;background:#fff}
+.passage-img img{width:100%;max-height:300px;object-fit:cover;display:block}
+.passage-img figcaption{padding:8px 12px;font-style:italic;color:#7e57c2;font-weight:600;font-size:0.88rem}
 .exercises-col{display:flex;flex-direction:column;gap:22px}
 @media(max-width:900px){
   .reading-layout{grid-template-columns:1fr}
@@ -43,20 +47,20 @@ main{max-width:1400px;margin:0 auto;padding:24px 20px}
   .reading-col{position:static;height:420px}
 }
 
-/* EXERCISE BLOCKS (cột phải) */
 .ex-block{background:rgba(255,255,255,0.85);border:var(--border);border-radius:18px;padding:20px;box-shadow:var(--shadow)}
 .ex-block h2{font-size:1.2rem;font-weight:900;margin-bottom:14px;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
 .section-score{margin-left:auto;background:linear-gradient(135deg,#a5d6a7,#80deea);border:var(--border);border-radius:12px;padding:4px 12px;font-weight:800;box-shadow:3px 3px 0 #2b2d42;font-size:0.85rem}
 .btn{font-family:inherit;font-weight:800;font-size:0.9rem;padding:10px 18px;border:var(--border);border-radius:14px;cursor:pointer;transition:transform 0.15s ease,box-shadow 0.15s ease;box-shadow:4px 4px 0 #2b2d42;color:var(--ink)}
-.btn:hover{transform:translate(-2px,-2px);box-shadow:6px 6px 0 #2b2d42}
-.btn:active{transform:translate(2px,2px);box-shadow:1px 1px 0 #2b2d42}
-.btn:disabled{opacity:0.5;cursor:not-allowed}
+.btn:hover:not(:disabled){transform:translate(-2px,-2px);box-shadow:6px 6px 0 #2b2d42}
+.btn:active:not(:disabled){transform:translate(2px,2px);box-shadow:1px 1px 0 #2b2d42}
+.btn:disabled{opacity:0.45;cursor:not-allowed;box-shadow:2px 2px 0 #999}
 .btn-primary{background:linear-gradient(135deg,#f48fb1,#b39ddb)}
 .btn-success{background:linear-gradient(135deg,#a5d6a7,#80deea)}
 .btn-warn{background:linear-gradient(135deg,#fff59d,#ffcc80)}
 .btn-info{background:linear-gradient(135deg,#81d4fa,#80deea)}
 .btn-group{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px;justify-content:center}
 .lazy-placeholder{text-align:center;padding:30px 14px;font-weight:700;color:#7e57c2;font-style:italic}
+.check-hint{font-size:0.75rem;color:#7e57c2;font-weight:600;margin-top:6px;font-style:italic;text-align:center}
 
 /* FLASHCARDS + NÚT CHỮ NHẬT */
 .flashcard-wrapper{perspective:1200px;width:100%}
@@ -73,14 +77,8 @@ main{max-width:1400px;margin:0 auto;padding:24px 20px}
 .flashcard-back .word-form{font-size:0.8rem;font-weight:700;color:rgba(0,0,0,0.5);margin-bottom:6px;text-transform:uppercase;letter-spacing:1px}
 .flashcard-back .meaning{font-size:1.05rem;font-weight:800;color:#1b5e20;margin-bottom:12px;line-height:1.5}
 .flashcard-back .example{font-style:italic;color:#2e7d32;font-size:0.88rem;line-height:1.6;background:rgba(255,255,255,0.5);padding:10px 14px;border-radius:12px;border:2px dashed #2e7d32}
-/* NÚT ĐIỀU KHIỂN HÌNH CHỮ NHẬT */
 .flashcard-nav{display:flex;align-items:center;gap:10px;margin-top:16px;flex-wrap:wrap;justify-content:center}
-.flashcard-nav button{
-  border-radius:12px;               /* chữ nhật bo góc */
-  padding:10px 18px;min-width:80px;height:auto;
-  border:var(--border);background:#fff;font-size:0.88rem;cursor:pointer;
-  box-shadow:3px 3px 0 #2b2d42;transition:all 0.2s;font-family:inherit;font-weight:800;
-}
+.flashcard-nav button{border-radius:12px;padding:10px 18px;min-width:80px;height:auto;border:var(--border);background:#fff;font-size:0.88rem;cursor:pointer;box-shadow:3px 3px 0 #2b2d42;transition:all 0.2s;font-family:inherit;font-weight:800}
 .flashcard-nav button:hover{transform:translateY(-2px);box-shadow:5px 5px 0 #2b2d42;background:linear-gradient(135deg,#e1f5fe,#f3e5f5)}
 .flashcard-nav .counter{font-weight:800;font-size:1rem;min-width:80px;text-align:center}
 
@@ -168,19 +166,18 @@ footer .heart{color:#ec407a}
   <button class="tool-btn" onclick="downloadPDF()">⬇ Download</button>
 </div>
 
-<!-- ===== 2 CỘT ===== -->
 <div class="reading-layout" id="readingLayout">
 
   <!-- CỘT 1: BÀI ĐỌC -->
   <div class="reading-col" id="leftCol">
     <h3>📖 Bài đọc</h3>
-    <div class="pdf-frame" id="pdfFrame"><div class="lazy-placeholder">Loading PDF...</div></div>
+    <div class="pdf-frame" id="pdfFrame"><div class="lazy-placeholder">Loading...</div></div>
   </div>
 
-  <!-- DIVIDER KÉO THẢ -->
+  <!-- DIVIDER -->
   <div class="divider" id="divider"></div>
 
-  <!-- CỘT 2: FLASHCARD + BÀI TẬP -->
+  <!-- CỘT 2: BÀI TẬP -->
   <div class="exercises-col" id="rightCol">
 
     <div class="ex-block" id="sectionFlashcards">
@@ -218,8 +215,9 @@ footer .heart{color:#ec407a}
       <div class="btn-group">
         <button class="btn btn-primary" onclick="checkMatchPic()">✓ Check</button>
         <button class="btn btn-warn" onclick="resetMatchPic()">↺ Reset</button>
-        <button class="btn btn-info" onclick="showAnswersPic()">👁 Show Answers</button>
+        <button class="btn btn-info" id="showMatchPic" onclick="showAnswersPic()" disabled>👁 Show Answers</button>
       </div>
+      <div class="check-hint">💡 Bấm Check 3 lần để mở khóa Show Answers</div>
     </div>
 
     <div class="ex-block" id="sectionMatchSyn" data-lazy="matchSyn">
@@ -228,8 +226,9 @@ footer .heart{color:#ec407a}
       <div class="btn-group">
         <button class="btn btn-primary" onclick="checkMatchSyn()">✓ Check</button>
         <button class="btn btn-warn" onclick="resetMatchSyn()">↺ Reset</button>
-        <button class="btn btn-info" onclick="showAnswersSyn()">👁 Show Answers</button>
+        <button class="btn btn-info" id="showMatchSyn" onclick="showAnswersSyn()" disabled>👁 Show Answers</button>
       </div>
+      <div class="check-hint">💡 Bấm Check 3 lần để mở khóa Show Answers</div>
     </div>
 
     <div class="ex-block" id="sectionComprehension" data-lazy="mcq">
@@ -238,8 +237,9 @@ footer .heart{color:#ec407a}
       <div class="btn-group">
         <button class="btn btn-primary" onclick="checkMCQ()">✓ Check Answers</button>
         <button class="btn btn-warn" onclick="resetMCQ()">↺ Reset</button>
-        <button class="btn btn-info" onclick="showAnswersMCQ()">👁 Show Answers</button>
+        <button class="btn btn-info" id="showMCQ" onclick="showAnswersMCQ()" disabled>👁 Show Answers</button>
       </div>
+      <div class="check-hint">💡 Bấm Check 3 lần để mở khóa Show Answers</div>
     </div>
 
     <div class="ex-block" id="sectionFill" data-lazy="fill">
@@ -248,8 +248,9 @@ footer .heart{color:#ec407a}
       <div class="btn-group">
         <button class="btn btn-primary" onclick="checkFill()">✓ Check Answers</button>
         <button class="btn btn-warn" onclick="resetFill()">↺ Reset</button>
-        <button class="btn btn-info" onclick="showAnswersFill()">👁 Show Answers</button>
+        <button class="btn btn-info" id="showFill" onclick="showAnswersFill()" disabled>👁 Show Answers</button>
       </div>
+      <div class="check-hint">💡 Bấm Check 3 lần để mở khóa Show Answers</div>
     </div>
 
   </div>
@@ -260,9 +261,17 @@ footer .heart{color:#ec407a}
 <script>
 let postData=null,currentCardIndex=0,orderedVocab=[],quizQuestions=[],currentQuizIndex=0,quizScore=0,quizAnswered=[],fillBlanks=[],matchPicAnswers=[],matchSynAnswers=[];
 let zoomPercent=100,seconds=0;
+let checkCounts={matchPic:0,matchSyn:0,mcq:0,fill:0};
 const loaded={};
 const urlParams=new URLSearchParams(window.location.search);
 const postId=urlParams.get('id')||'reading-1';
+
+/* ===== CHECK 3 LẦN ===== */
+function trackCheck(key,btnId){
+  checkCounts[key]++;
+  if(checkCounts[key]>=3){document.getElementById(btnId).disabled=false;}
+}
+function lockShow(btnId){const b=document.getElementById(btnId);if(b)b.disabled=true;}
 
 async function loadPost(){
   try{
@@ -277,7 +286,7 @@ async function loadPost(){
   }
 }
 
-/* ===== DIVIDER KÉO THẢ ===== */
+/* ===== DIVIDER ===== */
 function initDivider(){
   const divider=document.getElementById('divider');
   const layout=document.getElementById('readingLayout');
@@ -310,13 +319,27 @@ function toggleFullscreen(){if(!document.fullscreenElement)document.documentElem
 function downloadPDF(){if(postData.pdf){const a=document.createElement('a');a.href=postData.pdf;a.download=postData.title+'.pdf';a.click();}else alert('Không có file PDF để tải');}
 function startTimer(){setInterval(()=>{seconds++;const m=String(Math.floor(seconds/60)).padStart(2,'0'),s=String(seconds%60).padStart(2,'0');document.getElementById('timer').textContent=`${m}:${s}`;},1000);}
 
-/* ===== PDF / PASSAGE ===== */
+/* ===== PDF / PASSAGE + ẢNH ===== */
 function initPDF(){
   const frame=document.getElementById('pdfFrame');
-  if(postData.pdf){frame.innerHTML=`<iframe src="${postData.pdf}"></iframe>`;}
+  if(postData.pdf){
+    frame.innerHTML=`<iframe src="${postData.pdf}"></iframe>`;
+  }
   else if(postData.passage){
-    frame.innerHTML=`<div class="passage-scroll">${postData.passage.split('\n\n').map(p=>`<p>${p}</p>`).join('')}</div>`;
-  }else frame.innerHTML=`<div class="lazy-placeholder">Không có bài đọc</div>`;
+    const blocks=postData.passage.split('\n\n').map(block=>{
+      block=block.trim();
+      if(block.startsWith('[IMG:')){
+        const m=block.match(/\[IMG:\s*(.*?)\s*(?:\|\s*(.*?))?\s*\]/);
+        if(m){
+          const url=m[1],caption=m[2]||'';
+          return `<figure class="passage-img"><img src="${url}" alt="${caption}" loading="lazy" onerror="this.parentElement.style.display='none'">${caption?`<figcaption>${caption}</figcaption>`:''}</figure>`;
+        }
+      }
+      return `<p>${block}</p>`;
+    }).join('');
+    frame.innerHTML=`<div class="passage-scroll">${blocks}</div>`;
+  }
+  else frame.innerHTML=`<div class="lazy-placeholder">Không có bài đọc</div>`;
 }
 
 /* ===== LAZY ===== */
@@ -372,7 +395,7 @@ function generateQuizQuestions(vocabList){
     else{const shortMeaning=vocab.meaning.split('-')[0].split(',')[0].trim();questionText=`"${shortMeaning}" trong tiếng Anh là gì?`;correctAnswer=vocab.word;wrongPool=allWords.filter((w,idx)=>idx!==i);}
     const shuffled=wrongPool.sort(()=>Math.random()-0.5);
     const options=[correctAnswer,...shuffled.slice(0,3)].sort(()=>Math.random()-0.5);
-    questions.push({question:questionText,direction:isEnToVi?"🇬 EN → 🇻🇳 VI":"🇻🇳 VI → 🇬🇧 EN",options:options,answer:options.indexOf(correctAnswer)});
+    questions.push({question:questionText,direction:isEnToVi?"🇬🇧 EN → 🇻🇳 VI":"🇻🇳 VI → 🇬🇧 EN",options:options,answer:options.indexOf(correctAnswer)});
   });
   return questions.sort(()=>Math.random()-0.5);
 }
@@ -436,6 +459,7 @@ function initMatchPic(){
 }
 function checkMatchPic(){
   if(!loaded.matchPic)return;
+  trackCheck('matchPic','showMatchPic');
   const items=postData.matchingPictures||[];let correct=0;
   items.forEach((_,i)=>{
     const sel=document.getElementById('matchPicSel'+i),fb=document.getElementById('matchPicFb'+i),item=document.getElementById('matchPicItem'+i);
@@ -448,6 +472,7 @@ function checkMatchPic(){
 }
 function resetMatchPic(){
   if(!loaded.matchPic)return;
+  checkCounts.matchPic=0;lockShow('showMatchPic');
   (postData.matchingPictures||[]).forEach((_,i)=>{document.getElementById('matchPicSel'+i).value='';document.getElementById('matchPicFb'+i).textContent='';document.getElementById('matchPicItem'+i).classList.remove('correct','wrong');});
   document.getElementById('matchPicScore').textContent=`0 / ${(postData.matchingPictures||[]).length}`;
   updateGlobal();
@@ -474,6 +499,7 @@ function initMatchSyn(){
 }
 function checkMatchSyn(){
   if(!loaded.matchSyn)return;
+  trackCheck('matchSyn','showMatchSyn');
   const items=postData.matchingSynonyms||[];let correct=0;
   items.forEach((_,i)=>{
     const sel=document.getElementById('matchSynSel'+i),fb=document.getElementById('matchSynFb'+i),item=document.getElementById('matchSynItem'+i);
@@ -486,6 +512,7 @@ function checkMatchSyn(){
 }
 function resetMatchSyn(){
   if(!loaded.matchSyn)return;
+  checkCounts.matchSyn=0;lockShow('showMatchSyn');
   (postData.matchingSynonyms||[]).forEach((_,i)=>{document.getElementById('matchSynSel'+i).value='';document.getElementById('matchSynFb'+i).textContent='';document.getElementById('matchSynItem'+i).classList.remove('correct','wrong');});
   document.getElementById('matchSynScore').textContent=`0 / ${(postData.matchingSynonyms||[]).length}`;
   updateGlobal();
@@ -513,6 +540,7 @@ function initMCQ(){
 }
 function checkMCQ(){
   if(!loaded.mcq)return;
+  trackCheck('mcq','showMCQ');
   const items=postData.mcqQuestions||[];let correct=0;
   items.forEach((q,qi)=>{
     const selected=document.querySelector(`input[name="mcq${qi}"]:checked`);
@@ -527,6 +555,7 @@ function checkMCQ(){
 }
 function resetMCQ(){
   if(!loaded.mcq)return;
+  checkCounts.mcq=0;lockShow('showMCQ');
   document.querySelectorAll('#mcqBody input[type="radio"]').forEach(r=>r.checked=false);
   document.querySelectorAll('.mcq-option').forEach(o=>o.classList.remove('selected'));
   (postData.mcqQuestions||[]).forEach((_,qi)=>{const fb=document.getElementById('mcqFb'+qi);fb.classList.remove('show','correct','wrong');fb.textContent='';});
@@ -557,6 +586,7 @@ function initFill(){
 }
 function checkFill(){
   if(!loaded.fill)return;
+  trackCheck('fill','showFill');
   let correct=0;
   document.querySelectorAll('#fillBody input').forEach(inp=>{
     const bi=parseInt(inp.dataset.bi);
@@ -574,6 +604,7 @@ function checkFill(){
 }
 function resetFill(){
   if(!loaded.fill)return;
+  checkCounts.fill=0;lockShow('showFill');
   fillBlanks.forEach(b=>b.attempts=0);
   document.querySelectorAll('#fillBody input').forEach(inp=>{inp.value='';inp.classList.remove('correct','wrong');});
   document.querySelectorAll('#fillBody .blank-fb').forEach(s=>s.textContent='');
@@ -599,7 +630,6 @@ function updateGlobal(){
   document.getElementById('finalScore').textContent=totalQ>0?(correct/totalQ*10).toFixed(1):'0.0';
 }
 
-/* ===== TTS ===== */
 function speakCurrent(){if(orderedVocab[currentCardIndex])speakWord(orderedVocab[currentCardIndex].word);}
 function speakWord(text){
   speechSynthesis.cancel();
