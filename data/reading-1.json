@@ -1,0 +1,52 @@
+{
+  "id": "reading-1",
+  "title": "The History of Chocolate",
+  "description": "Đọc hiểu về lịch sử phát triển của sô-cô-la từ thời Aztec đến ngày nay.",
+  "layout": "reading",
+  "duration": "20 min",
+  "level": "B2",
+  "tags": ["b2", "ielts"],
+  "pdf": "",
+  "passage": "Chocolate has a rich and fascinating history that spans over 4,000 years. The story begins in ancient Mesoamerica, where the Olmec civilization was the first to cultivate the cacao plant around 1500 BCE. They passed their knowledge to the Maya and Aztec civilizations, who considered cacao a gift from the gods.\n\nThe Maya consumed chocolate as a bitter, frothy drink made from ground cacao beans mixed with water, chili peppers, and cornmeal. They called it \"xocolatl,\" meaning \"bitter water.\" This drink was reserved for nobility, warriors, and religious ceremonies. Cacao beans were so valuable that they were used as currency.\n\nWhen Spanish conquistador Hernán Cortés arrived in Mexico in 1519, he was introduced to the chocolate drink by Emperor Montezuma. Cortés recognized the commercial potential of cacao and brought it back to Spain in 1528.\n\nIn Europe, chocolate was sweetened with sugar and honey to suit European tastes. By the 17th century, chocolate houses had become popular gathering places for the wealthy across London, Paris, and Madrid.\n\nThe Industrial Revolution changed everything. In 1828, Dutch chemist Coenraad van Houten invented the cocoa press, which could separate cocoa butter from the cacao bean. This invention made chocolate production more affordable and consistent.\n\nToday, the global chocolate industry is worth over $100 billion annually. West Africa produces approximately 70% of the world's cacao, with Côte d'Ivoire and Ghana being the largest producers. However, the industry faces significant challenges including deforestation, child labor, and climate change affecting cacao-growing regions.\n\nModern consumers are increasingly demanding ethical and sustainable chocolate production. Fair Trade certification ensures that farmers receive fair prices for their cacao, while organic and single-origin chocolates appeal to consumers seeking quality and transparency.",
+  "vocabulary": [
+    {"word": "Cultivate", "ipa": "/ˈkʌltɪveɪt/", "wordForm": "Verb", "meaning": "Trồng trọt, canh tác", "example": "The Olmec were the first to cultivate the cacao plant."},
+    {"word": "Bitter", "ipa": "/ˈbɪtər/", "wordForm": "Adjective", "meaning": "Đắng", "example": "The Maya consumed chocolate as a bitter drink."},
+    {"word": "Frothy", "ipa": "/ˈfrɒθi/", "wordForm": "Adjective", "meaning": "Có bọt, sủi bọt", "example": "They drank a frothy beverage made from cacao."},
+    {"word": "Nobility", "ipa": "/noʊˈbɪləti/", "wordForm": "Noun", "meaning": "Tầng lớp quý tộc", "example": "This drink was reserved for nobility."},
+    {"word": "Currency", "ipa": "/ˈkɜːrənsi/", "wordForm": "Noun", "meaning": "Tiền tệ", "example": "Cacao beans were used as currency."},
+    {"word": "Conquistador", "ipa": "/kɒnˈkwɪstədɔːr/", "wordForm": "Noun", "meaning": "Nhà chinh phục Tây Ban Nha", "example": "Spanish conquistador Hernán Cortés arrived in Mexico."},
+    {"word": "Commercial", "ipa": "/kəˈmɜːrʃl/", "wordForm": "Adjective", "meaning": "Thuộc thương mại", "example": "Cortés recognized the commercial potential of cacao."},
+    {"word": "Aristocracy", "ipa": "/ˌærɪˈstɒkrəsi/", "wordForm": "Noun", "meaning": "Giới quý tộc", "example": "Chocolate was accessible only to the aristocracy."},
+    {"word": "Revolution", "ipa": "/ˌrevəˈluːʃn/", "wordForm": "Noun", "meaning": "Cuộc cách mạng", "example": "The Industrial Revolution changed chocolate production."},
+    {"word": "Consistent", "ipa": "/kənˈsɪstənt/", "wordForm": "Adjective", "meaning": "Nhất quán", "example": "The cocoa press made production more consistent."},
+    {"word": "Deforestation", "ipa": "/diːˌfɒrɪˈsteɪʃn/", "wordForm": "Noun", "meaning": "Nạn phá rừng", "example": "The industry faces challenges including deforestation."},
+    {"word": "Certification", "ipa": "/ˌsɜːrtɪfɪˈkeɪʃn/", "wordForm": "Noun", "meaning": "Chứng nhận", "example": "Fair Trade certification ensures fair prices."},
+    {"word": "Transparency", "ipa": "/trænsˈpærənsi/", "wordForm": "Noun", "meaning": "Sự minh bạch", "example": "Consumers seek quality and transparency."},
+    {"word": "Sustainable", "ipa": "/səˈsteɪnəbl/", "wordForm": "Adjective", "meaning": "Bền vững", "example": "Consumers demand sustainable chocolate production."},
+    {"word": "Fascinating", "ipa": "/ˈfæsɪneɪtɪŋ/", "wordForm": "Adjective", "meaning": "Hấp dẫn, thú vị", "example": "Chocolate has a fascinating history."}
+  ],
+  "matchingPictures": [
+    {"word": "Cacao plant", "pic": "https://images.unsplash.com/photo-1514053826546-2bb5c47ad8e4?w=300"},
+    {"word": "Chocolate bar", "pic": "https://images.unsplash.com/photo-1511381939415-e44015466890?w=300"},
+    {"word": "Cocoa powder", "pic": "https://images.unsplash.com/photo-1606312619062-31d5946b1cc0?w=300"},
+    {"word": "Chocolate cake", "pic": "https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=300"}
+  ],
+  "matchingSynonyms": [
+    {"word": "Cultivate", "synonym": "Grow / Farm"},
+    {"word": "Bitter", "synonym": "Sharp / Acrid"},
+    {"word": "Nobility", "synonym": "Aristocracy"},
+    {"word": "Consistent", "synonym": "Steady / Uniform"},
+    {"word": "Fascinating", "synonym": "Captivating / Interesting"}
+  ],
+  "mcqQuestions": [
+    {"q": "According to the passage, which civilization first cultivated the cacao plant?", "options": ["The Aztec around 500 BCE", "The Maya around 1000 BCE", "The Olmec around 1500 BCE", "The Spanish in the 16th century"], "answer": 2},
+    {"q": "What does 'xocolatl' mean in the Maya language?", "options": ["Sweet water", "Bitter water", "God's gift", "Royal drink"], "answer": 1},
+    {"q": "Why were cacao beans valuable in ancient Mesoamerica?", "options": ["Used only for ceremonies", "Difficult to grow", "Used as currency", "Only for kings"], "answer": 2},
+    {"q": "What did Cortés do with chocolate?", "options": ["Shared it immediately with Europe", "Brought it back to Spain, kept secret for a century", "Refused to try it", "Used as medicine"], "answer": 1},
+    {"q": "How did Europeans modify chocolate?", "options": ["Added chili peppers", "Sweetened with sugar and honey", "Mixed with milk", "Removed cocoa butter"], "answer": 1},
+    {"q": "What was van Houten's invention in 1828?", "options": ["First chocolate bar", "Introduced to America", "Cocoa press for separating cocoa butter", "Invented milk chocolate"], "answer": 2},
+    {"q": "Which region produces 70% of the world's cacao today?", "options": ["South America", "Southeast Asia", "West Africa", "Central America"], "answer": 2},
+    {"q": "What does Fair Trade certification ensure?", "options": ["All chocolate is organic", "Farmers receive fair prices", "Produced only in Europe", "No machines used"], "answer": 1}
+  ],
+  "fillInBlank": "Chocolate has a ___rich___ and fascinating history. The story begins in ancient Mesoamerica, where the Olmec civilization was the first to ___cultivate___ the cacao plant around 1500 BCE. The Maya consumed chocolate as a ___bitter___, frothy drink. This drink was reserved for ___nobility___ and warriors. Cacao beans were so valuable that they were used as ___currency___."
+}
