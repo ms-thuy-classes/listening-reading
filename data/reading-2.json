@@ -41,14 +41,14 @@
     {"word": "Elaborate", "ipa": "/ɪˈlæbəreɪt/", "wordForm": "Verb", "meaning": "Giải thích chi tiết, làm rõ thêm", "example": "Could you please elaborate on your proposed solution?"}
   ],
   "matchingPictures": [
-    {"word": "An accidental spill triggering immediate emotional distress", "pic": "H"},
-    {"word": "Feeling frazzled and overwhelmed by heavy workload", "pic": "F"},
-    {"word": "Emotional granularity likened to seeing diverse color shades", "pic": "D"},
-    {"word": "Practicing mindfulness to achieve mental balance", "pic": "B"},
-    {"word": "Writing in a daily diary to elaborate on subjective feelings", "pic": "G"},
-    {"word": "Utilizing an online vocabulary list to identify fine emotional states", "pic": "A"},
-    {"word": "Observing external sources (like media) to understand human emotions", "pic": "C"},
-    {"word": "Taking a constructive action guided by guilt to repair a relationship", "pic": "E"}
+    {"word": "Weary", "pic": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6ahfw7fpSvFlON2d6AKcT2KYsqEajq4RvVgFgyxqGl4aOChekTH2pM0SQ&s=10"},
+    {"word": "Intervention", "pic": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCFuXzVrO2P_GPlYXjfV4OjBu-QG8kKEshIYiR-NGcj695xIbCVfVRdrk&s=10"},
+    {"word": "Rattled", "pic": "https://thumbs.dreamstime.com/b/suprise-man-close-up-portrait-black-surprise-expression-his-hand-his-face-44972034.jpg"},
+    {"word": "Conjure up", "pic": "https://cdn.langeek.co/photo/44974/original/?type=jpeg"},
+    {"word": "Mindfulness", "pic": "https://cdn2.fptshop.com.vn/unsafe/1920x0/filters:format(webp):quality(75)/Mindfulness_la_gi_cover_e541c3b277.png"},
+    {"word": "Elaborate", "pic": "https://images.squarespace-cdn.com/content/v1/5430da84e4b096aeb94a0050/1436930222465-LZ33RLN1WMWNOMF5NIWV/cause-effect.jpg"},
+    {"word": "Implication", "pic": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTiIGzn_cl02SL2Tv3Rw3HzIAM3GbnxpZtDxoDczADawD7v7cVp7xrcSkkP&s=10"},
+    {"word": "Vivid", "pic": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5dwo5tIE6knu6HZWwJO0k6Fiv-Ao2IZrI2jjPLpanulHtueoEFvsNzj8&s=10"}
   ],
   "matchingSynonyms": [
     {"word": "Tailor", "synonym": "Modify / Adapt specifically"},
