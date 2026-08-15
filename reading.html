@@ -142,6 +142,106 @@ footer .heart{color:#ec407a}
 ::-webkit-scrollbar{width:10px;height:10px}
 ::-webkit-scrollbar-track{background:rgba(255,255,255,0.3);border-radius:10px}
 ::-webkit-scrollbar-thumb{background:linear-gradient(180deg,#b39ddb,#f48fb1);border-radius:10px;border:2px solid rgba(255,255,255,0.3)}
+  /* ===== HIGHLIGHT KEYWORD (VÀNG THẨM MỸ) ===== */
+.passage-scroll mark.highlight {
+  background: linear-gradient(
+    120deg,
+    rgba(255, 235, 59, 0.55) 0%,
+    rgba(255, 193, 7, 0.65) 50%,
+    rgba(255, 235, 59, 0.55) 100%
+  );
+  padding: 2px 6px;
+  border-radius: 5px;
+  color: #4e342e;
+  font-weight: 700;
+  box-shadow:
+    inset 0 -2px 0 rgba(255, 152, 0, 0.45),
+    0 1px 2px rgba(255, 152, 0, 0.15);
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  display: inline-block;
+  position: relative;
+}
+
+.passage-scroll mark.highlight::after {
+  content: '';
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  height: 30%;
+  background: linear-gradient(to top, rgba(255, 152, 0, 0.25), transparent);
+  border-radius: 0 0 5px 5px;
+  pointer-events: none;
+}
+
+.passage-scroll mark.highlight:hover {
+  background: linear-gradient(
+    120deg,
+    rgba(255, 235, 59, 0.8) 0%,
+    rgba(255, 193, 7, 0.9) 50%,
+    rgba(255, 235, 59, 0.8) 100%
+  );
+  box-shadow:
+    inset 0 -2px 0 rgba(255, 152, 0, 0.6),
+    0 3px 6px rgba(255, 152, 0, 0.25);
+  transform: translateY(-1px);
+  color: #3e2723;
+}
+
+/* ===== ẢNH PASSAGE — HỖ TRỢ ALIGN ===== */
+.passage-img {
+  margin: 22px auto;
+  max-width: 92%;
+  display: block;
+  border-radius: 16px;
+  overflow: hidden;
+  border: var(--border);
+  box-shadow: var(--shadow);
+  background: #fff;
+  clear: both;
+}
+
+.passage-img-left {
+  float: left;
+  margin: 8px 20px 14px 0;
+  max-width: 45%;
+  clear: left;
+}
+
+.passage-img-right {
+  float: right;
+  margin: 8px 0 14px 20px;
+  max-width: 45%;
+  clear: right;
+}
+
+.passage-img-center {
+  margin: 22px auto;
+  display: block;
+}
+
+.passage-img img {
+  width: 100%;
+  max-height: 320px;
+  object-fit: cover;
+  display: block;
+}
+
+.passage-img figcaption {
+  padding: 10px 14px;
+  font-style: italic;
+  color: #7e57c2;
+  font-weight: 600;
+  font-size: 0.88rem;
+  text-align: center;
+  background: linear-gradient(135deg, #fafafa, #f3e5f5);
+  border-top: 2px dashed #b39ddb;
+}
+
+/* Clearfix cho passage khi dùng float ảnh */
+.passage-scroll::after {
+  content: '';
+  display: table;
+  clear: both;
+}
 </style>
 </head>
 <body>
@@ -320,26 +420,74 @@ function downloadPDF(){if(postData.pdf){const a=document.createElement('a');a.hr
 function startTimer(){setInterval(()=>{seconds++;const m=String(Math.floor(seconds/60)).padStart(2,'0'),s=String(seconds%60).padStart(2,'0');document.getElementById('timer').textContent=`${m}:${s}`;},1000);}
 
 /* ===== PDF / PASSAGE + ẢNH ===== */
-function initPDF(){
-  const frame=document.getElementById('pdfFrame');
-  if(postData.pdf){
-    frame.innerHTML=`<iframe src="${postData.pdf}"></iframe>`;
+/* ===== HELPER: Escape HTML để tránh XSS ===== */
+function escapeHtml(str) {
+  return str
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#039;');
+}
+
+/* ===== HELPER: Format passage (ảnh + highlight) ===== */
+function formatPassageBlock(block) {
+  // 1. Escape HTML trước để an toàn
+  let html = escapeHtml(block);
+
+  // 2. Highlight keyword: ==keyword==  →  <mark class="highlight">keyword</mark>
+  html = html.replace(/==([^=\n]+)==/g, '<mark class="highlight">$1</mark>');
+
+  // 3. (Optional) Bold **text** và Italic *text* nếu muốn
+  // html = html.replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>');
+  // html = html.replace(/(?<!\*)\*([^*]+)\*(?!\*)/g, '<em>$1</em>');
+
+  return `<p>${html}</p>`;
+}
+
+/* ===== PDF / PASSAGE + ẢNH (CÓ ALIGN + HIGHLIGHT) ===== */
+function initPDF() {
+  const frame = document.getElementById('pdfFrame');
+
+  if (postData.pdf) {
+    frame.innerHTML = `<iframe src="${postData.pdf}"></iframe>`;
+    return;
   }
-  else if(postData.passage){
-    const blocks=postData.passage.split('\n\n').map(block=>{
-      block=block.trim();
-      if(block.startsWith('[IMG:')){
-        const m=block.match(/\[IMG:\s*(.*?)\s*(?:\|\s*(.*?))?\s*\]/);
-        if(m){
-          const url=m[1],caption=m[2]||'';
-          return `<figure class="passage-img"><img src="${url}" alt="${caption}" loading="lazy" onerror="this.parentElement.style.display='none'">${caption?`<figcaption>${caption}</figcaption>`:''}</figure>`;
+
+  if (postData.passage) {
+    const blocks = postData.passage.split('\n\n').map(block => {
+      block = block.trim();
+      if (!block) return '';
+
+      // ===== XỬ LÝ ẢNH =====
+      // Cú pháp: [IMG: url] hoặc [IMG: url | caption] hoặc [IMG: url | caption | center|left|right]
+      if (block.startsWith('[IMG:')) {
+        const m = block.match(
+          /\[IMG:\s*([^\|\]]+?)\s*(?:\|\s*([^\|\]]*?))?(?:\|\s*(center|left|right))?\s*\]/i
+        );
+        if (m) {
+          const url = m[1].trim();
+          const caption = (m[2] || '').trim();
+          const align = (m[3] || 'center').toLowerCase();
+          return `
+            <figure class="passage-img passage-img-${align}">
+              <img src="${url}" alt="${caption}" loading="lazy"
+                   onerror="this.parentElement.style.display='none'">
+              ${caption ? `<figcaption>${escapeHtml(caption)}</figcaption>` : ''}
+            </figure>
+          `;
         }
       }
-      return `<p>${block}</p>`;
+
+      // ===== XỬ LÝ PARAGRAPH (với highlight) =====
+      return formatPassageBlock(block);
     }).join('');
-    frame.innerHTML=`<div class="passage-scroll">${blocks}</div>`;
+
+    frame.innerHTML = `<div class="passage-scroll">${blocks}</div>`;
+    return;
   }
-  else frame.innerHTML=`<div class="lazy-placeholder">Không có bài đọc</div>`;
+
+  frame.innerHTML = `<div class="lazy-placeholder">Không có bài đọc</div>`;
 }
 
 /* ===== LAZY ===== */
