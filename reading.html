@@ -446,6 +446,63 @@ function formatPassageBlock(block) {
 }
 
 /* ===== PDF / PASSAGE + ẢNH (CÓ ALIGN + HIGHLIGHT) ===== */
+/* ===== HELPER: Escape HTML ===== */
+function escapeHtml(str) {
+  return str
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#039;');
+}
+
+/* ===== HELPER: Format passage (ảnh + highlight) ===== */
+function formatPassageBlock(block) {
+  let html = escapeHtml(block);
+  
+  // Highlight keyword thủ công: ==keyword==
+  html = html.replace(/==([^=\n]+)==/g, '<mark class="highlight">$1</mark>');
+  
+  return `<p>${html}</p>`;
+}
+
+/* ===== HELPER: Highlight Vocabulary Words ===== */
+function highlightVocabulary(text, vocabulary) {
+  if (!vocabulary || !vocabulary.length) return text;
+  
+  // Tạo danh sách từ cần highlight (sắp xếp theo độ dài giảm dần để tránh match partial)
+  const wordsToHighlight = vocabulary
+    .map(v => ({
+      word: v.word,
+      // Tạo regex match word boundary, case-insensitive
+      regex: new RegExp(`\\b${v.word.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}\\b`, 'gi')
+    }))
+    .sort((a, b) => b.word.length - a.word.length); // Sort theo độ dài giảm dần
+  
+  let highlightedText = text;
+  
+  // Highlight từng từ
+  wordsToHighlight.forEach(({ word, regex }) => {
+    // Tránh highlight từ đã được wrap trong <mark> rồi
+    highlightedText = highlightedText.replace(regex, (match) => {
+      // Kiểm tra xem match có nằm trong <mark> tag không
+      const beforeMatch = highlightedText.substring(0, highlightedText.indexOf(match));
+      const openMarks = (beforeMatch.match(/<mark class="highlight">/g) || []).length;
+      const closeMarks = (beforeMatch.match(/<\/mark>/g) || []).length;
+      
+      // Nếu số lượng <mark> mở nhiều hơn </mark>, nghĩa là đang trong <mark> tag
+      if (openMarks > closeMarks) {
+        return match; // Không highlight lại
+      }
+      
+      return `<mark class="highlight">${match}</mark>`;
+    });
+  });
+  
+  return highlightedText;
+}
+
+/* ===== PDF / PASSAGE + ẢNH + HIGHLIGHT VOCABULARY ===== */
 function initPDF() {
   const frame = document.getElementById('pdfFrame');
 
@@ -455,12 +512,17 @@ function initPDF() {
   }
 
   if (postData.passage) {
-    const blocks = postData.passage.split('\n\n').map(block => {
+    let passageText = postData.passage;
+    
+    // Bước 1: Highlight vocabulary words trước
+    passageText = highlightVocabulary(passageText, postData.vocabulary || []);
+    
+    // Bước 2: Xử lý từng block (ngăn cách bởi \n\n)
+    const blocks = passageText.split('\n\n').map(block => {
       block = block.trim();
       if (!block) return '';
 
-      // ===== XỬ LÝ ẢNH =====
-      // Cú pháp: [IMG: url] hoặc [IMG: url | caption] hoặc [IMG: url | caption | center|left|right]
+      // Xử lý ẢNH
       if (block.startsWith('[IMG:')) {
         const m = block.match(
           /\[IMG:\s*([^\|\]]+?)\s*(?:\|\s*([^\|\]]*?))?(?:\|\s*(center|left|right))?\s*\]/i
@@ -479,7 +541,7 @@ function initPDF() {
         }
       }
 
-      // ===== XỬ LÝ PARAGRAPH (với highlight) =====
+      // Xử lý PARAGRAPH (đã có highlight từ bước 1)
       return formatPassageBlock(block);
     }).join('');
 
