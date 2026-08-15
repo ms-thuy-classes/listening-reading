@@ -3,7 +3,7 @@
   "title": "What is Consumerism?",
   "description": "Luyện nghe và học từ vựng IELTS qua chủ đề Kinh tế - Xã hội: Nguồn gốc, tác động và bản chất của Chủ nghĩa tiêu dùng (Consumerism).",
   "layout": "listening",
-  "youtubeVideo": "https://www.youtube.com/watch?v=c4wJDW4_q5w",
+  "youtubeVideo": "https://www.youtube.com/embed/D9gcGjCF60o?si=oOe6GyBjxm3YKnhY,
   "duration": "12 min",
   "level": "B2",
   "tags": ["b2", "ielts", "consumerism", "economics", "society"],
@@ -41,14 +41,14 @@
     {"word": "Merit", "ipa": "/ˈmer.ɪt/", "wordForm": "Noun", "meaning": "Giá trị, sự xứng đáng", "example": "Consumer demand provides merit to niche products that would otherwise lack a market."}
   ],
   "matchingPictures": [
-    {"word": "Household Necessities (Refrigerator)", "pic": "Image A"},
-    {"word": "Mass Production & Assembly Line", "pic": "Image B"},
-    {"word": "Conspicuous Consumption (Luxury Car/Watch)", "pic": "Image C"},
-    {"word": "Targeted Marketing & Advertisements", "pic": "Image D"},
-    {"word": "Television Commercial Breaks", "pic": "Image E"},
-    {"word": "Smartwatch & Modern Gadgets", "pic": "Image F"},
-    {"word": "Flaunting Wealth & High Status", "pic": "Image G"},
-    {"word": "Expanding Middle Class Consumer Society", "pic": "Image H"}
+    {"word": "Household Necessities ", "pic": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRW1JYJAHGHtmcVS1zv9yJi9Jmeh-_HrQOoIwJHxNG4OipvVQrf27QKj0&s=10"},
+    {"word": "Mass Production", "pic": "https://nativespeaker.vn/uploaded/page_1261_1688773334_1693015847.jpg"},
+    {"word": "Conspicuous Consumption", "pic": "https://hips.hearstapps.com/hmg-prod/images/most-expensive-cars-6855c388b079a.jpg?crop=0.501xw:1.00xh;0,0&resize=1200:*"},
+    {"word": "Targeted Marketing & Advertisements", "pic": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3Z2hVQMTDqmMTrjlopYNQnZqZ9GcaL0_4fC1u5S38Un0YDhk3pqZiP4Ip&s=10"},
+    {"word": "Television Commercial Breaks", "pic": "https://images.ctfassets.net/pjshm78m9jt4/627zViqSPcZSUqiXoDRkS9/6ccb542858dddd89d139feef850a2dc5/tv_2.jpeg"},
+    {"word": "Modern Gadgets", "pic": "https://cdn2.cellphones.com.vn/x/media/wysiwyg/Dong-ho-thong-minh/dong-ho-thong-minh-23_3.jpg"},
+    {"word": "Flaunting Wealth", "pic": "https://9f8e62d4.delivery.rocketcdn.me/wp-content/uploads/2025/07/thestylesystem_A_confident_well-groomed_man_in_his_mid-30s_em_401e103e-ae88-4fce-8794-46827b803710_2.jpg"},
+    {"word": "Expanding Middle Class Consumer Society", "pic": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ37m6usegi_gHACt49qxa81Urgf_6cH7U-L3IQF-FXfxGd4I6aNTrj_AiX&s=10"}
   ],
   "matchingSynonyms": [
     {"word": "Flaunt", "synonym": "Show off / Display"},
