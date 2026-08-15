@@ -421,31 +421,6 @@ function startTimer(){setInterval(()=>{seconds++;const m=String(Math.floor(secon
 
 /* ===== PDF / PASSAGE + ẢNH ===== */
 /* ===== HELPER: Escape HTML để tránh XSS ===== */
-function escapeHtml(str) {
-  return str
-    .replace(/&/g, '&amp;')
-    .replace(/</g, '&lt;')
-    .replace(/>/g, '&gt;')
-    .replace(/"/g, '&quot;')
-    .replace(/'/g, '&#039;');
-}
-
-/* ===== HELPER: Format passage (ảnh + highlight) ===== */
-function formatPassageBlock(block) {
-  // 1. Escape HTML trước để an toàn
-  let html = escapeHtml(block);
-
-  // 2. Highlight keyword: ==keyword==  →  <mark class="highlight">keyword</mark>
-  html = html.replace(/==([^=\n]+)==/g, '<mark class="highlight">$1</mark>');
-
-  // 3. (Optional) Bold **text** và Italic *text* nếu muốn
-  // html = html.replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>');
-  // html = html.replace(/(?<!\*)\*([^*]+)\*(?!\*)/g, '<em>$1</em>');
-
-  return `<p>${html}</p>`;
-}
-
-/* ===== PDF / PASSAGE + ẢNH (CÓ ALIGN + HIGHLIGHT) ===== */
 /* ===== HELPER: Escape HTML ===== */
 function escapeHtml(str) {
   return str
@@ -456,53 +431,49 @@ function escapeHtml(str) {
     .replace(/'/g, '&#039;');
 }
 
-/* ===== HELPER: Format passage (ảnh + highlight) ===== */
-function formatPassageBlock(block) {
+/* ===== FORMAT PASSAGE BLOCK (FIX) ===== */
+function formatPassageBlock(block, vocabulary) {
+  // Bước 1: Escape HTML trước để an toàn (XSS protection)
   let html = escapeHtml(block);
   
-  // Highlight keyword thủ công: ==keyword==
-  html = html.replace(/==([^=\n]+)==/g, '<mark class="highlight">$1</mark>');
+  // Dùng ký tự đặc biệt làm marker (không có trong văn bản thường)
+  const MARKER_S = '\u0001'; // Start marker
+  const MARKER_E = '\u0002'; // End marker
+  
+  // Bước 2: Highlight thủ công ==keyword== (dùng marker)
+  html = html.replace(/==([^=\n]+)==/g, (m, p1) => `${MARKER_S}${p1}${MARKER_E}`);
+  
+  // Bước 3: Highlight vocabulary (skip nếu đã được highlight)
+  if (vocabulary && vocabulary.length) {
+    const words = [...vocabulary]
+      .map(v => v.word)
+      .sort((a, b) => b.length - a.length); // Dài trước để tránh match partial
+    
+    words.forEach(word => {
+      const escaped = word.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+      const regex = new RegExp(`\\b${escaped}\\b`, 'gi');
+      html = html.replace(regex, (match, offset, fullStr) => {
+        // Kiểm tra xem vị trí này có đang NẰM TRONG marker đã có không
+        const before = fullStr.substring(0, offset);
+        const openCount = (before.split(MARKER_S).length - 1);
+        const closeCount = (before.split(MARKER_E).length - 1);
+        
+        if (openCount > closeCount) {
+          return match; // Đang ở trong highlight rồi, skip
+        }
+        return `${MARKER_S}${match}${MARKER_E}`;
+      });
+    });
+  }
+  
+  // Bước 4: Cuối cùng mới chuyển marker thành HTML thật
+  html = html.split(MARKER_S).join('<mark class="highlight">');
+  html = html.split(MARKER_E).join('</mark>');
   
   return `<p>${html}</p>`;
 }
 
-/* ===== HELPER: Highlight Vocabulary Words ===== */
-function highlightVocabulary(text, vocabulary) {
-  if (!vocabulary || !vocabulary.length) return text;
-  
-  // Tạo danh sách từ cần highlight (sắp xếp theo độ dài giảm dần để tránh match partial)
-  const wordsToHighlight = vocabulary
-    .map(v => ({
-      word: v.word,
-      // Tạo regex match word boundary, case-insensitive
-      regex: new RegExp(`\\b${v.word.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}\\b`, 'gi')
-    }))
-    .sort((a, b) => b.word.length - a.word.length); // Sort theo độ dài giảm dần
-  
-  let highlightedText = text;
-  
-  // Highlight từng từ
-  wordsToHighlight.forEach(({ word, regex }) => {
-    // Tránh highlight từ đã được wrap trong <mark> rồi
-    highlightedText = highlightedText.replace(regex, (match) => {
-      // Kiểm tra xem match có nằm trong <mark> tag không
-      const beforeMatch = highlightedText.substring(0, highlightedText.indexOf(match));
-      const openMarks = (beforeMatch.match(/<mark class="highlight">/g) || []).length;
-      const closeMarks = (beforeMatch.match(/<\/mark>/g) || []).length;
-      
-      // Nếu số lượng <mark> mở nhiều hơn </mark>, nghĩa là đang trong <mark> tag
-      if (openMarks > closeMarks) {
-        return match; // Không highlight lại
-      }
-      
-      return `<mark class="highlight">${match}</mark>`;
-    });
-  });
-  
-  return highlightedText;
-}
-
-/* ===== PDF / PASSAGE + ẢNH + HIGHLIGHT VOCABULARY ===== */
+/* ===== PDF / PASSAGE + ẢNH (FIXED) ===== */
 function initPDF() {
   const frame = document.getElementById('pdfFrame');
 
@@ -512,13 +483,7 @@ function initPDF() {
   }
 
   if (postData.passage) {
-    let passageText = postData.passage;
-    
-    // Bước 1: Highlight vocabulary words trước
-    passageText = highlightVocabulary(passageText, postData.vocabulary || []);
-    
-    // Bước 2: Xử lý từng block (ngăn cách bởi \n\n)
-    const blocks = passageText.split('\n\n').map(block => {
+    const blocks = postData.passage.split('\n\n').map(block => {
       block = block.trim();
       if (!block) return '';
 
@@ -533,7 +498,7 @@ function initPDF() {
           const align = (m[3] || 'center').toLowerCase();
           return `
             <figure class="passage-img passage-img-${align}">
-              <img src="${url}" alt="${caption}" loading="lazy"
+              <img src="${url}" alt="${escapeHtml(caption)}" loading="lazy"
                    onerror="this.parentElement.style.display='none'">
               ${caption ? `<figcaption>${escapeHtml(caption)}</figcaption>` : ''}
             </figure>
@@ -541,8 +506,8 @@ function initPDF() {
         }
       }
 
-      // Xử lý PARAGRAPH (đã có highlight từ bước 1)
-      return formatPassageBlock(block);
+      // Xử lý PARAGRAPH - truyền thêm vocabulary để highlight
+      return formatPassageBlock(block, postData.vocabulary || []);
     }).join('');
 
     frame.innerHTML = `<div class="passage-scroll">${blocks}</div>`;
