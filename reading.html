@@ -36,7 +36,6 @@ main{max-width:1400px;margin:0 auto;padding:24px 20px}
 .pdf-frame iframe{width:100%;height:100%;border:0}
 .passage-scroll{height:100%;overflow-y:auto;padding:20px;line-height:1.9;font-size:1.02rem}
 .passage-scroll p{margin-bottom:14px;text-align:justify}
-/* ẢNH TRONG BÀI ĐỌC */
 .passage-img{margin:18px auto;text-align:center;border-radius:14px;overflow:hidden;border:var(--border);box-shadow:var(--shadow);max-width:92%;background:#fff}
 .passage-img img{width:100%;max-height:300px;object-fit:cover;display:block}
 .passage-img figcaption{padding:8px 12px;font-style:italic;color:#7e57c2;font-weight:600;font-size:0.88rem}
@@ -116,6 +115,61 @@ main{max-width:1400px;margin:0 auto;padding:24px 20px}
 .pic-card:hover{transform:translateY(-3px);box-shadow:4px 4px 0 #2b2d42}
 .pic-card img{width:100%;height:100px;object-fit:cover;border-radius:8px;border:2px solid #ddd}
 
+/* ===== HEADING/FEATURE BOX ===== */
+.headings-box, .features-box {
+  background: linear-gradient(135deg, #fff3e0, #fce4ec);
+  border: var(--border);
+  border-radius: 14px;
+  padding: 14px;
+  margin-bottom: 16px;
+  box-shadow: var(--shadow);
+}
+.headings-box h4, .features-box h4 {
+  font-size: 0.9rem;
+  font-weight: 900;
+  margin-bottom: 10px;
+  color: #4a148c;
+  text-align: center;
+  padding-bottom: 6px;
+  border-bottom: 2px dashed #b39ddb;
+}
+.headings-list, .features-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.heading-item, .feature-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  padding: 8px 10px;
+  background: rgba(255,255,255,0.8);
+  border-radius: 8px;
+  border: 2px solid #e0e0e0;
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+.heading-item .h-label, .feature-item .f-label {
+  font-weight: 900;
+  color: #7e57c2;
+  min-width: 28px;
+  text-align: center;
+  background: linear-gradient(135deg, #e1bee7, #f3e5f5);
+  border-radius: 6px;
+  padding: 2px 6px;
+  font-size: 0.8rem;
+}
+.heading-item .h-text, .feature-item .f-text {
+  font-weight: 600;
+  flex: 1;
+  color: #2b2d42;
+}
+.match-questions-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
 /* MCQ + FILL */
 .mcq-list{display:flex;flex-direction:column;gap:14px}
 .mcq-item{background:rgba(255,255,255,0.75);border:var(--border);border-radius:16px;padding:14px;box-shadow:var(--shadow)}
@@ -142,106 +196,33 @@ footer .heart{color:#ec407a}
 ::-webkit-scrollbar{width:10px;height:10px}
 ::-webkit-scrollbar-track{background:rgba(255,255,255,0.3);border-radius:10px}
 ::-webkit-scrollbar-thumb{background:linear-gradient(180deg,#b39ddb,#f48fb1);border-radius:10px;border:2px solid rgba(255,255,255,0.3)}
-  /* ===== HIGHLIGHT KEYWORD (VÀNG THẨM MỸ) ===== */
+
+/* ===== HIGHLIGHT KEYWORD ===== */
 .passage-scroll mark.highlight {
-  background: linear-gradient(
-    120deg,
-    rgba(255, 235, 59, 0.55) 0%,
-    rgba(255, 193, 7, 0.65) 50%,
-    rgba(255, 235, 59, 0.55) 100%
-  );
-  padding: 2px 6px;
-  border-radius: 5px;
-  color: #4e342e;
-  font-weight: 700;
-  box-shadow:
-    inset 0 -2px 0 rgba(255, 152, 0, 0.45),
-    0 1px 2px rgba(255, 152, 0, 0.15);
-  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-  display: inline-block;
-  position: relative;
+  background: linear-gradient(120deg,rgba(255, 235, 59, 0.55) 0%,rgba(255, 193, 7, 0.65) 50%,rgba(255, 235, 59, 0.55) 100%);
+  padding: 2px 6px;border-radius: 5px;color: #4e342e;font-weight: 700;
+  box-shadow: inset 0 -2px 0 rgba(255, 152, 0, 0.45),0 1px 2px rgba(255, 152, 0, 0.15);
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);display: inline-block;position: relative;
 }
-
 .passage-scroll mark.highlight::after {
-  content: '';
-  position: absolute;
-  left: 0; right: 0; bottom: 0;
-  height: 30%;
+  content: '';position: absolute;left: 0; right: 0; bottom: 0;height: 30%;
   background: linear-gradient(to top, rgba(255, 152, 0, 0.25), transparent);
-  border-radius: 0 0 5px 5px;
-  pointer-events: none;
+  border-radius: 0 0 5px 5px;pointer-events: none;
 }
-
 .passage-scroll mark.highlight:hover {
-  background: linear-gradient(
-    120deg,
-    rgba(255, 235, 59, 0.8) 0%,
-    rgba(255, 193, 7, 0.9) 50%,
-    rgba(255, 235, 59, 0.8) 100%
-  );
-  box-shadow:
-    inset 0 -2px 0 rgba(255, 152, 0, 0.6),
-    0 3px 6px rgba(255, 152, 0, 0.25);
-  transform: translateY(-1px);
-  color: #3e2723;
+  background: linear-gradient(120deg,rgba(255, 235, 59, 0.8) 0%,rgba(255, 193, 7, 0.9) 50%,rgba(255, 235, 59, 0.8) 100%);
+  box-shadow: inset 0 -2px 0 rgba(255, 152, 0, 0.6),0 3px 6px rgba(255, 152, 0, 0.25);
+  transform: translateY(-1px);color: #3e2723;
 }
 
-/* ===== ẢNH PASSAGE — HỖ TRỢ ALIGN ===== */
-.passage-img {
-  margin: 22px auto;
-  max-width: 92%;
-  display: block;
-  border-radius: 16px;
-  overflow: hidden;
-  border: var(--border);
-  box-shadow: var(--shadow);
-  background: #fff;
-  clear: both;
-}
-
-.passage-img-left {
-  float: left;
-  margin: 8px 20px 14px 0;
-  max-width: 45%;
-  clear: left;
-}
-
-.passage-img-right {
-  float: right;
-  margin: 8px 0 14px 20px;
-  max-width: 45%;
-  clear: right;
-}
-
-.passage-img-center {
-  margin: 22px auto;
-  display: block;
-}
-
-.passage-img img {
-  width: 100%;
-  max-height: 320px;
-  object-fit: cover;
-  display: block;
-}
-
-.passage-img figcaption {
-  padding: 10px 14px;
-  font-style: italic;
-  color: #7e57c2;
-  font-weight: 600;
-  font-size: 0.88rem;
-  text-align: center;
-  background: linear-gradient(135deg, #fafafa, #f3e5f5);
-  border-top: 2px dashed #b39ddb;
-}
-
-/* Clearfix cho passage khi dùng float ảnh */
-.passage-scroll::after {
-  content: '';
-  display: table;
-  clear: both;
-}
+/* ===== ẢNH PASSAGE ===== */
+.passage-img {margin: 22px auto;max-width: 92%;display: block;border-radius: 16px;overflow: hidden;border: var(--border);box-shadow: var(--shadow);background: #fff;clear: both;}
+.passage-img-left {float: left;margin: 8px 20px 14px 0;max-width: 45%;clear: left;}
+.passage-img-right {float: right;margin: 8px 0 14px 20px;max-width: 45%;clear: right;}
+.passage-img-center {margin: 22px auto;display: block;}
+.passage-img img {width: 100%;max-height: 320px;object-fit: cover;display: block;}
+.passage-img figcaption {padding: 10px 14px;font-style: italic;color: #7e57c2;font-weight: 600;font-size: 0.88rem;text-align: center;background: linear-gradient(135deg, #fafafa, #f3e5f5);border-top: 2px dashed #b39ddb;}
+.passage-scroll::after {content: '';display: table;clear: both;}
 </style>
 </head>
 <body>
@@ -331,6 +312,30 @@ footer .heart{color:#ec407a}
       <div class="check-hint">💡 Bấm Check 3 lần để mở khóa Show Answers</div>
     </div>
 
+    <!-- ===== MATCHING HEADINGS ===== -->
+    <div class="ex-block" id="sectionMatchHeading" data-lazy="matchHeading">
+      <h2>📑 Matching Headings <span class="section-score" id="matchHeadingScore">0 / 0</span></h2>
+      <div id="matchHeadingBody"><div class="lazy-placeholder">👇 Scroll để tải bài tập...</div></div>
+      <div class="btn-group">
+        <button class="btn btn-primary" onclick="checkMatchHeading()">✓ Check</button>
+        <button class="btn btn-warn" onclick="resetMatchHeading()">↺ Reset</button>
+        <button class="btn btn-info" id="showMatchHeading" onclick="showAnswersHeading()" disabled>👁 Show Answers</button>
+      </div>
+      <div class="check-hint">💡 Bấm Check 3 lần để mở khóa Show Answers</div>
+    </div>
+
+    <!-- ===== MATCHING FEATURES ===== -->
+    <div class="ex-block" id="sectionMatchFeature" data-lazy="matchFeature">
+      <h2>🏷️ Matching Features <span class="section-score" id="matchFeatureScore">0 / 0</span></h2>
+      <div id="matchFeatureBody"><div class="lazy-placeholder">👇 Scroll để tải bài tập...</div></div>
+      <div class="btn-group">
+        <button class="btn btn-primary" onclick="checkMatchFeature()">✓ Check</button>
+        <button class="btn btn-warn" onclick="resetMatchFeature()">↺ Reset</button>
+        <button class="btn btn-info" id="showMatchFeature" onclick="showAnswersFeature()" disabled>👁 Show Answers</button>
+      </div>
+      <div class="check-hint">💡 Bấm Check 3 lần để mở khóa Show Answers</div>
+    </div>
+
     <div class="ex-block" id="sectionComprehension" data-lazy="mcq">
       <h2>📋 Reading Comprehension <span class="section-score" id="mcqScore">0 / 0</span></h2>
       <div id="mcqBody"><div class="lazy-placeholder">👇 Scroll để tải bài tập...</div></div>
@@ -359,9 +364,9 @@ footer .heart{color:#ec407a}
 <footer>Made with <span class="heart">♥</span> by Ms. Thúy · Happy Learning! 🌈</footer>
 </main>
 <script>
-let postData=null,currentCardIndex=0,orderedVocab=[],quizQuestions=[],currentQuizIndex=0,quizScore=0,quizAnswered=[],fillBlanks=[],matchPicAnswers=[],matchSynAnswers=[];
+let postData=null,currentCardIndex=0,orderedVocab=[],quizQuestions=[],currentQuizIndex=0,quizScore=0,quizAnswered=[],fillBlanks=[],matchPicAnswers=[],matchSynAnswers=[],matchHeadingAnswers=[],matchFeatureAnswers=[];
 let zoomPercent=100,seconds=0;
-let checkCounts={matchPic:0,matchSyn:0,mcq:0,fill:0};
+let checkCounts={matchPic:0,matchSyn:0,mcq:0,fill:0,matchHeading:0,matchFeature:0};
 const loaded={};
 const urlParams=new URLSearchParams(window.location.search);
 const postId=urlParams.get('id')||'reading-1';
@@ -420,106 +425,64 @@ function downloadPDF(){if(postData.pdf){const a=document.createElement('a');a.hr
 function startTimer(){setInterval(()=>{seconds++;const m=String(Math.floor(seconds/60)).padStart(2,'0'),s=String(seconds%60).padStart(2,'0');document.getElementById('timer').textContent=`${m}:${s}`;},1000);}
 
 /* ===== PDF / PASSAGE + ẢNH ===== */
-/* ===== HELPER: Escape HTML để tránh XSS ===== */
-/* ===== HELPER: Escape HTML ===== */
 function escapeHtml(str) {
-  return str
-    .replace(/&/g, '&amp;')
-    .replace(/</g, '&lt;')
-    .replace(/>/g, '&gt;')
-    .replace(/"/g, '&quot;')
-    .replace(/'/g, '&#039;');
+  return str.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#039;');
 }
 
-/* ===== FORMAT PASSAGE BLOCK (FIX) ===== */
 function formatPassageBlock(block, vocabulary) {
-  // Bước 1: Escape HTML trước để an toàn (XSS protection)
   let html = escapeHtml(block);
-  
-  // Dùng ký tự đặc biệt làm marker (không có trong văn bản thường)
-  const MARKER_S = '\u0001'; // Start marker
-  const MARKER_E = '\u0002'; // End marker
-  
-  // Bước 2: Highlight thủ công ==keyword== (dùng marker)
+  const MARKER_S = '\u0001';
+  const MARKER_E = '\u0002';
   html = html.replace(/==([^=\n]+)==/g, (m, p1) => `${MARKER_S}${p1}${MARKER_E}`);
-  
-  // Bước 3: Highlight vocabulary (skip nếu đã được highlight)
   if (vocabulary && vocabulary.length) {
-    const words = [...vocabulary]
-      .map(v => v.word)
-      .sort((a, b) => b.length - a.length); // Dài trước để tránh match partial
-    
+    const words = [...vocabulary].map(v => v.word).sort((a, b) => b.length - a.length);
     words.forEach(word => {
       const escaped = word.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
       const regex = new RegExp(`\\b${escaped}\\b`, 'gi');
       html = html.replace(regex, (match, offset, fullStr) => {
-        // Kiểm tra xem vị trí này có đang NẰM TRONG marker đã có không
         const before = fullStr.substring(0, offset);
         const openCount = (before.split(MARKER_S).length - 1);
         const closeCount = (before.split(MARKER_E).length - 1);
-        
-        if (openCount > closeCount) {
-          return match; // Đang ở trong highlight rồi, skip
-        }
+        if (openCount > closeCount) return match;
         return `${MARKER_S}${match}${MARKER_E}`;
       });
     });
   }
-  
-  // Bước 4: Cuối cùng mới chuyển marker thành HTML thật
   html = html.split(MARKER_S).join('<mark class="highlight">');
   html = html.split(MARKER_E).join('</mark>');
-  
   return `<p>${html}</p>`;
 }
 
-/* ===== PDF / PASSAGE + ẢNH (FIXED) ===== */
 function initPDF() {
   const frame = document.getElementById('pdfFrame');
-
   if (postData.pdf) {
     frame.innerHTML = `<iframe src="${postData.pdf}"></iframe>`;
     return;
   }
-
   if (postData.passage) {
     const blocks = postData.passage.split('\n\n').map(block => {
       block = block.trim();
       if (!block) return '';
-
-      // Xử lý ẢNH
       if (block.startsWith('[IMG:')) {
-        const m = block.match(
-          /\[IMG:\s*([^\|\]]+?)\s*(?:\|\s*([^\|\]]*?))?(?:\|\s*(center|left|right))?\s*\]/i
-        );
+        const m = block.match(/\[IMG:\s*([^\|\]]+?)\s*(?:\|\s*([^\|\]]*?))?(?:\|\s*(center|left|right))?\s*\]/i);
         if (m) {
           const url = m[1].trim();
           const caption = (m[2] || '').trim();
           const align = (m[3] || 'center').toLowerCase();
-          return `
-            <figure class="passage-img passage-img-${align}">
-              <img src="${url}" alt="${escapeHtml(caption)}" loading="lazy"
-                   onerror="this.parentElement.style.display='none'">
-              ${caption ? `<figcaption>${escapeHtml(caption)}</figcaption>` : ''}
-            </figure>
-          `;
+          return `<figure class="passage-img passage-img-${align}"><img src="${url}" alt="${escapeHtml(caption)}" loading="lazy" onerror="this.parentElement.style.display='none'">${caption ? `<figcaption>${escapeHtml(caption)}</figcaption>` : ''}</figure>`;
         }
       }
-
-      // Xử lý PARAGRAPH - truyền thêm vocabulary để highlight
       return formatPassageBlock(block, postData.vocabulary || []);
     }).join('');
-
     frame.innerHTML = `<div class="passage-scroll">${blocks}</div>`;
     return;
   }
-
   frame.innerHTML = `<div class="lazy-placeholder">Không có bài đọc</div>`;
 }
 
 /* ===== LAZY ===== */
 function setupLazy(){
-  const initFns={matchPic:initMatchPic,matchSyn:initMatchSyn,mcq:initMCQ,fill:initFill};
+  const initFns={matchPic:initMatchPic,matchSyn:initMatchSyn,mcq:initMCQ,fill:initFill,matchHeading:initMatchHeading,matchFeature:initMatchFeature};
   const obs=new IntersectionObserver(es=>{
     es.forEach(en=>{
       if(en.isIntersecting){
@@ -533,10 +496,7 @@ function setupLazy(){
 }
 
 /* ===== FLASHCARDS ===== */
-function initFlashcards(){
-  orderedVocab=[...(postData.vocabulary||[])];
-  showCard(0);
-}
+function initFlashcards(){orderedVocab=[...(postData.vocabulary||[])];showCard(0);}
 function showCard(index){
   if(!orderedVocab.length)return;
   const v=orderedVocab[index];
@@ -553,12 +513,7 @@ function prevCard(){showCard((currentCardIndex-1+orderedVocab.length)%orderedVoc
 function shuffleCards(){orderedVocab=orderedVocab.sort(()=>Math.random()-0.5);showCard(0);}
 
 /* ===== MINI-QUIZ ===== */
-function initQuiz(){
-  quizQuestions=generateQuizQuestions(postData.vocabulary||[]);
-  quizAnswered=new Array(quizQuestions.length).fill(false);
-  quizScore=0;currentQuizIndex=0;
-  showQuizQuestion(0);
-}
+function initQuiz(){quizQuestions=generateQuizQuestions(postData.vocabulary||[]);quizAnswered=new Array(quizQuestions.length).fill(false);quizScore=0;currentQuizIndex=0;showQuizQuestion(0);}
 function generateQuizQuestions(vocabList){
   const questions=[];
   const allMeanings=vocabList.map(v=>v.meaning);
@@ -694,6 +649,187 @@ function resetMatchSyn(){
 }
 function showAnswersSyn(){if(!loaded.matchSyn)return;(postData.matchingSynonyms||[]).forEach((_,i)=>{document.getElementById('matchSynSel'+i).value=matchSynAnswers[i];});}
 
+/* ===== MATCHING HEADINGS ===== */
+function initMatchHeading(){
+  const data = postData.matchingHeadings || {};
+  const headings = data.headings || [];
+  const questions = data.questions || [];
+  const body = document.getElementById('matchHeadingBody');
+  if(!headings.length || !questions.length){body.innerHTML='<div class="lazy-placeholder">Không có dữ liệu</div>';return;}
+  
+  const romanNumerals = ['I','II','III','IV','V','VI','VII','VIII','IX','X','XI','XII','XIII','XIV','XV'];
+  const headingLabels = headings.map((_,i) => romanNumerals[i] || (i+1));
+  
+  matchHeadingAnswers = [];
+  questions.forEach((q,i) => {
+    matchHeadingAnswers[i] = q.answer; // index of correct heading
+  });
+  
+  // Build headings box
+  let headingsHtml = `<div class="headings-box"><h4>📋 Headings</h4><div class="headings-list">`;
+  headings.forEach((h,i) => {
+    headingsHtml += `<div class="heading-item"><span class="h-label">${headingLabels[i]}</span><span class="h-text">${h}</span></div>`;
+  });
+  headingsHtml += `</div></div>`;
+  
+  // Build questions with dropdowns
+  let questionsHtml = `<div class="match-questions-list">`;
+  questions.forEach((q,i) => {
+    let opts = `<option value="">--</option>`;
+    headings.forEach((_,hi) => {
+      opts += `<option value="${hi}">${headingLabels[hi]}</option>`;
+    });
+    questionsHtml += `<div class="match-item" id="matchHItem${i}">
+      <span class="label">${i+1}.</span>
+      <span class="word">${q.question}</span>
+      <select id="matchHSel${i}">${opts}</select>
+      <span class="feedback" id="matchHFb${i}"></span>
+    </div>`;
+  });
+  questionsHtml += `</div>`;
+  
+  body.innerHTML = headingsHtml + questionsHtml;
+  document.getElementById('matchHeadingScore').textContent = `0 / ${questions.length}`;
+}
+
+function checkMatchHeading(){
+  if(!loaded.matchHeading)return;
+  trackCheck('matchHeading','showMatchHeading');
+  const data = postData.matchingHeadings || {};
+  const questions = data.questions || [];
+  let correct = 0;
+  questions.forEach((_,i) => {
+    const sel = document.getElementById('matchHSel'+i);
+    const fb = document.getElementById('matchHFb'+i);
+    const item = document.getElementById('matchHItem'+i);
+    item.classList.remove('correct','wrong');
+    if(parseInt(sel.value) === matchHeadingAnswers[i]){
+      correct++; fb.textContent='✔'; item.classList.add('correct');
+    } else {
+      fb.textContent='❌'; item.classList.add('wrong');
+    }
+  });
+  document.getElementById('matchHeadingScore').textContent = `${correct} / ${questions.length}`;
+  updateGlobal();
+}
+
+function resetMatchHeading(){
+  if(!loaded.matchHeading)return;
+  checkCounts.matchHeading=0; lockShow('showMatchHeading');
+  const data = postData.matchingHeadings || {};
+  const questions = data.questions || [];
+  questions.forEach((_,i) => {
+    const sel = document.getElementById('matchHSel'+i);
+    const fb = document.getElementById('matchHFb'+i);
+    const item = document.getElementById('matchHItem'+i);
+    if(sel) sel.value = '';
+    if(fb) fb.textContent = '';
+    if(item) item.classList.remove('correct','wrong');
+  });
+  document.getElementById('matchHeadingScore').textContent = `0 / ${questions.length}`;
+  updateGlobal();
+}
+
+function showAnswersHeading(){
+  if(!loaded.matchHeading)return;
+  const data = postData.matchingHeadings || {};
+  const questions = data.questions || [];
+  questions.forEach((_,i) => {
+    const sel = document.getElementById('matchHSel'+i);
+    if(sel) sel.value = matchHeadingAnswers[i];
+  });
+}
+
+/* ===== MATCHING FEATURES ===== */
+function initMatchFeature(){
+  const data = postData.matchingFeatures || {};
+  const features = data.features || [];
+  const questions = data.questions || [];
+  const body = document.getElementById('matchFeatureBody');
+  if(!features.length || !questions.length){body.innerHTML='<div class="lazy-placeholder">Không có dữ liệu</div>';return;}
+  
+  const featureLabels = features.map((_,i) => String.fromCharCode(65+i)); // A, B, C...
+  
+  matchFeatureAnswers = [];
+  questions.forEach((q,i) => {
+    matchFeatureAnswers[i] = q.answer; // index of correct feature
+  });
+  
+  // Build features box
+  let featuresHtml = `<div class="features-box"><h4>🏷️ Features</h4><div class="features-list">`;
+  features.forEach((f,i) => {
+    featuresHtml += `<div class="feature-item"><span class="f-label">${featureLabels[i]}</span><span class="f-text">${f}</span></div>`;
+  });
+  featuresHtml += `</div></div>`;
+  
+  // Build questions with dropdowns
+  let questionsHtml = `<div class="match-questions-list">`;
+  questions.forEach((q,i) => {
+    let opts = `<option value="">--</option>`;
+    features.forEach((_,fi) => {
+      opts += `<option value="${fi}">${featureLabels[fi]}</option>`;
+    });
+    questionsHtml += `<div class="match-item" id="matchFItem${i}">
+      <span class="label">${i+1}.</span>
+      <span class="word">${q.question}</span>
+      <select id="matchFSel${i}">${opts}</select>
+      <span class="feedback" id="matchFFb${i}"></span>
+    </div>`;
+  });
+  questionsHtml += `</div>`;
+  
+  body.innerHTML = featuresHtml + questionsHtml;
+  document.getElementById('matchFeatureScore').textContent = `0 / ${questions.length}`;
+}
+
+function checkMatchFeature(){
+  if(!loaded.matchFeature)return;
+  trackCheck('matchFeature','showMatchFeature');
+  const data = postData.matchingFeatures || {};
+  const questions = data.questions || [];
+  let correct = 0;
+  questions.forEach((_,i) => {
+    const sel = document.getElementById('matchFSel'+i);
+    const fb = document.getElementById('matchFFb'+i);
+    const item = document.getElementById('matchFItem'+i);
+    item.classList.remove('correct','wrong');
+    if(parseInt(sel.value) === matchFeatureAnswers[i]){
+      correct++; fb.textContent='✔'; item.classList.add('correct');
+    } else {
+      fb.textContent='❌'; item.classList.add('wrong');
+    }
+  });
+  document.getElementById('matchFeatureScore').textContent = `${correct} / ${questions.length}`;
+  updateGlobal();
+}
+
+function resetMatchFeature(){
+  if(!loaded.matchFeature)return;
+  checkCounts.matchFeature=0; lockShow('showMatchFeature');
+  const data = postData.matchingFeatures || {};
+  const questions = data.questions || [];
+  questions.forEach((_,i) => {
+    const sel = document.getElementById('matchFSel'+i);
+    const fb = document.getElementById('matchFFb'+i);
+    const item = document.getElementById('matchFItem'+i);
+    if(sel) sel.value = '';
+    if(fb) fb.textContent = '';
+    if(item) item.classList.remove('correct','wrong');
+  });
+  document.getElementById('matchFeatureScore').textContent = `0 / ${questions.length}`;
+  updateGlobal();
+}
+
+function showAnswersFeature(){
+  if(!loaded.matchFeature)return;
+  const data = postData.matchingFeatures || {};
+  const questions = data.questions || [];
+  questions.forEach((_,i) => {
+    const sel = document.getElementById('matchFSel'+i);
+    if(sel) sel.value = matchFeatureAnswers[i];
+  });
+}
+
 /* ===== MCQ ===== */
 function initMCQ(){
   const items=postData.mcqQuestions||[];
@@ -799,7 +935,17 @@ function updateGlobal(){
   if(loaded.matchSyn)(postData.matchingSynonyms||[]).forEach((_,i)=>{const s=document.getElementById('matchSynSel'+i);if(s&&parseInt(s.value)===matchSynAnswers[i])correct++;});
   if(loaded.mcq)(postData.mcqQuestions||[]).forEach((q,qi)=>{const s=document.querySelector(`input[name="mcq${qi}"]:checked`);if(s&&parseInt(s.value)===q.answer)correct++;});
   if(loaded.fill)document.querySelectorAll('#fillBody input').forEach(inp=>{if(inp.classList.contains('correct'))correct++;});
-  const totalQ=quizQuestions.length+(postData.matchingPictures||[]).length+(postData.matchingSynonyms||[]).length+(postData.mcqQuestions||[]).length+fillBlanks.length;
+  if(loaded.matchHeading){
+    const q=(postData.matchingHeadings||{}).questions||[];
+    q.forEach((_,i)=>{const s=document.getElementById('matchHSel'+i);if(s&&parseInt(s.value)===matchHeadingAnswers[i])correct++;});
+  }
+  if(loaded.matchFeature){
+    const q=(postData.matchingFeatures||{}).questions||[];
+    q.forEach((_,i)=>{const s=document.getElementById('matchFSel'+i);if(s&&parseInt(s.value)===matchFeatureAnswers[i])correct++;});
+  }
+  const mhLen=((postData.matchingHeadings||{}).questions||[]).length;
+  const mfLen=((postData.matchingFeatures||{}).questions||[]).length;
+  const totalQ=quizQuestions.length+(postData.matchingPictures||[]).length+(postData.matchingSynonyms||[]).length+(postData.mcqQuestions||[]).length+fillBlanks.length+mhLen+mfLen;
   document.getElementById('correctCount').textContent=correct;
   document.getElementById('totalCount').textContent=totalQ;
   document.getElementById('finalScore').textContent=totalQ>0?(correct/totalQ*10).toFixed(1):'0.0';
