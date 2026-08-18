@@ -153,11 +153,11 @@
   "matchingPictures": [
     {
       "word": "Archaeologist",
-      "pic": "https://images.unsplash.com/photo-1533237264889-2f83d247a81c?w=400"
+      "pic": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQg1uobbRlwmC3vhA8zXw8oqt6RqgMzxPVHxA2QNuiRJz-et91VYSDIO0kh&s=10"
     },
     {
       "word": "Confectionery",
-      "pic": "https://images.unsplash.com/photo-1582053433063-460e1bbc87ad?w=400"
+      "pic": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYm5LwV685LCbQAUFcO_Is_KHBwn2_Lhdz8l1wc2xoa7rgDrnXA9PsIsPz&s=10"
     },
     {
       "word": "Beverage",
@@ -165,23 +165,23 @@
     },
     {
       "word": "Cultivate",
-      "pic": "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=400"
+      "pic": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8y2yZ6POxvbqJX44vrLK5Lox0q7HvWtGfPfd1CsRoZAtm3QEfd9SzNZs&s=10"
     },
     {
       "word": "Inscription",
-      "pic": "https://images.unsplash.com/photo-1535905557558-afc4984b0e92?w=400"
+      "pic": "https://voca-land.sgp1.cdn.digitaloceanspaces.com/43844/1763816717277/c1ca135c.jpg"
     },
     {
       "word": "Tooth Decay",
-      "pic": "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=400"
+      "pic": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXLv_NJ8NYJK5u5pz1n84pPXCRdzPpYnHuKYt3XE7f1unJxSsQIpcNQeFN&s=10"
     },
     {
       "word": "Fatigue",
-      "pic": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=400"
+      "pic": "https://domf5oio6qrcr.cloudfront.net/medialibrary/6306/conversions/b66a9e0c-3a28-4486-bbab-2430827c0b15-thumb.jpg
     },
     {
       "word": "Prehistoric",
-      "pic": "https://images.unsplash.com/photo-1569263979104-865ab7cd8d13?w=400"
+      "pic": "https://cdn.prod.website-files.com/621f789c295b777169edc867/6266c0bb7bba3f3d1a01e499_Dinos-%26-Prehistoric-Creatures-Collection-Header.jpg"
     }
   ],
   "matchingSynonyms": [
@@ -315,5 +315,6 @@
       "answer": 0
     }
   ],
-  "fillInBlank": "Long before modern factories existed, prehistoric humans satisfied their sweet cravings using (11) _______________. As civilizations developed, Egyptians combined this natural sweetener with fruits and nuts, while archaeologists even discovered sweet treats in pharaohs' tombs. In addition to being enjoyed as food, ancient sweets frequently served as treatments for (12) _______________ problems. For example, herbs like licorice were utilized to relieve symptoms such as sore throats and (13) _______________. Over time, candies became linked with special occasions; early American (14) _______________ wrote romantic messages directly onto sweets. Today, manufactured items often feature printed (15) _______________ on heart-shaped candies during holidays."
+   "fillInBlank": "Long before modern factories existed, prehistoric humans satisfied their sweet cravings using ___honey___. As civilizations developed, Egyptians combined this natural sweetener with fruits and nuts, while archaeologists even discovered sweet treats in pharaohs' tombs. In addition to being enjoyed as food, ancient sweets frequently served as treatments for ___digestive___ problems. For example, herbs like licorice were utilized to relieve symptoms such as sore throats and ___fatigue___. Over time, candies became linked with special occasions; early American ___colonists___ wrote romantic messages directly onto sweets. Today, manufactured items often feature printed ___inscriptions___ on heart-shaped candies during holidays.",
+
 }
