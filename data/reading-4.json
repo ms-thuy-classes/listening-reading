@@ -1,1 +1,313 @@
-
+{
+  "id": "reading-4",
+  "title": "Eating well",
+  "description": "Bài đọc về ăn uống lành mạnh.",
+  "layout": "reading",
+  "duration": "20 min",
+  "level": "B2",
+  "tags": ["b1", "ielts", "health", "vocabulary"],
+  "pdf": "https://raw.githubusercontent.com/ms-thuy-classes/audio/main/pdf/Eating%20well.pdf",
+  "passage": "",
+  "vocabulary": [
+    {
+      "word": "Vital",
+      "ipa": "/ˈvaɪtl/",
+      "wordForm": "Adjective",
+      "meaning": "Thiết yếu, vô cùng quan trọng",
+      "example": "Eating well plays a vital role in good health and disease prevention."
+    },
+    {
+      "word": "Prevention",
+      "ipa": "/prɪˈvenʃn/",
+      "wordForm": "Noun",
+      "meaning": "Sự phòng ngừa, ngăn ngừa",
+      "example": "Choosing natural foods is important for disease prevention."
+    },
+    {
+      "word": "Processed",
+      "ipa": "/ˈprɑːsest/",
+      "wordForm": "Adjective",
+      "meaning": "Đã qua chế biến",
+      "example": "Choosing food that is close to its natural form and not overly processed is best practice."
+    },
+    {
+      "word": "Moderation",
+      "ipa": "/ˌmɑːdəˈreɪʃn/",
+      "wordForm": "Noun",
+      "meaning": "Sự tiết chế, mức độ vừa phải",
+      "example": "Restaurant meals tend to have more salt and fat, so eat out in moderation."
+    },
+    {
+      "word": "Saturated fats",
+      "ipa": "/ˌsætʃəreɪtɪd ˈfæts/",
+      "wordForm": "Noun Phrase",
+      "meaning": "Chất béo bão hòa",
+      "example": "Butter and processed meats are high in saturated fats."
+    },
+    {
+      "word": "Refined grains",
+      "ipa": "/rɪˈfaɪnd ɡreɪnz/",
+      "wordForm": "Noun Phrase",
+      "meaning": "Ngũ cốc tinh chế",
+      "example": "Limit refined grains like white bread and white rice."
+    },
+    {
+      "word": "Nutrient",
+      "ipa": "/ˈnuːtriənt/",
+      "wordForm": "Noun",
+      "meaning": "Chất dinh dưỡng",
+      "example": "Doughnuts and pastries are high in sugar and low in nutrients."
+    },
+    {
+      "word": "Antioxidant",
+      "ipa": "/ˌæntiˈɑːksɪdənt/",
+      "wordForm": "Noun",
+      "meaning": "Chất chống oxy hóa",
+      "example": "Tomatoes are an excellent source of antioxidants."
+    },
+    {
+      "word": "Digestive health",
+      "ipa": "/daɪˈdʒestɪv helθ/",
+      "wordForm": "Noun Phrase",
+      "meaning": "Sức khỏe tiêu hóa",
+      "example": "Diets high in fiber promote digestive health."
+    },
+    {
+      "word": "Cholesterol",
+      "ipa": "/kəˈlestərɔːl/",
+      "wordForm": "Noun",
+      "meaning": "Cholesterol / mỡ máu",
+      "example": "High fiber foods can help lower cholesterol."
+    },
+    {
+      "word": "Concentration",
+      "ipa": "/ˌkɑːnsnˈtreɪʃn/",
+      "wordForm": "Noun",
+      "meaning": "Sự tập trung",
+      "example": "Eating breakfast improves focus and concentration in children."
+    },
+    {
+      "word": "Replenish",
+      "ipa": "/rɪˈplenɪʃ/",
+      "wordForm": "Verb",
+      "meaning": "Bổ sung, làm đầy lại",
+      "example": "Bananas help replenish carbohydrates and bodily fluids burned during exercise."
+    },
+    {
+      "word": "Affordable",
+      "ipa": "/əˈfɔːrdəbl/",
+      "wordForm": "Adjective",
+      "meaning": "Giá cả hợp lý, vừa túi tiền",
+      "example": "Some consider bananas the perfect food because they are affordable and nutritious."
+    },
+    {
+      "word": "Nutritional value",
+      "ipa": "/nuːˈtrɪʃənl ˈvæljuː/",
+      "wordForm": "Noun Phrase",
+      "meaning": "Giá trị dinh dưỡng",
+      "example": "Apples are low in calories and high in nutritional value."
+    },
+    {
+      "word": "Relative",
+      "ipa": "/ˈrelətɪv/",
+      "wordForm": "Noun",
+      "meaning": "Họ hàng, loài cùng chi/họ",
+      "example": "The tomato is a close relative of the eggplant and red pepper."
+    },
+    {
+      "word": "Legume",
+      "ipa": "/ˈleɡjuːm/",
+      "wordForm": "Noun",
+      "meaning": "Họ đậu (hạt đậu, đậu đỗ)",
+      "example": "Legumes are good plant-based sources of protein."
+    },
+    {
+      "word": "Whole grains",
+      "ipa": "/hoʊl ɡreɪnz/",
+      "wordForm": "Noun Phrase",
+      "meaning": "Ngũ cốc nguyên hạt",
+      "example": "Choose whole grains instead of refined options like white pasta."
+    },
+    {
+      "word": "Fiber",
+      "ipa": "/ˈfaɪbər/",
+      "wordForm": "Noun",
+      "meaning": "Chất xơ",
+      "example": "Broccoli and dark green leafy vegetables are excellent sources of fiber."
+    },
+    {
+      "word": "Potent",
+      "ipa": "/ˈpoʊtnt/",
+      "wordForm": "Adjective",
+      "meaning": "Có hiệu lực mạnh mẽ, công hiệu",
+      "example": "Fresh vegetables contain potent compounds that help protect the body."
+    },
+    {
+      "word": "Hydration",
+      "ipa": "/haɪˈdreɪʃn/",
+      "wordForm": "Noun",
+      "meaning": "Sự cấp nước, giữ nước",
+      "example": "Proper hydration is essential when exercising for long periods."
+    }
+  ],
+  "matchingPictures": [
+    {
+      "word": "Broccoli",
+      "pic": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Broccolo_01.jpg/800px-Broccolo_01.jpg"
+    },
+    {
+      "word": "Eggplant",
+      "pic": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Solanum_melongena_24_08_2012_%281%29.JPG/800px-Solanum_melongena_24_08_2012_%281%29.JPG"
+    },
+    {
+      "word": "Avocado",
+      "pic": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Avocado_Hass_-_single_and_halved.jpg/800px-Avocado_Hass_-_single_and_halved.jpg"
+    },
+    {
+      "word": "Rainbow trout",
+      "pic": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Oncorhynchus_mykiss_1.jpg/800px-Oncorhynchus_mykiss_1.jpg"
+    },
+    {
+      "word": "Swiss cheese",
+      "pic": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Emmentaler_ch33.jpg/800px-Emmentaler_ch33.jpg"
+    },
+    {
+      "word": "Legumes",
+      "pic": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Various_legumes.jpg/800px-Various_legumes.jpg"
+    },
+    {
+      "word": "Corn tortilla",
+      "pic": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Corn_tortillas_stack.jpg/800px-Corn_tortillas_stack.jpg"
+    }
+  ],
+  "matchingSynonyms": [
+    {
+      "word": "Vital",
+      "synonym": "Essential / Crucial"
+    },
+    {
+      "word": "Replenish",
+      "synonym": "Restore / Refill"
+    },
+    {
+      "word": "Affordable",
+      "synonym": "Inexpensive / Low-cost"
+    },
+    {
+      "word": "Moderation",
+      "synonym": "Limitation / Control"
+    },
+    {
+      "word": "Nutrient",
+      "synonym": "Nourishing substance"
+    },
+    {
+      "word": "Prevention",
+      "synonym": "Avoidance / Protection"
+    },
+    {
+      "word": "Concentration",
+      "synonym": "Focus / Attention"
+    }
+  ],
+  "mcqQuestions": [
+    {
+      "q": "What is the main purpose of the passage?",
+      "options": [
+        "To convince readers to strictly follow a vegetarian diet.",
+        "To explain the economic benefits of buying organic food products.",
+        "To provide practical nutritional guidance on choosing healthier food choices.",
+        "To analyze the medical history of diabetes and cardiovascular diseases."
+      ],
+      "answer": 2
+    },
+    {
+      "q": "Which statement best summarizes the section about eating breakfast?",
+      "options": [
+        "Breakfast is optional, but high-protein meals always guarantee weight loss.",
+        "A nutritious breakfast enhances brain function and supports overall health.",
+        "Eating pastries in the morning is more beneficial than skipping breakfast entirely.",
+        "Adolescents are the only age group that benefits from eating breakfast daily."
+      ],
+      "answer": 1
+    },
+    {
+      "q": "What is the central message of the \"Tips for eating well\" section?",
+      "options": [
+        "Individuals should completely eliminate all dairy products and fats.",
+        "Processed meats and refined grains should replace natural plant foods.",
+        "Healthy eating relies on prioritizing plant foods while limiting processed items and saturated fats.",
+        "The MyPlate app is the only effective way to track daily food consumption."
+      ],
+      "answer": 2
+    },
+    {
+      "q": "According to the text, why are bananas considered an excellent food choice for active individuals?",
+      "options": [
+        "They lower cholesterol faster than any other fruit.",
+        "They contain no fat or cholesterol and help restore carbohydrates burned during physical activity.",
+        "They contain high amounts of sodium that prevent muscle cramps.",
+        "They act as a natural toothbrush that kills mouth bacteria."
+      ],
+      "answer": 1
+    },
+    {
+      "q": "How were tomatoes viewed historically, according to the text?",
+      "options": [
+        "They were cultivated by Spanish explorers before the Aztecs discovered them.",
+        "They were grown by the Aztecs and are closely related to deadly nightshade.",
+        "They were initially used exclusively as a medicinal herb for heart health.",
+        "They were considered a rare fruit only available in Central America."
+      ],
+      "answer": 1
+    },
+    {
+      "q": "Which nutrient present in dark green leafy vegetables helps promote healthy digestion?",
+      "options": [
+        "Calcium",
+        "Iron",
+        "Fiber",
+        "Folate"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "What role does the MyPlate app play in dietary health?",
+      "options": [
+        "It assists users in developing balanced and healthy eating habits.",
+        "It measures the exact percentage of antioxidants in meal portions.",
+        "It calculates daily calories burned during 90-minute workouts.",
+        "It replaces the need to consult medical professionals or dietitians."
+      ],
+      "answer": 0
+    },
+    {
+      "q": "Apples can function as an organic alternative to cleaning teeth and reducing oral bacteria.",
+      "options": [
+        "TRUE",
+        "FALSE",
+        "NOT GIVEN"
+      ],
+      "answer": 0
+    },
+    {
+      "q": "Consuming meals prepared at commercial restaurants is more detrimental to cardiovascular health than home-cooked food.",
+      "options": [
+        "TRUE",
+        "FALSE",
+        "NOT GIVEN"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "Consuming high-quality protein during breakfast helps teenagers maintain sustained energy throughout the school day.",
+      "options": [
+        "TRUE",
+        "FALSE",
+        "NOT GIVEN"
+      ],
+      "answer": 2
+    }
+  ],
+  "fillInBlank": "Eating a variety of foods in their natural form plays a ___vital___ role in avoiding illness and supporting health. Because takeout dishes contain excess salt and sugar, consumers should practice ___moderation___ when eating out. Dark leafy green vegetables are rich in carotenoids and act as ___antioxidants___ within the human body. Diets containing a high amount of dietary fiber are effective at helping to reduce ___cholesterol___ levels. The ___MyPlate___ application was created by the U.S. Department of Agriculture to aid users in building better eating patterns. Consuming a wholesome breakfast helps feed the brain and improves both mental focus and ___concentration___ in children. Two bananas can supply sufficient stamina for a strenuous ___90-minute___ workout. Bananas are useful after exercise because they ___replenish___ glycogen and lost bodily fluids. Although often treated as a vegetable in cooking, the tomato is actually a ___juicy nutritious___ fruit. Tomatoes are rich in antioxidants, low in fat, and contain zero ___cholesterol___."
+}
