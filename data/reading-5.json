@@ -1,0 +1,319 @@
+{
+  "id": "reading-5",
+  "title": "World of Wonder: The Story of Candy",
+  "description": "Bài đọc về lịch sử, định nghĩa và ý nghĩa văn hóa của kẹo qua các thời kỳ.",
+  "layout": "reading",
+  "duration": "20 min",
+  "level": "B2",
+  "tags": ["b2", "ielts", "history", "vocabulary", "food"],
+  "pdf": "https://raw.githubusercontent.com/ms-thuy-classes/listening-reading/main/pdf/candy%202.pdf",
+  "passage": "WORLD OF WONDER: THE STORY OF CANDY\nExploring the realms of history, science, nature and technology\n\nParagraph A\nThe word \"candy\" is derived from the Arabic word qandi, which means \"something made with sugar.\" Sugary treats are categorized as confections, and a confectioner is a professional who specializes in crafting these sweets. By definition, candy is a sweet confection made with sugar, alternative sweeteners, and artificial or natural flavors. Confectionery items encompass a broad variety of hard candies, lollipops, candy bars, chocolate, and candy floss. However, conventional desserts such as ice cream, cakes, and puddings are not classified as confections.\n\nParagraph B\nHistorically, honey was likely the first sweet snack enjoyed by prehistoric humans. Thousands of years ago, ancient Egyptians combined fruits, nuts, and honey to create early forms of candy. In fact, archaeologists have discovered marshmallow and licorice treats inside the tombs of pharaohs. Honey remained the dominant sweetener until sugar cane was first cultivated in ancient China, India, and Persia around A.D. 500. Sugar made its way to Europe around A.D. 1100. Later, in 1519, Spanish explorers in Mexico discovered cacao, the foundation of chocolate. Initially, chocolate was served not as a sweet bar, but as a medicinal beverage. The solid chocolate bar was not invented until the late 1870s.\n\nParagraph C\nBeyond being an indulgence, many early sweets were consumed primarily as medical treatments for digestive issues. Modern items like cough drops and peppermint sticks trace their origins back to this healthcare tradition. Licorice root mixed with honey or sugar was historically used to treat arthritis, asthma, constipation, fatigue, and sore throats.\n\nParagraph D\nCandies have also developed strong cultural connections to holidays. In 1868, Richard Cadbury created the first Valentine candy box, which featured a painting of his daughter and her kitten. Early American colonists made romantic treats by scratching love notes directly onto candy. Today, around 8 billion candy hearts are produced annually with inscriptions such as \"Be Mine\" and \"Kiss Me\". Similarly, during the four weeks preceding Christmas, nearly 2 billion candy canes are sold in the United States alone.",
+  "vocabulary": [
+    {
+      "word": "Confectionery",
+      "ipa": "/kənˈfek.ʃən.er.i/",
+      "wordForm": "Noun",
+      "meaning": "Bánh kẹo, ngành sản xuất kẹo",
+      "example": "Candy and sugary treats are categorized as confections."
+    },
+    {
+      "word": "Derived",
+      "ipa": "/dɪˈraɪvd/",
+      "wordForm": "Verb",
+      "meaning": "Bắt nguồn từ",
+      "example": "The word candy is derived from the Arabic word qandi."
+    },
+    {
+      "word": "Relish",
+      "ipa": "/ˈrel.ɪʃ/",
+      "wordForm": "Verb",
+      "meaning": "Thưởng thức, thích thú",
+      "example": "Candy lovers relish sweet tastes."
+    },
+    {
+      "word": "Cultivate",
+      "ipa": "/ˈkʌl.tɪ.veɪt/",
+      "wordForm": "Verb",
+      "meaning": "Trồng trọt, canh tác",
+      "example": "Sugar cane was first cultivated in ancient China, India, and Persia."
+    },
+    {
+      "word": "Archaeologist",
+      "ipa": "/ˌɑː.kiɒl.ə.dʒɪst/",
+      "wordForm": "Noun",
+      "meaning": "Nhà khảo cổ học",
+      "example": "Archaeologists have discovered marshmallow and licorice treats in pharaohs' tombs."
+    },
+    {
+      "word": "Medicinal",
+      "ipa": "/məˈdɪs.ɪ.nəl/",
+      "wordForm": "Adjective",
+      "meaning": "Thuộc y học, có tính chữa bệnh",
+      "example": "Chocolate was first served as a medicinal beverage."
+    },
+    {
+      "word": "Digestive",
+      "ipa": "/daɪˈdʒes.tɪv/",
+      "wordForm": "Adjective",
+      "meaning": "Thuộc hệ tiêu hóa",
+      "example": "Many early sweets were consumed as medical treatments for digestive issues."
+    },
+    {
+      "word": "Fatigue",
+      "ipa": "/fəˈtiːɡ/",
+      "wordForm": "Noun",
+      "meaning": "Sự mệt mỏi, kiệt sức",
+      "example": "Licorice root was used to treat arthritis, asthma, constipation, and fatigue."
+    },
+    {
+      "word": "Inscription",
+      "ipa": "/ɪnˈskrɪp.ʃən/",
+      "wordForm": "Noun",
+      "meaning": "Câu/chữ khắc hoặc ghi trên bề mặt",
+      "example": "Candy hearts are produced with inscriptions such as 'Be Mine' and 'Kiss Me'."
+    },
+    {
+      "word": "Contribute",
+      "ipa": "/kənˈtrɪb.juːt/",
+      "wordForm": "Verb",
+      "meaning": "Góp phần, gây ra",
+      "example": "If you brush after snacks, candy will not contribute to tooth decay."
+    },
+    {
+      "word": "Decay",
+      "ipa": "/dɪˈkeɪ/",
+      "wordForm": "Noun/Verb",
+      "meaning": "Sự sâu (răng), mục nát",
+      "example": "Candy will not contribute to tooth decay if you brush after eating."
+    },
+    {
+      "word": "Patented",
+      "ipa": "/ˈpeɪ.tən.tɪd/",
+      "wordForm": "Adjective/Verb",
+      "meaning": "Được cấp bằng sáng chế",
+      "example": "The first machine for making cotton candy was patented in 1899."
+    },
+    {
+      "word": "Prehistoric",
+      "ipa": "/ˌpriː.hɪˈstɒr.ɪk/",
+      "wordForm": "Adjective",
+      "meaning": "Tiền sử",
+      "example": "Honey was likely the first sweet snack enjoyed by prehistoric humans."
+    },
+    {
+      "word": "Estimate",
+      "ipa": "/ˈes.tɪ.meɪt/",
+      "wordForm": "Verb/Noun",
+      "meaning": "Ước tính",
+      "example": "It is estimated that 99% of North American households buy candy at least once a week."
+    },
+    {
+      "word": "Sweetener",
+      "ipa": "/ˈswiːt.nər/",
+      "wordForm": "Noun",
+      "meaning": "Chất tạo ngọt",
+      "example": "Candy is made with sugar and other sweeteners."
+    },
+    {
+      "word": "Beverage",
+      "ipa": "/ˈbev.ər.ɪdʒ/",
+      "wordForm": "Noun",
+      "meaning": "Đồ uống",
+      "example": "Chocolate was first served as a medicinal beverage."
+    },
+    {
+      "word": "Constipation",
+      "ipa": "/ˌkɒn.stɪˈpeɪ.ʃən/",
+      "wordForm": "Noun",
+      "meaning": "Bệnh táo bón",
+      "example": "Licorice root was used to treat constipation and other ailments."
+    },
+    {
+      "word": "Tradition",
+      "ipa": "/trəˈdɪ.ən/",
+      "wordForm": "Noun",
+      "meaning": "Truyền thống",
+      "example": "Modern cough drops trace their origins back to this healthcare tradition."
+    },
+    {
+      "word": "Colonist",
+      "ipa": "/ˈkɒl.ə.nɪst/",
+      "wordForm": "Noun",
+      "meaning": "Người đi thực dân/khai hoang",
+      "example": "Early American colonists made romantic treats by scratching love notes on candy."
+    },
+    {
+      "word": "Consume",
+      "ipa": "/kənˈsjum/",
+      "wordForm": "Verb",
+      "meaning": "Tiêu thụ, ăn/uống",
+      "example": "Many early sweets were consumed as medical treatments."
+    }
+  ],
+  "matchingPictures": [
+    {
+      "word": "Archaeologist",
+      "pic": "https://images.unsplash.com/photo-1533237264889-2f83d247a81c?w=400"
+    },
+    {
+      "word": "Confectionery",
+      "pic": "https://images.unsplash.com/photo-1582053433063-460e1bbc87ad?w=400"
+    },
+    {
+      "word": "Beverage",
+      "pic": "https://images.unsplash.com/photo-1544145945-f90425347f5e?w=400"
+    },
+    {
+      "word": "Cultivate",
+      "pic": "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=400"
+    },
+    {
+      "word": "Inscription",
+      "pic": "https://images.unsplash.com/photo-1535905557558-afc4984b0e92?w=400"
+    },
+    {
+      "word": "Tooth Decay",
+      "pic": "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=400"
+    },
+    {
+      "word": "Fatigue",
+      "pic": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=400"
+    },
+    {
+      "word": "Prehistoric",
+      "pic": "https://images.unsplash.com/photo-1569263979104-865ab7cd8d13?w=400"
+    }
+  ],
+  "matchingSynonyms": [
+    {
+      "word": "Relish",
+      "synonym": "Savor / Enjoy"
+    },
+    {
+      "word": "Derived",
+      "synonym": "Originated / Stemmed"
+    },
+    {
+      "word": "Consume",
+      "synonym": "Eat / Devour"
+    },
+    {
+      "word": "Estimate",
+      "synonym": "Calculate / Gauge"
+    },
+    {
+      "word": "Contribute",
+      "synonym": "Lead to / Cause"
+    },
+    {
+      "word": "Cultivate",
+      "synonym": "Farm / Grow"
+    },
+    {
+      "word": "Fatigue",
+      "synonym": "Exhaustion / Tiredness"
+    },
+    {
+      "word": "Medicinal",
+      "synonym": "Therapeutic / Healing"
+    }
+  ],
+  "mcqQuestions": [
+    {
+      "q": "What is the main purpose of the reading passage?",
+      "options": [
+        "To argue that modern candies are healthier than ancient sweets.",
+        "To trace the historical evolution, definition, and cultural significance of candy.",
+        "To explain the manufacturing process of Cadbury chocolates.",
+        "To compare the popularity of sugar cane with honey in European history."
+      ],
+      "answer": 1
+    },
+    {
+      "q": "According to Paragraph A, which of the following is NOT classified as a confection?",
+      "options": [
+        "Lollipops",
+        "Hard candies",
+        "Puddings",
+        "Candy floss"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "Where was sugar cane originally cultivated around A.D. 500?",
+      "options": [
+        "Mexico",
+        "Europe",
+        "Egypt",
+        "China, India, and Persia"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "How was cacao initially consumed when Spanish explorers found it in Mexico?",
+      "options": [
+        "As a solid candy bar",
+        "As a medicinal drink",
+        "Mixed with baked cakes",
+        "Combined with licorice root"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "What decorated the first Valentine candy box invented by Richard Cadbury in 1868?",
+      "options": [
+        "Written love notes",
+        "A painting of his daughter and her kitten",
+        "Candy canes and hearts",
+        "An inscription saying 'Be Mine'"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "Desserts such as ice cream and cakes are formally categorized as confectionery items.",
+      "options": [
+        "TRUE",
+        "FALSE",
+        "NOT GIVEN"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "Sugar cane was introduced to Europe before it was grown in Asia.",
+      "options": [
+        "TRUE",
+        "FALSE",
+        "NOT GIVEN"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "Early medical uses of licorice root included treating joint problems like arthritis.",
+      "options": [
+        "TRUE",
+        "FALSE",
+        "NOT GIVEN"
+      ],
+      "answer": 0
+    },
+    {
+      "q": "Richard Cadbury earned a massive fortune from selling his Valentine candy boxes.",
+      "options": [
+        "TRUE",
+        "FALSE",
+        "NOT GIVEN"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "Approximately two billion candy canes are purchased in the United States during the Christmas season.",
+      "options": [
+        "TRUE",
+        "FALSE",
+        "NOT GIVEN"
+      ],
+      "answer": 0
+    }
+  ],
+  "fillInBlank": "Long before modern factories existed, prehistoric humans satisfied their sweet cravings using (11) _______________. As civilizations developed, Egyptians combined this natural sweetener with fruits and nuts, while archaeologists even discovered sweet treats in pharaohs' tombs. In addition to being enjoyed as food, ancient sweets frequently served as treatments for (12) _______________ problems. For example, herbs like licorice were utilized to relieve symptoms such as sore throats and (13) _______________. Over time, candies became linked with special occasions; early American (14) _______________ wrote romantic messages directly onto sweets. Today, manufactured items often feature printed (15) _______________ on heart-shaped candies during holidays."
+}
