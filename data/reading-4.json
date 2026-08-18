@@ -6,7 +6,7 @@
   "duration": "20 min",
   "level": "B2",
   "tags": ["b1", "ielts", "health", "vocabulary"],
-  "pdf": "https://raw.githubusercontent.com/ms-thuy-classes/audio/main/pdf/Eating%20well.pdf",
+  "pdf": "https://raw.githubusercontent.com/ms-thuy-classes/audio/main/pdf/Eating%20well%20(1).pdf",
   "passage": "World of Wonder: EATING WELL\nExploring the realms of history, science, nature and technology\n\nMain Overview\nEating well plays a vital role in good health and disease prevention. Eating lots of fruits and vegetables is one of the easiest and most delicious ways to eat healthy. Choosing food that is close to its natural form and not overly processed is best practice. Restaurant and takeout meals tend to have more added salt, sugar and fat, so eat out in moderation.\n\nKey Sections & Dietary Advice\n\nTips for Eating Well\n\nEat more foods from plants: Fruits, vegetables, beans, whole grains, and nuts. If you fill half your plate with fruits and vegetables, you are on your way to a healthy diet.\n\nAvoid foods high in saturated and trans fats: Butter, ice cream, cheese, chocolate and processed meat should be eaten in moderation.\n\nLimit refined grains: White bread, white rice and white pasta act just like sugar in your body—choose whole grains instead.\n\nHealthy snacks: Nibble on celery and carrots, or bite into some fruit instead of chips or cookies. Other good snacks include low-fat yogurt, peanut butter and celery, or whole-grain crackers and cheese.\n\nDark Green Veggies\n\nBroccoli and dark green leafy vegetables, like spinach and kale, are excellent sources of fiber, folate and carotenoids. These vegetables also contain vitamins C and K and the minerals iron and calcium. These foods are famous for acting as antioxidants in the body. Diets high in fiber promote digestive health and can help lower cholesterol.\n\nThe MyPlate App\n\nThe MyPlate app, developed by the U.S. Department of Agriculture, can help you build healthy eating habits.\n\nEat More Fish!\n\nLimit how much red meat (beef, pork and lamb) and processed meat (bacon, hot dogs, bologna, etc.) you eat—they can be bad for the heart. Serve good sources of protein like chicken (no skin), fish, eggs, beans and nuts.\n\nAn Apple a Day\n\nThere is some truth in the old saying 'an apple a day keeps the doctor away.' Apples (and other fruits) are very good for you—helping to reduce the risk of diabetes, high blood pressure and many types of cancer. Apples are low in calories and high in nutritional value. They also serve as a natural toothbrush—cleaning teeth and killing bacteria in the mouth.\n\nAlmost Perfect (Bananas)\n\nSome consider bananas the perfect food because they are affordable, delicious and nutritious. Bananas have no fat, cholesterol or sodium, and they are loaded with vitamins. Just two bananas provide enough energy for a strenuous 90-minute workout. They also replenish carbohydrates, glycogen and bodily fluids burned during exercise.\n\nThe Most Important Meal of the Day (Breakfast)\n\nStudies show that eating breakfast feeds your brain—improving focus and concentration. Children who eat a good breakfast get better grades and tend to be more active and healthy. Any breakfast is better than no breakfast, but doughnuts and pastries are high in sugar and low in nutrients. Eating a breakfast high in quality protein—from enriched cereal, yogurt, milk, cheese, eggs, meat or fish—can even help teenagers lose weight. How about some hot oatmeal with nuts and maple syrup, or some avocado spread on rye toast?\n\nTomatoes Are Fruit\n\nThe tomato is a juicy, nutritious fruit usually eaten as a vegetable. It is a close relative of the eggplant, red pepper, potato and the highly poisonous belladonna. Native to Central America, the tomato was grown by the Aztecs long before Spanish explorers discovered it. Today, there are thousands of tomato varieties. Tomatoes have just 18 calories per 3.5-ounce serving. They are also very low in fat and have no cholesterol. They are an excellent source of antioxidants, dietary fiber, minerals and vitamins.\n\nVisual Food Labels Featured in Article\n\nVegetables & Greens: Broccoli, Asparagus, Cauliflower, Bok choy, Eggplant, Avocado, Tomatoes\nProteins & Seafood: Rainbow trout, Legumes\nDairy & Staples: Swiss cheese, Corn tortilla, Pita, Bagel, Brown rice, Strawberry, Banana",
   "vocabulary": [
     {
@@ -151,13 +151,29 @@
     }
   ],
   "matchingPictures": [
+     {
+      "word": "Prevention",
+      "pic": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1hqVYGbUlQb7F2ZdFAdDLeg1c46gxrE5lnNCfw2wcBaCGk_qHLN2G4wDz&s=10"
+    },
+     {
+      "word": "Processed",
+      "pic": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUMu2S0VP85SvxKyDTih8P2qa7SQ2ikE9vMt61sM1fdaXSyfiSbYSOW202&s=10"
+    },
+     {
+      "word": "Nutrient",
+      "pic": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_nIbcpM51WI6pG6D-WZKHmJyv-0vPtbhSFFDIjK0HaYIRMsmJLevQ76c&s=10"
+    },
+     {
+      "word": "Concentration",
+      "pic": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRrCBwiTD8iM4uOpDEKywytNxUggBM_s_6w0b8yEjvF1c-DBIFFNWZLriK&s=10"
+    },
     {
       "word": "Broccoli",
-      "pic": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Broccolo_01.jpg/800px-Broccolo_01.jpg"
+      "pic": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAJ2TpARDEJSQFrTZIPVNyXFK4_ibGwYPp_J5W3FzQfQ&s=10"
     },
     {
       "word": "Eggplant",
-      "pic": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Solanum_melongena_24_08_2012_%281%29.JPG/800px-Solanum_melongena_24_08_2012_%281%29.JPG"
+      "pic": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZbfwBv4xFRUENt9RFA9t1lTAKlUCht-FnHmqNFQ70dA&s=10"
     },
     {
       "word": "Avocado",
@@ -165,19 +181,19 @@
     },
     {
       "word": "Rainbow trout",
-      "pic": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Oncorhynchus_mykiss_1.jpg/800px-Oncorhynchus_mykiss_1.jpg"
+      "pic": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmZ-AUFDiL5CJGddNd32a0Igyl0wVKQFiHNRgB4OBwYQ&s=10"
     },
     {
-      "word": "Swiss cheese",
-      "pic": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Emmentaler_ch33.jpg/800px-Emmentaler_ch33.jpg"
+      "word": "Affordable",
+      "pic": "https://voca-land.sgp1.cdn.digitaloceanspaces.com/0/1757656261945/cc8c7b49.jpg"
     },
     {
-      "word": "Legumes",
-      "pic": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Various_legumes.jpg/800px-Various_legumes.jpg"
+      "word": "Hydration",
+      "pic": "https://familydoctor.org/wp-content/uploads/2023/03/shutterstock_2463542855-1-scaled.jpg"
     },
     {
-      "word": "Corn tortilla",
-      "pic": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Corn_tortillas_stack.jpg/800px-Corn_tortillas_stack.jpg"
+      "word": "Replenish",
+      "pic": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVoIEa3sRYXcElwcbLSLU7iFkEhMRWrnbbx_5rVxt_I8I_yYBwO5IkilE&s=10"
     }
   ],
   "matchingSynonyms": [
