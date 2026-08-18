@@ -456,9 +456,13 @@ function formatPassageBlock(block, vocabulary) {
 function initPDF() {
   const frame = document.getElementById('pdfFrame');
   if (postData.pdf) {
-    frame.innerHTML = `<iframe src="${postData.pdf}"></iframe>`;
+    // Sử dụng PDF.js Viewer của Mozilla để render PDF từ link raw GitHub
+    // Giúp tránh lỗi trình duyệt bắt tải xuống do header của GitHub
+    const encodedPdfUrl = encodeURIComponent(postData.pdf);
+    frame.innerHTML = `<iframe src="https://mozilla.github.io/pdf.js/web/viewer.html?file=${encodedPdfUrl}" style="width:100%;height:100%;border:none;" allowfullscreen></iframe>`;
     return;
   }
+  
   if (postData.passage) {
     const blocks = postData.passage.split('\n\n').map(block => {
       block = block.trim();
@@ -477,6 +481,7 @@ function initPDF() {
     frame.innerHTML = `<div class="passage-scroll">${blocks}</div>`;
     return;
   }
+  
   frame.innerHTML = `<div class="lazy-placeholder">Không có bài đọc</div>`;
 }
 
