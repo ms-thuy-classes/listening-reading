@@ -40,7 +40,7 @@
   "duration": "20 min",
   "vocabCount": 20,
   "dataFile": "data/reading-6.json"
-}
+},
   {"id": "listening-7", "title": "Interview: Life as a Digital Nomad", "description": "Phỏng vấn một digital nomad về cuộc sống làm việc tự do khắp thế giới.", "thumbnail": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=400", "tags": ["b2", "toeic"], "layout": "listening", "duration": "16 min", "vocabCount": 13, "dataFile": "data/listening-7.json"},
   {"id": "reading-7", "title": "Renewable Energy Sources", "description": "Tổng quan về các nguồn năng lượng tái tạo: mặt trời, gió, thủy điện.", "thumbnail": "https://images.unsplash.com/photo-1509391366360-7af84c00d82b?w=400", "tags": ["b2", "c1", "ielts"], "layout": "reading", "duration": "21 min", "vocabCount": 19, "dataFile": "data/reading-7.json"},
   {"id": "listening-8", "title": "Movie Scene: The Pursuit of Happyness", "description": "Luyện nghe qua phân cảnh cảm động trong bộ phim The Pursuit of Happyness.", "thumbnail": "https://images.unsplash.com/photo-1478720568477-152d9b164e26?w=400", "tags": ["b1", "b2"], "layout": "listening", "duration": "8 min", "vocabCount": 9, "dataFile": "data/listening-8.json"},
