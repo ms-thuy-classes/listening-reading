@@ -1,1 +1,274 @@
-a
+{
+  "id": "reading-6",
+  "title": "Family Reunion: A Summer Narrative",
+  "description": "Bài đọc về những kỷ niệm, tình cảm gia đình và ý nghĩa của sự gắn kết qua các thế hệ trong buổi tụ họp mùa hè.",
+  "layout": "reading",
+  "duration": "20 min",
+  "level": "B2",
+  "tags": ["b2", "ielts", "family", "vocabulary", "narrative"],
+  "pdf": "",
+  "passage": "Once a year, when the summer breeze starts to playfully toss the leaves, our family comes together at our grandparents’ countryside home. It’s a charming old house with enough space to accommodate the extended family, and it holds countless memories of our collective childhood. The garden is always blooming with flowers, making it the perfect backdrop for our reunion. My grandparents, both in their late seventies, are the heart of the family. They await our arrival with the same excitement every time.\n\nAs we pull into the gravel driveway, aunts, uncles, and cousins emerge to greet us. Uncle George, a cheerful man with a booming laugh, is recently divorced but always the life of the party. His two kids, teenagers now, race over to challenge us to a game of soccer. Aunt Maria, George’s sister, is a warm and caring teacher. She and her husband Mark, a kind-hearted lawyer, have three young children who instantly start a game of hide and seek around the garden. My mother’s sister, Aunt Sophia, arrives with her husband and their adopted son; they enjoy discussing their travels and adventures with all of us.\n\nInside the house, a variety of aromas waft through the air as Grandma and Grandpa put the finishing touches on a feast. Our parents help by setting the elegant dining table, perfect for the occasion. Laughter and chit-chat fill the rooms, intertwining with the clinking of glasses and silverware. Stories from the past are shared, and future plans are discussed, bridging distances and renewing our bond.\n\nAs the sun sets, the younger cousins gather around a bonfire, sharing spooky stories and roasting marshmallows. The older relatives settle on the porch, sipping their tea and reminiscing about days gone by. The divisions of age melt away as playful jests and wisdom are exchanged effortlessly. Our in-laws, once outsiders, are now entwined in the fabric of our family narrative, contributing their own tales and laughter to our shared history.\n\nNight falls, and the stars begin to twinkle above, mirroring the sparkles of joy in our eyes. A guitar is brought out, and soon, everyone is singing along to old and new tunes alike. The music unites us, a harmonious thread linking generations. As the night grows deep, weary but hearts full, we say our goodbyes. Our grandparents stand at the doorway, waving until our cars disappear from view. Their shadows linger, a testament to the warmth and unity they bring to us all.\n\nIt’s events like these that remind us of the importance of family. Regardless of our different paths in life, we come together to celebrate the love we share. The memories we create during these gatherings will last us until the next summer, when once again, we return to the embrace of family.",
+  "vocabulary": [
+    {
+      "word": "Accommodate",
+      "ipa": "/əˈkɒm.ə.deɪt/",
+      "wordForm": "Verb",
+      "meaning": "Chứa, cung cấp chỗ ở cho ai",
+      "example": "It is a charming old house with enough space to accommodate the extended family."
+    },
+    {
+      "word": "Backdrop",
+      "ipa": "/ˈbæk.drɒp/",
+      "wordForm": "Noun",
+      "meaning": "Bối cảnh, phông nền",
+      "example": "The garden is always blooming with flowers, making it the perfect backdrop for our reunion."
+    },
+    {
+      "word": "Booming",
+      "ipa": "/ˈbuː.mɪŋ/",
+      "wordForm": "Adjective",
+      "meaning": "Vang rền, trầm hùng (giọng nói)",
+      "example": "Uncle George is a cheerful man with a booming laugh."
+    },
+    {
+      "word": "Bridge",
+      "ipa": "/brɪdʒ/",
+      "wordForm": "Verb",
+      "meaning": "Rút ngắn, thu hẹp khoảng cách",
+      "example": "Stories from the past are shared, bridging distances and renewing our bond."
+    },
+    {
+      "word": "Chit-chat",
+      "ipa": "/ˈtʃɪt.tʃæt/",
+      "wordForm": "Noun",
+      "meaning": "Trò chuyện phiếm, tán chuyện",
+      "example": "Laughter and chit-chat fill the rooms."
+    },
+    {
+      "word": "Collective",
+      "ipa": "/kəˈlek.tɪv/",
+      "wordForm": "Adjective",
+      "meaning": "Tập thể, chung",
+      "example": "It holds countless memories of our collective childhood."
+    },
+    {
+      "word": "Emerge",
+      "ipa": "/ɪˈmɜːdʒ/",
+      "wordForm": "Verb",
+      "meaning": "Xuất hiện, bước ra",
+      "example": "Aunts, uncles, and cousins emerge to greet us."
+    },
+    {
+      "word": "Entwined",
+      "ipa": "/ɪnˈtwaɪnd/",
+      "wordForm": "Adjective/Verb",
+      "meaning": "Gắn kết chặt chẽ, quấn quít",
+      "example": "Our in-laws are now entwined in the fabric of our family narrative."
+    },
+    {
+      "word": "Extended family",
+      "ipa": "/ɪkˌstendɪd ˈfæməli/",
+      "wordForm": "Noun Phrase",
+      "meaning": "Đại gia đình (gồm cô, chú, bác, anh chị em họ...)",
+      "example": "There is enough space to accommodate the extended family."
+    },
+    {
+      "word": "Feast",
+      "ipa": "/fiːst/",
+      "wordForm": "Noun",
+      "meaning": "Bữa tiệc lớn, yến tiệc",
+      "example": "Grandma and Grandpa put the finishing touches on a feast."
+    },
+    {
+      "word": "Gravel",
+      "ipa": "/ˈɡræv.əl/",
+      "wordForm": "Noun",
+      "meaning": "Sỏi, đá dăm",
+      "example": "As we pull into the gravel driveway, relatives emerge to greet us."
+    },
+    {
+      "word": "Intertwine",
+      "ipa": "/ˌɪn.təˈtwaɪn/",
+      "wordForm": "Verb",
+      "meaning": "Đan xen, quyện vào nhau",
+      "example": "Laughter fills the rooms, intertwining with the clinking of glasses."
+    },
+    {
+      "word": "Linger",
+      "ipa": "/ˈlɪŋ.ɡər/",
+      "wordForm": "Verb",
+      "meaning": "Nán lại, đọng lại",
+      "example": "Their shadows linger, a testament to the warmth and unity they bring."
+    },
+    {
+      "word": "Porch",
+      "ipa": "/pɔːtʃ/",
+      "wordForm": "Noun",
+      "meaning": "Hiên nhà",
+      "example": "The older relatives settle on the porch, sipping their tea."
+    },
+    {
+      "word": "Reminisce",
+      "ipa": "/ˌrem.ɪˈnɪs/",
+      "wordForm": "Verb",
+      "meaning": "Hồi tưởng, nhớ lại quá khứ",
+      "example": "They sat on the porch reminiscing about days gone by."
+    },
+    {
+      "word": "Silverware",
+      "ipa": "/ˈsɪl.və.weər/",
+      "wordForm": "Noun",
+      "meaning": "Bộ dao, muỗng, nĩa ăn (bằng kim loại)",
+      "example": "We heard the clinking of glasses and silverware."
+    },
+    {
+      "word": "Testament",
+      "ipa": "/ˈtes.tə.mənt/",
+      "wordForm": "Noun",
+      "meaning": "Bằng chứng, chứng nhận cho cái gì",
+      "example": "Their shadows linger, a testament to the warmth and unity they bring to us all."
+    },
+    {
+      "word": "Unite",
+      "ipa": "/juːˈnaɪt/",
+      "wordForm": "Verb",
+      "meaning": "Kết nối, đoàn kết",
+      "example": "The music unites us, a harmonious thread linking generations."
+    },
+    {
+      "word": "Waft",
+      "ipa": "/wɒft/",
+      "wordForm": "Verb",
+      "meaning": "Phảng phất, bay nhẹ trong gió/không khí",
+      "example": "A variety of aromas waft through the air."
+    },
+    {
+      "word": "Wisdom",
+      "ipa": "/ˈwɪz.dəm/",
+      "wordForm": "Noun",
+      "meaning": "Trí tuệ, sự khôn ngoan",
+      "example": "Playful jests and wisdom are exchanged effortlessly."
+    }
+  ],
+  "matchingPictures": [
+    {
+      "word": "Backdrop",
+      "pic": "https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?q=80&w=600&auto=format&fit=crop"
+    },
+    {
+      "word": "Gravel Driveway",
+      "pic": "https://images.unsplash.com/photo-1590086782957-93c06ef51604?q=80&w=600&auto=format&fit=crop"
+    },
+    {
+      "word": "Porch",
+      "pic": "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=600&auto=format&fit=crop"
+    },
+    {
+      "word": "Bonfire",
+      "pic": "https://images.unsplash.com/photo-1526725702145-338c5d55ee47?q=80&w=600&auto=format&fit=crop"
+    }
+  ],
+  "matchingSynonyms": [
+    {
+      "word": "Reminisce",
+      "synonym": "Recall / Look back"
+    },
+    {
+      "word": "Emerge",
+      "synonym": "Appear / Step out"
+    },
+    {
+      "word": "Testament",
+      "synonym": "Evidence / Proof"
+    },
+    {
+      "word": "Intertwine",
+      "synonym": "Weave / Twist together"
+    },
+    {
+      "word": "Accommodate",
+      "synonym": "House / Fit in"
+    },
+    {
+      "word": "Waft",
+      "synonym": "Drift / Float"
+    },
+    {
+      "word": "Booming",
+      "synonym": "Thunderous / Resonant"
+    },
+    {
+      "word": "Linger",
+      "synonym": "Remain / Stay"
+    }
+  ],
+  "mcqQuestions": [
+    {
+      "q": "What is the primary purpose of the passage?",
+      "options": [
+        "To detail the exact history and architectural structure of an old house.",
+        "To describe a recurring annual family gathering and the emotional bond it fosters.",
+        "To highlight the social challenges faced by extended families in modern times.",
+        "To explain how different generations resolve personal conflicts over summer."
+      ],
+      "answer": 1
+    },
+    {
+      "q": "According to Paragraph 2, what can be inferred about Uncle George?",
+      "options": [
+        "His recent personal changes have made him quiet and distant.",
+        "He refuses to participate in sports due to his health.",
+        "He maintains a lively and cheerful spirit despite his divorce.",
+        "He spends most of his time helping Aunt Maria teach her kids."
+      ],
+      "answer": 2
+    },
+    {
+      "q": "What does the word 'bridging' mean in the context of Paragraph 3?",
+      "options": [
+        "Narrowing or overcoming differences",
+        "Constructing physical pathways",
+        "Increasing distance between people",
+        "Ignoring shared history"
+      ],
+      "answer": 0
+    },
+    {
+      "q": "The annual family reunion takes place in a modern apartment building in the city center.",
+      "options": [
+        "TRUE",
+        "FALSE",
+        "NOT GIVEN"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "Aunt Sophia's adopted son actively shares details of his family's travels with others.",
+      "options": [
+        "TRUE",
+        "FALSE",
+        "NOT GIVEN"
+      ],
+      "answer": 0
+    },
+    {
+      "q": "The grandparents feel exhausted by the children and prefer them to leave early.",
+      "options": [
+        "TRUE",
+        "FALSE",
+        "NOT GIVEN"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "The family sings both traditional and contemporary music while playing the guitar.",
+      "options": [
+        "TRUE",
+        "FALSE",
+        "NOT GIVEN"
+      ],
+      "answer": 0
+    }
+  ],
+  "fillInBlank": "Every summer, the family gathers at their grandparents' countryside home, where a blooming garden serves as the perfect ___backdrop___ for their reunion. Upon arrival via the ___gravel___ driveway, family members emerge to welcome each other. Inside, delicious meal scents ___waft___ through the air while relatives prepare the dining table. As night falls, the younger generation sits around a bonfire roasting marshmallows, whereas older adults gather on the ___porch___ to drink tea and ___reminisce___ about past events."
+}
