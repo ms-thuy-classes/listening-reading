@@ -1,0 +1,582 @@
+{
+  "title": "The Price of Fame",
+  "duration": "25 min",
+  "level": "B2",
+
+  "passage": "It isn’t always easy to be famous. It often comes with esteem, fortune, and prestige, but also a mountain of headaches that can smother the stars. The idea of being famous can be quite a nightmare for most young actors and musicians. Let’s explore the complex price of fame and its implications on personal lives.\n\n[IMG: https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=600 | A photographer surrounded by cameras | center]\n\n==The Allure of Celebrity==\nIn millions of cases, publicizing the celebrity life motivates people to want to be one. Red carpets, VIP parties, and loyal fans all paint a picture many would wish to be. However, behind the glitz and glamor lies a reality that often involves intense ==scrutiny== and ==pressure==. Many actors and musicians have expressed the overwhelming nature of fame, highlighting that the ==public persona== can overshadow their personal identities.\n\n==The Invasion of Privacy==\nOne of the most significant costs associated with fame is the loss of ==privacy==. For celebrities like Taylor Swift, whose personal life frequently makes headlines, privacy becomes a luxury that is hard to maintain. Every relationship, every public appearance, and even casual outings can be captured by ==paparazzi==, leading to a constant state of ==surveillance==. This invasion can take a toll on ==mental health==, as the line between public and private life becomes blurred.\n\n[IMG: https://images.unsplash.com/photo-1557597774-9d273605dfa9?w=600 | A surveillance camera watching public activity | center]\n\n==The Struggle with Public Perception==\nFame comes with the ==burden== of public ==perception==. A celebrity’s life is often dissected and judged by fans and media alike. For instance, Taylor Swift has faced intense scrutiny over her relationships, with each new romance analyzed and critiqued. This relentless attention can lead to feelings of ==isolation== and ==anxiety==, as celebrities grapple with the need to maintain a perfect image in the eyes of the public.\n\nConversely, some celebrities handle the pressure of fame with grace, while others struggle under its weight. Russell Crowe's infamous incident in 2005 serves as a stark reminder of how fame can push individuals to their breaking points. The pressures of being in the spotlight can lead to ==erratic behavior==, and the ==consequences== are often dire, affecting both personal and professional relationships.\n\n==The Mental Health Impact==\nThe mental health implications of fame cannot be ignored. Constant scrutiny and lack of privacy can lead to severe ==stress==, anxiety, and ==depression==. Celebrities often find themselves in a precarious situation where they must balance their public persona with their true selves. The importance of mental health awareness has become a focal point in recent years, with many celebrities speaking out about their struggles and advocating for help.\n\nIt’s crucial for aspiring actors and musicians to understand that fame is not just about success; it’s also about navigating a complex web of challenges. Building a ==support system== and prioritizing mental well-being can be vital in managing the pressures that come with being in the spotlight.\n\n==Finding Balance==\nUltimately, the price of fame is steep, but it can be managed with the right approach. Many celebrities emphasize the importance of maintaining a ==work-life balance==, ==setting boundaries==, and seeking help when needed. It’s essential for them to carve out personal time away from the public eye, allowing for moments of normalcy amidst the chaos.\n\nIn conclusion, while the allure of fame may be enticing, it is crucial to recognize the challenges that come with it. The invasion of privacy, public perception, and mental health impacts can significantly affect a celebrity's life. By understanding these complexities, aspiring stars can prepare themselves for the rich yet challenging tapestry that is fame.",
+
+  "vocabulary": [
+    {
+      "word": "Fame",
+      "ipa": "/feɪm/",
+      "wordForm": "noun",
+      "meaning": "Sự nổi tiếng",
+      "example": "Fame can bring both opportunities and serious personal challenges."
+    },
+    {
+      "word": "Celebrity",
+      "ipa": "/səˈlebrəti/",
+      "wordForm": "noun",
+      "meaning": "Người nổi tiếng",
+      "example": "The celebrity struggled to maintain a normal private life."
+    },
+    {
+      "word": "Prestige",
+      "ipa": "/presˈtiːʒ/",
+      "wordForm": "noun",
+      "meaning": "Uy tín, danh tiếng",
+      "example": "Fame can bring wealth, prestige, and public recognition."
+    },
+    {
+      "word": "Fortune",
+      "ipa": "/ˈfɔːtʃuːn/",
+      "wordForm": "noun",
+      "meaning": "Tài sản, sự giàu có",
+      "example": "Some celebrities make a fortune from their careers."
+    },
+    {
+      "word": "Scrutiny",
+      "ipa": "/ˈskruːtəni/",
+      "wordForm": "noun",
+      "meaning": "Sự soi xét kỹ lưỡng",
+      "example": "Celebrities often face intense scrutiny from the media."
+    },
+    {
+      "word": "Pressure",
+      "ipa": "/ˈpreʃə(r)/",
+      "wordForm": "noun",
+      "meaning": "Áp lực",
+      "example": "Constant public attention can create enormous pressure."
+    },
+    {
+      "word": "Public persona",
+      "ipa": "/ˈpʌblɪk pəˈsəʊnə/",
+      "wordForm": "noun phrase",
+      "meaning": "Hình ảnh trước công chúng",
+      "example": "A celebrity's public persona may differ from their private identity."
+    },
+    {
+      "word": "Personal identity",
+      "ipa": "/ˈpɜːsənəl aɪˈdentəti/",
+      "wordForm": "noun phrase",
+      "meaning": "Bản sắc cá nhân",
+      "example": "Fame can sometimes overshadow a person's personal identity."
+    },
+    {
+      "word": "Privacy",
+      "ipa": "/ˈprɪvəsi/",
+      "wordForm": "noun",
+      "meaning": "Sự riêng tư",
+      "example": "Celebrities often struggle to protect their privacy."
+    },
+    {
+      "word": "Paparazzi",
+      "ipa": "/ˌpæpəˈrætsi/",
+      "wordForm": "noun",
+      "meaning": "Thợ săn ảnh",
+      "example": "The paparazzi followed the actress outside the restaurant."
+    },
+    {
+      "word": "Surveillance",
+      "ipa": "/səˈveɪləns/",
+      "wordForm": "noun",
+      "meaning": "Sự giám sát",
+      "example": "Constant surveillance can make celebrities feel uncomfortable."
+    },
+    {
+      "word": "Invasion of privacy",
+      "ipa": "/ɪnˈveɪʒən əv ˈprɪvəsi/",
+      "wordForm": "noun phrase",
+      "meaning": "Sự xâm phạm quyền riêng tư",
+      "example": "The invasion of privacy can seriously affect a person's well-being."
+    },
+    {
+      "word": "Blurred",
+      "ipa": "/blɜːd/",
+      "wordForm": "adjective",
+      "meaning": "Mờ nhạt, không rõ ranh giới",
+      "example": "The boundary between public and private life became blurred."
+    },
+    {
+      "word": "Public perception",
+      "ipa": "/ˈpʌblɪk pəˈsepʃən/",
+      "wordForm": "noun phrase",
+      "meaning": "Cách công chúng nhìn nhận",
+      "example": "Celebrities often worry about public perception."
+    },
+    {
+      "word": "Burden",
+      "ipa": "/ˈbɜːdən/",
+      "wordForm": "noun",
+      "meaning": "Gánh nặng",
+      "example": "Public expectations can become a heavy burden."
+    },
+    {
+      "word": "Isolation",
+      "ipa": "/ˌaɪsəˈleɪʃən/",
+      "wordForm": "noun",
+      "meaning": "Sự cô lập",
+      "example": "Constant attention may cause feelings of isolation."
+    },
+    {
+      "word": "Anxiety",
+      "ipa": "/æŋˈzaɪəti/",
+      "wordForm": "noun",
+      "meaning": "Sự lo âu",
+      "example": "Fame may contribute to anxiety and emotional stress."
+    },
+    {
+      "word": "Erratic behavior",
+      "ipa": "/ɪˈrætɪk bɪˈheɪvjə(r)/",
+      "wordForm": "noun phrase",
+      "meaning": "Hành vi thất thường",
+      "example": "Extreme pressure can sometimes result in erratic behavior."
+    },
+    {
+      "word": "Consequences",
+      "ipa": "/ˈkɒnsɪkwənsɪz/",
+      "wordForm": "noun",
+      "meaning": "Hậu quả",
+      "example": "Poor decisions can have serious consequences."
+    },
+    {
+      "word": "Mental health",
+      "ipa": "/ˈmentl helθ/",
+      "wordForm": "noun phrase",
+      "meaning": "Sức khỏe tinh thần",
+      "example": "Fame can have a significant impact on mental health."
+    },
+    {
+      "word": "Stress",
+      "ipa": "/stres/",
+      "wordForm": "noun",
+      "meaning": "Căng thẳng",
+      "example": "Constant media attention can cause severe stress."
+    },
+    {
+      "word": "Depression",
+      "ipa": "/dɪˈpreʃən/",
+      "wordForm": "noun",
+      "meaning": "Trầm cảm",
+      "example": "Some celebrities have spoken publicly about depression."
+    },
+    {
+      "word": "Support system",
+      "ipa": "/səˈpɔːt ˌsɪstəm/",
+      "wordForm": "noun phrase",
+      "meaning": "Hệ thống hỗ trợ",
+      "example": "A strong support system can help people manage pressure."
+    },
+    {
+      "word": "Set boundaries",
+      "ipa": "/set ˈbaʊndəriz/",
+      "wordForm": "verb phrase",
+      "meaning": "Đặt ra giới hạn",
+      "example": "Celebrities need to set boundaries between work and private life."
+    },
+    {
+      "word": "Work-life balance",
+      "ipa": "/ˌwɜːk laɪf ˈbæləns/",
+      "wordForm": "noun phrase",
+      "meaning": "Cân bằng công việc và cuộc sống",
+      "example": "Maintaining a healthy work-life balance is important for everyone."
+    }
+  ],
+
+  "matchingPictures": [
+    {
+      "word": "Paparazzi",
+      "pic": "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=300&h=200&fit=crop"
+    },
+    {
+      "word": "Surveillance",
+      "pic": "https://images.unsplash.com/photo-1557597774-9d273605dfa9?w=300&h=200&fit=crop"
+    },
+    {
+      "word": "Anxiety",
+      "pic": "https://images.unsplash.com/photo-1493836512294-502baa1986e2?w=300&h=200&fit=crop"
+    },
+    {
+      "word": "Isolation",
+      "pic": "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?w=300&h=200&fit=crop"
+    },
+    {
+      "word": "Support system",
+      "pic": "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=300&h=200&fit=crop"
+    },
+    {
+      "word": "Work-life balance",
+      "pic": "https://images.unsplash.com/photo-1497215728101-856f4ea42174?w=300&h=200&fit=crop"
+    },
+    {
+      "word": "Celebrity",
+      "pic": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=300&h=200&fit=crop"
+    },
+    {
+      "word": "Fame",
+      "pic": "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=300&h=200&fit=crop"
+    },
+    {
+      "word": "Stress",
+      "pic": "https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=300&h=200&fit=crop"
+    },
+    {
+      "word": "Privacy",
+      "pic": "https://images.unsplash.com/photo-1518770660439-4636190af475?w=300&h=200&fit=crop"
+    }
+  ],
+
+  "matchingSynonyms": [
+    {
+      "word": "Scrutiny",
+      "synonym": "Close examination"
+    },
+    {
+      "word": "Pressure",
+      "synonym": "Stress"
+    },
+    {
+      "word": "Privacy",
+      "synonym": "Personal freedom"
+    },
+    {
+      "word": "Burden",
+      "synonym": "Heavy responsibility"
+    },
+    {
+      "word": "Isolation",
+      "synonym": "Loneliness"
+    },
+    {
+      "word": "Anxiety",
+      "synonym": "Worry"
+    },
+    {
+      "word": "Consequences",
+      "synonym": "Results"
+    },
+    {
+      "word": "Erratic behavior",
+      "synonym": "Unpredictable actions"
+    },
+    {
+      "word": "Fortune",
+      "synonym": "Wealth"
+    },
+    {
+      "word": "Prestige",
+      "synonym": "Reputation and respect"
+    }
+  ],
+
+  "matchingHeadings": {
+    "headings": [
+      "I. The attraction of celebrity life",
+      "II. The loss of privacy",
+      "III. The pressure of public perception",
+      "IV. Fame and mental health",
+      "V. Finding a healthier balance"
+    ],
+    "questions": [
+      {
+        "question": "Paragraph 1 mainly discusses...",
+        "answer": 0
+      },
+      {
+        "question": "Paragraph 2 explains how fame can lead to...",
+        "answer": 1
+      },
+      {
+        "question": "Paragraph 3 focuses on...",
+        "answer": 2
+      },
+      {
+        "question": "Paragraph 4 discusses...",
+        "answer": 3
+      },
+      {
+        "question": "Paragraph 5 explains the importance of...",
+        "answer": 4
+      }
+    ]
+  },
+
+  "matchingFeatures": {
+    "features": [
+      "A. A loss of personal privacy",
+      "B. Pressure to maintain a perfect image",
+      "C. Problems related to mental health",
+      "D. The need for a support network",
+      "E. The need for personal time"
+    ],
+    "questions": [
+      {
+        "question": "Paparazzi",
+        "answer": 0
+      },
+      {
+        "question": "Public perception",
+        "answer": 1
+      },
+      {
+        "question": "Stress and depression",
+        "answer": 2
+      },
+      {
+        "question": "Support system",
+        "answer": 3
+      },
+      {
+        "question": "Work-life balance",
+        "answer": 4
+      }
+    ]
+  },
+
+  "mcqQuestions": [
+    {
+      "q": "What attracts many people to celebrity life?",
+      "options": [
+        "The opportunity to avoid the media",
+        "The glamorous lifestyle associated with fame",
+        "The chance to live anonymously",
+        "The possibility of reducing stress"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "What does the passage suggest about a celebrity's public persona?",
+      "options": [
+        "It always reflects their true personality.",
+        "It helps celebrities avoid criticism.",
+        "It may overshadow their personal identity.",
+        "It makes celebrities less recognizable."
+      ],
+      "answer": 2
+    },
+    {
+      "q": "Why does privacy become difficult for celebrities?",
+      "options": [
+        "They frequently change their identities.",
+        "Their personal activities may be followed and reported.",
+        "They dislike spending time alone.",
+        "They deliberately reveal everything about themselves."
+      ],
+      "answer": 1
+    },
+    {
+      "q": "What is one consequence of constant media attention?",
+      "options": [
+        "Greater personal freedom",
+        "Better mental health",
+        "Isolation and anxiety",
+        "Stronger family relationships"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "Why is Taylor Swift mentioned in the passage?",
+      "options": [
+        "To show how celebrities can avoid the press",
+        "To illustrate the scrutiny celebrities may face",
+        "To prove that fame is always beneficial",
+        "To compare musicians with actors"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "What does the reference to Russell Crowe mainly demonstrate?",
+      "options": [
+        "Famous people never experience stress.",
+        "Fame can contribute to extreme pressure and problematic behavior.",
+        "Actors should avoid public appearances.",
+        "Fans are responsible for celebrity mistakes."
+      ],
+      "answer": 1
+    },
+    {
+      "q": "According to the passage, what may result from constant scrutiny?",
+      "options": [
+        "Stress, anxiety and depression",
+        "Wealth and prestige",
+        "Better public relations",
+        "Increased privacy"
+      ],
+      "answer": 0
+    },
+    {
+      "q": "What does the author recommend to people entering the entertainment industry?",
+      "options": [
+        "Ignoring criticism",
+        "Avoiding all social contact",
+        "Building a support system",
+        "Giving up their careers"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "What is meant by 'set boundaries'?",
+      "options": [
+        "Creating limits around personal and public life",
+        "Increasing media exposure",
+        "Ending all professional relationships",
+        "Hiding from fans permanently"
+      ],
+      "answer": 0
+    },
+    {
+      "q": "What is the main message of the passage?",
+      "options": [
+        "Fame is mostly positive and should be pursued.",
+        "Celebrity life is impossible to manage.",
+        "Fame offers benefits but also creates serious personal challenges.",
+        "Celebrities should never speak about mental health."
+      ],
+      "answer": 2
+    },
+
+    {
+      "q": "Fame always brings happiness and personal satisfaction.",
+      "options": [
+        "TRUE",
+        "FALSE",
+        "NOT GIVEN"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "Red carpets and VIP parties contribute to the glamorous image of celebrity life.",
+      "options": [
+        "TRUE",
+        "FALSE",
+        "NOT GIVEN"
+      ],
+      "answer": 0
+    },
+    {
+      "q": "Celebrities can usually keep their romantic relationships completely private.",
+      "options": [
+        "TRUE",
+        "FALSE",
+        "NOT GIVEN"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "Paparazzi may photograph celebrities during ordinary activities.",
+      "options": [
+        "TRUE",
+        "FALSE",
+        "NOT GIVEN"
+      ],
+      "answer": 0
+    },
+    {
+      "q": "Taylor Swift has been criticized in the media because of her relationships.",
+      "options": [
+        "TRUE",
+        "FALSE",
+        "NOT GIVEN"
+      ],
+      "answer": 0
+    },
+    {
+      "q": "All celebrities respond to fame in exactly the same way.",
+      "options": [
+        "TRUE",
+        "FALSE",
+        "NOT GIVEN"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "The passage says that Russell Crowe's incident happened in 2005.",
+      "options": [
+        "TRUE",
+        "FALSE",
+        "NOT GIVEN"
+      ],
+      "answer": 0
+    },
+    {
+      "q": "The passage provides statistical evidence about how many celebrities suffer from depression.",
+      "options": [
+        "TRUE",
+        "FALSE",
+        "NOT GIVEN"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "A support system can help people manage the pressure associated with fame.",
+      "options": [
+        "TRUE",
+        "FALSE",
+        "NOT GIVEN"
+      ],
+      "answer": 0
+    },
+    {
+      "q": "The author recommends maintaining some personal time away from the public eye.",
+      "options": [
+        "TRUE",
+        "FALSE",
+        "NOT GIVEN"
+      ],
+      "answer": 0
+    },
+
+    {
+      "q": "In the sentence 'Celebrities often face intense scrutiny from the media', what does 'scrutiny' mean?",
+      "options": [
+        "Careful and critical attention",
+        "Financial support",
+        "Complete protection",
+        "Friendly communication"
+      ],
+      "answer": 0
+    },
+    {
+      "q": "In the sentence 'Privacy becomes a luxury that is hard to maintain', what does 'luxury' mean?",
+      "options": [
+        "Something rare and difficult to have",
+        "Something legally required",
+        "Something easy to obtain",
+        "Something completely unnecessary"
+      ],
+      "answer": 0
+    },
+    {
+      "q": "What does the expression 'the line between public and private life becomes blurred' mean?",
+      "options": [
+        "The two areas become less clearly separated.",
+        "The two areas become completely different.",
+        "The private life becomes more protected.",
+        "The public life disappears."
+      ],
+      "answer": 0
+    },
+    {
+      "q": "What does 'true selves' refer to?",
+      "options": [
+        "Their real identities",
+        "Their professional skills",
+        "Their financial situations",
+        "Their public reputations"
+      ],
+      "answer": 0
+    },
+    {
+      "q": "What does 'carve out personal time' mean?",
+      "options": [
+        "Create time for themselves",
+        "Spend all their time working",
+        "Avoid their families",
+        "Become less famous"
+      ],
+      "answer": 0
+    }
+  ],
+
+  "fillInBlank": "Although fame can bring wealth and prestige, celebrities often face intense ___scrutiny___ from the media and the public. Maintaining ___privacy___ can be difficult because paparazzi may follow their daily activities. Public ___perception___ can create ___pressure___ and feelings of ___isolation___ and ___anxiety___. Constant stress may also affect ___mental health___ and contribute to ___depression___. To manage these challenges, celebrities need a strong ___support system___, should ___set boundaries___, and maintain a healthy ___work-life balance___."
+}
