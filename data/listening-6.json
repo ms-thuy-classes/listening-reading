@@ -36,16 +36,16 @@
     {"word": "Warren", "ipa": "/ˈwɔːrən/", "wordForm": "Noun", "meaning": "Mạng lưới chật hẹp, mê cung", "example": "Long Term Memory is an endless warren of corridors and shelves."}
   ],
   "matchingPictures": [
-    {"word": "Core Memory", "pic": "A glowing, shiny orb representing an extremely important life event."},
-    {"word": "Broccoli", "pic": "A green vegetable shaped like a small tree that Riley hates."},
-    {"word": "Grizzly bear", "pic": "A large yellow bear attacking a small deer in a green meadow."},
-    {"word": "Airplane", "pic": "A father holding a spoonful of food, pretending to fly it into a kid's mouth."},
-    {"word": "Dung beetle", "pic": "A tiny insect rolling a big ball of dirt/waste on the ground."},
-    {"word": "Console", "pic": "A futuristic control desk with buttons and joysticks used by emotions."},
-    {"word": "Putting the foot down", "pic": "A large foot stomping down hard to end an argument."},
-    {"word": "Train of thought", "pic": "A physical locomotive carrying boxes of memories across a track."},
-    {"word": "Twirling dress", "pic": "A child twirling around rapidly in a bright yellow dress."},
-    {"word": "Circle of sadness", "pic": "A line drawn in chalk on the floor around a blue character."}
+    {"word": "Core Memory", "pic": "https://www.wikihow.com/images/thumb/b/b9/What-Is-a-Core-Memory-Step-1.jpg/v4-460px-What-Is-a-Core-Memory-Step-1.jpg"},
+    {"word": "Broccoli", "pic": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmTS4TmYSYAaXS50RDx4nWN0AdjmMpWbqaWHOGqtvlsg&s=10"},
+    {"word": "Grizzly bear", "pic": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-d6mlcmUekaVko6tKRqEbAnXh2TZrfZvYAk0YoR8j8AbVOwYwrOi23fkD&s=10"},
+    {"word": "Airplane", "pic": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/United_Airlines_Boeing_777-200_Meulemans.jpg/250px-United_Airlines_Boeing_777-200_Meulemans.jpg"},
+    {"word": "Dung beetle", "pic": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTf-cpEFupz01IjlPTy21zJmeARm-8ztqlEkWjr-nM0zcRY3NpLG__Y6IE&s=10"},
+    {"word": "Console", "pic": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREHRosoPpE1P1mVfEgplDdVTsjHz2u3F3fMkZJ5QBgig&s=10"},
+    {"word": "Putting the foot down", "pic": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRt1qUw9fmI0yO9Av9aXwVrzrrSqnVMzh1IbrUcvCFJI2fgjE6VWn5Q84F-&s=10"},
+    {"word": "Train of thought", "pic": "https://static.wikia.nocookie.net/pixar/images/d/d1/Inside-Out-litho-TrainOfThought.jpg/revision/latest?cb=20160424211701"},
+    {"word": "Twirling dress", "pic": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZG4U643bU9E2kNG3m3xZb3kA3Tp17hauD5t2-A-zZGpNNLlboupix-MA&s=10"},
+    {"word": "Negative", "pic": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxs9bu28TfP5onpxcq8UZCT6YWXqrgnzs_aBymIzycgw&s=10"}
   ],
   "matchingSynonyms": [
     {"word": "Vicious", "synonym": "Savage, violent"},
