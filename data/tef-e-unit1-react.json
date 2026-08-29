@@ -1,1 +1,103 @@
-a
+{
+  "id": "tef-e-unit1-react",
+  "title": "Describing People & Spoken Reactions Practice",
+  "description": "Luyện nghe, học từ vựng miêu tả tính cách con người và các cụm từ bộc lộ cảm xúc trong văn nói qua đoạn thoại giao tiếp gia đình.",
+  "layout": "listening",
+  "youtubeVideo": "https://www.youtube.com/embed/MuLsw6A4_Aw?si=drAIvrKEKy9Xi4O9",
+  "duration": "10 min",
+  "level": "B1",
+  "tags": ["b1", "describing-people", "spoken-english", "vocabulary", "dialogue"],
+  "transcript": "H: You know, our Jenny has done ___incredibly___ well, Rob. She’s the first member of our family to study at Harvard. She’s a very ___capable___ and ___ambitious___ young woman.\n\nJ: ___Oh___, Dad.\n\nR: No, ___it's true___, Jenny.\n\nH: But what about you, Rob? How do you see your career? Do you see yourself going into ___management___?\n\nR: Me? No. ___Not really___. I’m ___more of___ a… a writer.\n\nH: Really? What kind of things do you write?\n\nR: Oh, you know, interviews, reviews… things like that… and I’m doing a lot of work for the online magazine…\n\nJ: Rob’s a very ___talented___ writer, Dad. He’s very ___creative___.\n\nH: That’s great, but being creative doesn’t always ___pay the bills___.\n\nJ: You know, my dad’s a very ___keen___ photographer. He took all of these photos.\n\nH: Oh, Rob won’t be ___interested___ in them.\n\nR: But I am interested. ___I mean___, I like photography. And I think I recognize some of these people.\n\nH: That’s because most of them are of Jenny.\n\nR: But there are some great jazz musicians, too…. That’s Miles Davis… and isn’t that John Coltrane? And that’s Wynton Marsalis.\n\nH: You know about Wynton Marsalis?\n\nR: Know about him? I’ve interviewed him!\n\nH: ___How incredible___! I love that guy. He’s a ___hero___ of mine.\n\nR: Well, he’s a really ___nice___ guy. I spent a whole day with him, ___chatting___ and watching him ___rehearse___.\n\nH: Really? I want to hear all about it.\n\nS: Have a cookie, Rob.\n\nH: ___Go ahead___, son! Sally makes the best cookies in New York!",
+  "vocabulary": [
+    {"word": "Capable", "ipa": "/ˈkeɪpəbl/", "wordForm": "Adjective", "meaning": "Có năng lực, giỏi giang", "example": "She is a very capable worker who can handle any difficult task."},
+    {"word": "Ambitious", "ipa": "/æmˈbɪʃəs/", "wordForm": "Adjective", "meaning": "Có hoài bão, khát vọng lớn", "example": "He is very ambitious and always aims for high positions in his career."},
+    {"word": "Talented", "ipa": "/ˈtæləntɪd/", "wordForm": "Adjective", "meaning": "Tài năng, có năng khiếu", "example": "Rob is a very talented writer."},
+    {"word": "Creative", "ipa": "/kriˈeɪtɪv/", "wordForm": "Adjective", "meaning": "Sáng tạo", "example": "He's very creative in his approach to writing."},
+    {"word": "Keen", "ipa": "/kiːn/", "wordForm": "Adjective", "meaning": "Hăng hái, đam mê", "example": "My dad's a very keen photographer."},
+    {"word": "Hero", "ipa": "/ˈhɪəroʊ/", "wordForm": "Noun", "meaning": "Thần tượng, người hùng trong lòng ai đó", "example": "Wynton Marsalis is a hero of mine."},
+    {"word": "Nice", "ipa": "/naɪs/", "wordForm": "Adjective", "meaning": "Tốt bụng, thân thiện, dễ mến", "example": "He’s a really nice guy."},
+    {"word": "Incredibly", "ipa": "/ɪnˈkredəbli/", "wordForm": "Adverb", "meaning": "Cực kỳ, đến mức khó tin", "example": "Jenny has done incredibly well at university."},
+    {"word": "Oh, Dad.", "ipa": "/oʊ dæd/", "wordForm": "Phrase", "meaning": "Phản ứng ngượng ngùng hoặc làm dịu lời khen của bố mẹ", "example": "Oh, Dad, stop embarrassing me!"},
+    {"word": "No, it’s true.", "ipa": "/noʊ ɪts truː/", "wordForm": "Phrase", "meaning": "Phản ứng đồng tình, xác nhận điều vừa nói là đúng", "example": "No, it's true, you really did a great job."},
+    {"word": "Not really.", "ipa": "/nɑːt ˈriːəli/", "wordForm": "Phrase", "meaning": "Phản ứng từ chối khéo, không hoàn toàn đồng ý", "example": "Are you going into management? - Not really."},
+    {"word": "I’m more of a...", "ipa": "/aɪm mɔːr əv ə/", "wordForm": "Phrase", "meaning": "Định hình bản thân khi được hỏi (Tôi nghiêng về... hơn)", "example": "I'm more of a writer than a manager."},
+    {"word": "Pay the bills", "ipa": "/peɪ ðə bɪlz/", "wordForm": "Idiom", "meaning": "Trang trải cuộc sống", "example": "Being creative doesn't always pay the bills."},
+    {"word": "I mean,...", "ipa": "/aɪ miːn/", "wordForm": "Phrase", "meaning": "Dùng để đính chính, giải thích rõ hơn ý mình", "example": "I mean, I like photography a lot."},
+    {"word": "Know about him? I’ve...", "ipa": "/noʊ əˈbaʊt hɪm aɪv/", "wordForm": "Phrase", "meaning": "Lặp lại câu hỏi để thể hiện sự bất ngờ và tự tin khẳng định", "example": "Know about him? I've interviewed him!"},
+    {"word": "How incredible!", "ipa": "/haʊ ɪnˈkredəbl/", "wordForm": "Exclamation", "meaning": "Thốt lên ngạc nhiên, thán phục (Thật kinh ngạc!)", "example": "How incredible that you met him!"},
+    {"word": "I love that guy.", "ipa": "/aɪ lʌv ðæt ɡaɪ/", "wordForm": "Phrase", "meaning": "Bộc lộ sự yêu thích vô cùng hào hứng với ai đó", "example": "I love that guy, he's an amazing musician."},
+    {"word": "Chatting", "ipa": "/ˈtʃætɪŋ/", "wordForm": "Verb", "meaning": "Trò chuyện phiếm thân mật, thoải mái", "example": "We spent the whole afternoon chatting about jazz."},
+    {"word": "Rehearse", "ipa": "/rɪˈhɜːrs/", "wordForm": "Verb", "meaning": "Tổng duyệt, tập luyện (âm nhạc/kịch)", "example": "I spent the day watching him rehearse with his band."},
+    {"word": "Go ahead, son!", "ipa": "/ɡoʊ əˈhed sʌn/", "wordForm": "Phrase", "meaning": "Lời khuyến khích, mời gọi thân thiện (Cứ tự nhiên đi cháu/con!)", "example": "Go ahead, son! Help yourself to some cookies."}
+  ],
+  "matchingPictures": [
+    {"word": "Rehearse", "pic": "A musician holding a trumpet while practicing intensively with his band before a concert."},
+    {"word": "Ambitious", "pic": "A young woman standing in front of a career goals planning board with the target of becoming a CEO."},
+    {"word": "Keen photographer", "pic": "A male photographer holding a professional camera lens, happily taking outdoor landscape photos."},
+    {"word": "Chatting", "pic": "Two friends sitting at a café, drinking tea and having a casual, pleasant conversation."},
+    {"word": "Hero", "pic": "A young boy looking up at a picture of a famous artist with admiration in his eyes."},
+    {"word": "Capable", "pic": "A female employee efficiently handling a stack of complex files and solving tasks quickly."},
+    {"word": "Pay the bills", "pic": "A utility bill accompanied by a stack of cash to cover monthly expenses."}
+  ],
+  "matchingSynonyms": [
+    {"word": "Capable", "synonym": "Competent"},
+    {"word": "Ambitious", "synonym": "Determined"},
+    {"word": "Keen", "synonym": "Enthusiastic"},
+    {"word": "How incredible!", "synonym": "How amazing!"},
+    {"word": "Pay the bills", "synonym": "Cover living expenses"},
+    {"word": "Chatting", "synonym": "Informal talking"},
+    {"word": "Hero", "synonym": "Idol"}
+  ],
+  "mcqQuestions": [
+    {
+      "q": "When Harry says 'She’s a very capable and ambitious young woman', what does he mean about Jenny?",
+      "options": [
+        "Jenny is quiet and prefers to be alone.",
+        "Jenny is talented, skilled, and highly driven to succeed.",
+        "Jenny disliking working in management.",
+        "Jenny is not as academic as other family members."
+      ],
+      "answer": 1
+    },
+    {
+      "q": "When Rob replies 'Me? No. Not really. I’m more of a… a writer', what is his tone/attitude?",
+      "options": [
+        "Confidently stating that he wants a corporate management position.",
+        "Hesitant and humble, defining himself as leaning towards writing instead.",
+        "Angry at Harry for questioning his career choices.",
+        "Enthusiastic about abandoning writing to pursue photography."
+      ],
+      "answer": 1
+    },
+    {
+      "q": "What is the real meaning behind Harry's statement: 'Being creative doesn’t always pay the bills'?",
+      "options": [
+        "Creative jobs are guaranteed to make a person wealthy.",
+        "Creativity is valuable, but it may not always generate enough income for basic living expenses.",
+        "Creative professionals never have to worry about monthly expenses.",
+        "Writing is the most profitable career path available."
+      ],
+      "answer": 1
+    },
+    {
+      "q": "What does Rob’s reaction 'Know about him? I’ve interviewed him!' express?",
+      "options": [
+        "Confusion because he has no idea who Wynton Marsalis is.",
+        "Surprise combined with pride, showing that he not only knows the person but has met and interviewed him.",
+        "Annoyance at Harry for bringing up jazz music.",
+        "An attempt to interrupt Harry and change the topic immediately."
+      ],
+      "answer": 1
+    },
+    {
+      "q": "What is the main function of Harry's phrase 'Go ahead, son!'?",
+      "options": [
+        "Ordering Rob to leave the room.",
+        "Warmly encouraging Rob to feel welcome and take a cookie.",
+        "Instructing Rob to resume the interview.",
+        "Demanding that Rob get back to work straight away."
+      ],
+      "answer": 1
+    }
+  ]
+}
