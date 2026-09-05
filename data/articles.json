@@ -1,4 +1,15 @@
 [
+   {
+  "id": "listening-fraud",
+  "title": " Falling for fraud - 6 Minute English",
+  "description": "Luyện nghe và học từ vựng IELTS qua đoạn hội thoại nói về lửa đảo của BBC 6 Minite English",
+  "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdq_csqiSZbUvDRO-hAJy5o5CHqOll-lwnCvgL5qYVPbrT4tjW3OYXnKI&s=10",
+  "tags": ["b1", "ielts"],
+  "layout": "listening",
+  "duration": "10 min",
+  "vocabCount": 8,
+  "dataFile": "data/listening-fraud.json"
+},
   {"id": "listening-1", "title": "MasterChef Junior - Best Molten Lava Cake", "description": "Luyện nghe qua đoạn hội thoại trong chương trình MasterChef Junior với Sarah và giám khảo Gordon Ramsay.", "thumbnail": "https://hips.hearstapps.com/hmg-prod/images/chocolate-lava-cake-index-65c25056f21fb.jpg?crop=0.8891482670297961xw:1xh;center,top&resize=1200:*", "tags": ["b1", "ielts"], "layout": "listening", "duration": "18 min", "vocabCount": 20, "dataFile": "data/listening-1.json"},
   {"id": "reading-1", "title": "The History of Chocolate", "description": "Đọc hiểu về lịch sử phát triển của sô-cô-la từ thời Aztec đến ngày nay.", "thumbnail": "https://images.unsplash.com/photo-1481391319762-47dff72954d9?w=400", "tags": ["b2", "ielts"], "layout": "reading", "duration": "20 min", "vocabCount": 15, "dataFile": "data/reading-1.json"},
   {"id": "listening-2", "title": "Should College Be Free?? ", "description": "Luyện nghe bài nói về tranh luận liệu rằng đại học có nên miễn phí không", "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6LDoowopD_XnZSPXB4WQ35N3Vvn11TIsyUZuT-UwhH1xFjLB2R6AtxZ6N&s=10", "tags": ["b2", "ielts"], "layout": "listening", "duration": "15 min", "vocabCount": 12, "dataFile": "data/listening-2.json"},
