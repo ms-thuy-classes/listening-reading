@@ -128,6 +128,10 @@ footer .heart{color:#ec407a}
 ::-webkit-scrollbar{width:10px;height:10px}
 ::-webkit-scrollbar-track{background:rgba(255,255,255,0.3);border-radius:10px}
 ::-webkit-scrollbar-thumb{background:linear-gradient(180deg,#b39ddb,#f48fb1);border-radius:10px;border:2px solid rgba(255,255,255,0.3)}
+  .transcript-sentence{
+  display:block;
+  margin-bottom:12px;
+}
 </style>
 </head>
 <body>
@@ -514,10 +518,18 @@ function initTranscript(){
 function renderTranscript(){
   const scroll=document.getElementById('transcriptScroll');
   transcriptBlanks=[];let blankIndex=0;
-  const html=postData.transcript.replace(/___(.*?)___/g,function(match,answer){
-    transcriptBlanks.push({answer:answer,attempts:0});
-    const idx=blankIndex++;
-    return `<input type="text" data-bi="${idx}" placeholder="_____"> <span class="blank-fb" id="tfb${idx}"></span><span class="reveal" id="treveal${idx}"></span>`;
+let html = postData.transcript
+  .split(/(?<=[.!?])\s+/)
+  .map(s => `<span class="transcript-sentence">${s}</span>`)
+  .join('')
+  .replace(/___(.*?)___/g,function(match,answer){
+      transcriptBlanks.push({answer:answer,attempts:0});
+      const idx = blankIndex++;
+      return `
+        <input type="text" data-bi="${idx}" placeholder="_____">
+        <span class="blank-fb" id="tfb${idx}"></span>
+        <span class="reveal" id="treveal${idx}"></span>
+      `;
   });
   scroll.innerHTML=html;
   document.getElementById('transcriptScore').textContent=`0 / ${transcriptBlanks.length}`;
