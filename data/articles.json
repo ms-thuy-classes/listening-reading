@@ -1,4 +1,15 @@
 [
+    {
+  "id": "listening-spider-man",
+  "title": " Spider Man : New Brand Day",
+  "description": "Luyện nghe và học từ vựng qua phim ",
+  "thumbnail": "https://vcdn1-giaitri.vnecdn.net/2026/07/27/image001-1784958170-2692-1785131221.jpg?w=1020&h=0&q=100&dpr=2&fit=crop&s=tF8BAFjm70bstaZSnDRtuA",
+  "tags": ["b1", "ielts"],
+  "layout": "listening",
+  "duration": "10 min",
+  "vocabCount": 8,
+  "dataFile": "data/listening-spider-man.json"
+}
    {
   "id": "listening-fraud",
   "title": " Falling for fraud - 6 Minute English",
