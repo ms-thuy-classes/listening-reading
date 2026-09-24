@@ -1,0 +1,131 @@
+{
+  "id": "reading-8",
+  "title": "What Is Stress?",
+  "description": "Giáo trình bài đọc IELTS Reading cơ bản về chủ đề Tâm lý học & Căng thẳng (Stress).",
+  "layout": "reading",
+  "duration": "15 min",
+  "level": "B1",
+  "tags": ["b1", "ielts", "psychology", "vocabulary"],
+  "pdf": "",
+  "passage": "Most people would say they know what stress is. But for scientists who study stress, it has been surprisingly hard to define. This is because there are so many ways of looking at stress.\n\nSome researchers have studied how our bodies react to stress. You know how your heart beats faster, you perspire more heavily, and your words do not come out right when you are placed in a stressful situation. But knowing how we feel when we experience stress does not explain it; nor does it tell us what causes it.\n\nOther scientists have looked at stressors: events or situations that produce stress. A deadline, a poor test performance, or bothersome noises all may be thought of as stressors. Even pleasant events can be stressors. Planning a party or starting a new job can be just as stressful as being called to the principal’s office.\n\nStress, then, can be caused by both negative and positive events, or stressors. Of course, whether an event is thought of as positive or negative is, in some ways, a matter of personal choice.\n\nIn sum, it is the way people interpret an event that makes it stressful or not stressful. This process of interpretation is called appraisal. Depending on how people appraise, or judge, circumstances, they may or may not consider them stressful.\n\nWhat, specifically, causes people to appraise a situation as stressful? The answer depends on how much of a threat or challenge it appears to be. Circumstances that bring a threat or challenge to a person’s sense of well-being produce stress. Those that do not threaten or challenge us are not stressful.\n\nLooking at stress this way gives us a general definition of the concept of stress: Stress is a response to circumstances that seem threatening or challenging.\n\nThe circumstances that cause stress vary from one person to another. It all depends on how we appraise circumstances. In addition, the things that cause us stress today may not cause us stress at another time. And the opposite is true: things that once caused no stress may now be stressful.",
+  "vocabulary": [
+    {"word": "Appraise", "ipa": "/əˈpreɪz/", "wordForm": "Verb", "meaning": "Đánh giá, nhận định", "example": "Depending on how people appraise circumstances, they may or may not consider them stressful."},
+    {"word": "Bothersome", "ipa": "/ˈbɑːðərsəm/", "wordForm": "Adjective", "meaning": "Gây phiền toái, khó chịu", "example": "A deadline, a poor test performance, or bothersome noises all may be thought of as stressors."},
+    {"word": "Challenge", "ipa": "/ˈtʃælɪndʒ/", "wordForm": "Noun/Verb", "meaning": "Thử thách", "example": "Circumstances that bring a threat or challenge to a person’s sense of well-being produce stress."},
+    {"word": "Circumstance", "ipa": "/ˈsɜːrkəmstæns/", "wordForm": "Noun", "meaning": "Hoàn cảnh, tình huống", "example": "The circumstances that cause stress vary from one person to another."},
+    {"word": "Concept", "ipa": "/ˈkɑːnsept/", "wordForm": "Noun", "meaning": "Khái niệm", "example": "Looking at stress this way gives us a general definition of the concept of stress."},
+    {"word": "Deadline", "ipa": "/ˈdedlaɪn/", "wordForm": "Noun", "meaning": "Hạn chót", "example": "A deadline can be thought of as a common stressor in daily life."},
+    {"word": "Define", "ipa": "/dɪˈfaɪn/", "wordForm": "Verb", "meaning": "Định nghĩa", "example": "For scientists who study stress, it has been surprisingly hard to define."},
+    {"word": "Interpretation", "ipa": "/ɪnˌtɜːrprəˈteɪʃn/", "wordForm": "Noun", "meaning": "Sự diễn giải, cách hiểu", "example": "This process of interpretation is called appraisal."},
+    {"word": "Negative", "ipa": "/ˈneɡətɪv/", "wordForm": "Adjective", "meaning": "Tiêu cực", "example": "Stress can be caused by both negative and positive events."},
+    {"word": "Perspire", "ipa": "/pərˈspaɪər/", "wordForm": "Verb", "meaning": "Đổ mồ hôi", "example": "You perspire more heavily when placed in a stressful situation."},
+    {"word": "Positive", "ipa": "/ˈpɑːzətɪv/", "wordForm": "Adjective", "meaning": "Tích cực", "example": "Even positive events like planning a party can cause stress."},
+    {"word": "Principal", "ipa": "/ˈprɪnsəpl/", "wordForm": "Noun", "meaning": "Hiệu trưởng", "example": "Starting a new job can be as stressful as being called to the principal's office."},
+    {"word": "React", "ipa": "/riˈækt/", "wordForm": "Verb", "meaning": "Phản ứng", "example": "Some researchers have studied how our bodies react to stress."},
+    {"word": "Stress", "ipa": "/stres/", "wordForm": "Noun", "meaning": "Căng thẳng", "example": "Stress is a response to circumstances that seem threatening or challenging."},
+    {"word": "Stressor", "ipa": "/ˈstresər/", "wordForm": "Noun", "meaning": "Tác nhân gây căng thẳng", "example": "A stressor is an event or situation that produces stress."},
+    {"word": "Vary", "ipa": "/ˈveri/", "wordForm": "Verb", "meaning": "Thay đổi, khác nhau", "example": "The factors that trigger stress vary from person to person."}
+  ],
+  "mcqQuestions": [
+    {
+      "q": "Planning a party or starting a new job can be just as stressful as being called to the principal's office.",
+      "options": [
+        "teacher",
+        "headmaster",
+        "assistant"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "A deadline, a poor test performance, or bothersome noises all may be thought of as stressors.",
+      "options": [
+        "annoying",
+        "surprising",
+        "continuous"
+      ],
+      "answer": 0
+    },
+    {
+      "q": "Depending on how people appraise, or judge, circumstances, they may or may not consider them stressful.",
+      "options": [
+        "feel about",
+        "judge",
+        "adapt to"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "The circumstances that cause stress vary from one person to another.",
+      "options": [
+        "differ",
+        "move",
+        "start"
+      ],
+      "answer": 0
+    },
+    {
+      "q": "Knowing our feelings about stress can explain what causes the stress.",
+      "options": [
+        "TRUE",
+        "FALSE",
+        "NOT GIVEN"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "Bothersome noises are more likely to cause stress than a poor test performance.",
+      "options": [
+        "TRUE",
+        "FALSE",
+        "NOT GIVEN"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "Negative events cause more stress than positive ones do.",
+      "options": [
+        "TRUE",
+        "FALSE",
+        "NOT GIVEN"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "Sometimes whether an event is negative or not is based on a personal decision.",
+      "options": [
+        "TRUE",
+        "FALSE",
+        "NOT GIVEN"
+      ],
+      "answer": 0
+    },
+    {
+      "q": "Whether an event is considered stressful may be determined by the way people interpret it.",
+      "options": [
+        "TRUE",
+        "FALSE",
+        "NOT GIVEN"
+      ],
+      "answer": 0
+    },
+    {
+      "q": "Sometimes those circumstances that are not threatening to us are also stressful.",
+      "options": [
+        "TRUE",
+        "FALSE",
+        "NOT GIVEN"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "An event or situation may not always be a stressor.",
+      "options": [
+        "TRUE",
+        "FALSE",
+        "NOT GIVEN"
+      ],
+      "answer": 0
+    }
+  ],
+  "fillInBlank": "It is hard for scientists to define the word ___stress___ because there are many ways of looking at it. Your body reacts to stress with a fast-beating heart, heavy perspiration and so on when you are in ___a stressful situation___. ___Stressors___ refer to events or situations that produce stress and they may even include ___pleasant events___ such as planning a party and starting a new job. In general, stress can be caused by both negative and positive events."
+}
