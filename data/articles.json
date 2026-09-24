@@ -1,4 +1,15 @@
 [
+      {
+  "id": "reading-8.json",
+  "title": " What Is Stress?",
+  "description": "Giáo trình bài đọc IELTS Reading cơ bản về chủ đề Tâm lý học & Căng thẳng (Stress). ",
+  "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjSd04Bcl29ZlPzdyjKFIh9kveGWngrpNxaqncvRa59w&s=10",
+  "tags": ["b1", "ielts"],
+  "layout": "reading",
+  "duration": "10 min",
+  "vocabCount": 8,
+  "dataFile": "data/reading-8.json"
+},
     {
   "id": "listening-spider-man",
   "title": " Spider Man : New Brand Day",
