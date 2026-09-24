@@ -371,6 +371,12 @@ const loaded={};
 const urlParams=new URLSearchParams(window.location.search);
 const postId=urlParams.get('id')||'reading-1';
 
+/* ===== HELPER: Ẩn khối bài tập không có dữ liệu ===== */
+function toggleBlock(id, show) {
+  const el = document.getElementById(id);
+  if (el) el.style.display = show ? '' : 'none';
+}
+
 /* ===== CHECK 3 LẦN ===== */
 function trackCheck(key,btnId){
   checkCounts[key]++;
@@ -385,6 +391,18 @@ async function loadPost(){
     postData=await r.json();
     document.getElementById('lessonTitle').textContent='📖 '+postData.title;
     document.getElementById('lessonMeta').innerHTML=`⏱ ${postData.duration||'15 min'} • 📊 Level ${postData.level||'B1'} • 📝 ${postData.vocabulary?postData.vocabulary.length:0} từ vựng`;
+    
+    /* ===== Ẩn các khối bài tập không có dữ liệu ===== */
+    const hasVocab = !!(postData.vocabulary && postData.vocabulary.length);
+    toggleBlock('sectionFlashcards', hasVocab);
+    toggleBlock('sectionQuiz', hasVocab);
+    toggleBlock('sectionMatchPic', !!(postData.matchingPictures && postData.matchingPictures.length));
+    toggleBlock('sectionMatchSyn', !!(postData.matchingSynonyms && postData.matchingSynonyms.length));
+    toggleBlock('sectionMatchHeading', !!(postData.matchingHeadings && (postData.matchingHeadings.headings || []).length && (postData.matchingHeadings.questions || []).length));
+    toggleBlock('sectionMatchFeature', !!(postData.matchingFeatures && (postData.matchingFeatures.features || []).length && (postData.matchingFeatures.questions || []).length));
+    toggleBlock('sectionComprehension', !!(postData.mcqQuestions && postData.mcqQuestions.length));
+    toggleBlock('sectionFill', !!postData.fillInBlank);
+    
     initPDF();initFlashcards();initQuiz();setupLazy();startTimer();updateGlobal();initDivider();
   }catch(e){
     document.querySelector('main').innerHTML='<div class="loading">⚠️ Không tìm thấy bài học. <a href="index.html">← Quay lại</a></div>';
@@ -429,25 +447,62 @@ function escapeHtml(str) {
   return str.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#039;');
 }
 
-function formatPassageBlock(block, vocabulary) {
+/* ===== THAY ĐỔI: Chỉ highlight TỪ ĐẦU TIÊN trong bài ===== */
+function formatPassageBlock(block, vocabulary, highlightedWords) {
   let html = escapeHtml(block);
   const MARKER_S = '\u0001';
   const MARKER_E = '\u0002';
-  html = html.replace(/==([^=\n]+)==/g, (m, p1) => `${MARKER_S}${p1}${MARKER_E}`);
+  
+  // Xử lý marker ==...== trước
+  html = html.replace(/==([^=\n]+)==/g, (m, p1) => {
+    // Nếu từ trong ==...== trùng với vocab, đánh dấu đã highlight để không highlight lại
+    if (vocabulary && vocabulary.length) {
+      vocabulary.forEach(v => {
+        const escaped = v.word.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+        if (new RegExp(`\\b${escaped}\\b`, 'i').test(p1)) {
+          highlightedWords.add(v.word.toLowerCase());
+        }
+      });
+    }
+    return `${MARKER_S}${p1}${MARKER_E}`;
+  });
+  
+  // Highlight từ vựng - CHỈ LẦN ĐẦU TIÊN
   if (vocabulary && vocabulary.length) {
+    // Sắp xếp theo độ dài giảm dần để ưu tiên từ dài hơn
     const words = [...vocabulary].map(v => v.word).sort((a, b) => b.length - a.length);
     words.forEach(word => {
+      // Nếu từ này đã được highlight trước đó (ở block trước), bỏ qua
+      if (highlightedWords.has(word.toLowerCase())) return;
+      
       const escaped = word.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
       const regex = new RegExp(`\\b${escaped}\\b`, 'gi');
-      html = html.replace(regex, (match, offset, fullStr) => {
-        const before = fullStr.substring(0, offset);
+      
+      // Tìm lần xuất hiện ĐẦU TIÊN không nằm trong marker khác
+      let match = null;
+      regex.lastIndex = 0;
+      let m;
+      while ((m = regex.exec(html)) !== null) {
+        const before = html.substring(0, m.index);
         const openCount = (before.split(MARKER_S).length - 1);
         const closeCount = (before.split(MARKER_E).length - 1);
-        if (openCount > closeCount) return match;
-        return `${MARKER_S}${match}${MARKER_E}`;
-      });
+        if (openCount === closeCount) { // Không nằm trong marker khác
+          match = m;
+          break;
+        }
+      }
+      
+      if (match) {
+        // Highlight chỉ lần xuất hiện đầu tiên này
+        const before = html.substring(0, match.index);
+        const after = html.substring(match.index + match[0].length);
+        html = before + `${MARKER_S}${match[0]}${MARKER_E}` + after;
+        // Đánh dấu từ này đã được highlight, các block sau sẽ bỏ qua
+        highlightedWords.add(word.toLowerCase());
+      }
     });
   }
+  
   html = html.split(MARKER_S).join('<mark class="highlight">');
   html = html.split(MARKER_E).join('</mark>');
   return `<p>${html}</p>`;
@@ -456,14 +511,14 @@ function formatPassageBlock(block, vocabulary) {
 function initPDF() {
   const frame = document.getElementById('pdfFrame');
   if (postData.pdf) {
-    // Sử dụng PDF.js Viewer của Mozilla để render PDF từ link raw GitHub
-    // Giúp tránh lỗi trình duyệt bắt tải xuống do header của GitHub
     const encodedPdfUrl = encodeURIComponent(postData.pdf);
     frame.innerHTML = `<iframe src="https://mozilla.github.io/pdf.js/web/viewer.html?file=${encodedPdfUrl}" style="width:100%;height:100%;border:none;" allowfullscreen></iframe>`;
     return;
   }
   
   if (postData.passage) {
+    // Set theo dõi các từ đã được highlight (xuyên suốt tất cả các block)
+    const highlightedWords = new Set();
     const blocks = postData.passage.split('\n\n').map(block => {
       block = block.trim();
       if (!block) return '';
@@ -476,7 +531,8 @@ function initPDF() {
           return `<figure class="passage-img passage-img-${align}"><img src="${url}" alt="${escapeHtml(caption)}" loading="lazy" onerror="this.parentElement.style.display='none'">${caption ? `<figcaption>${escapeHtml(caption)}</figcaption>` : ''}</figure>`;
         }
       }
-      return formatPassageBlock(block, postData.vocabulary || []);
+      // Truyền highlightedWords vào để theo dõi xuyên suốt các block
+      return formatPassageBlock(block, postData.vocabulary || [], highlightedWords);
     }).join('');
     frame.innerHTML = `<div class="passage-scroll">${blocks}</div>`;
     return;
@@ -497,7 +553,12 @@ function setupLazy(){
       }
     });
   },{rootMargin:'0px 0px 200px 0px'});
-  document.querySelectorAll('[data-lazy]').forEach(el=>obs.observe(el));
+  document.querySelectorAll('[data-lazy]').forEach(el=>{
+    // Không observe các phần tử bị ẩn (display:none)
+    if (window.getComputedStyle(el).display !== 'none') {
+      obs.observe(el);
+    }
+  });
 }
 
 /* ===== FLASHCARDS ===== */
@@ -575,7 +636,7 @@ function resetQuiz(){initQuiz();}
 function initMatchPic(){
   const items=postData.matchingPictures||[];
   const body=document.getElementById('matchPicBody');
-  if(!items.length){body.innerHTML='<div class="lazy-placeholder">Không có dữ liệu</div>';return;}
+  if(!items.length){body.innerHTML='';return;}
   const letters='ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
   const picIndices=items.map((_,i)=>i).sort(()=>Math.random()-0.5);
   matchPicAnswers=[];
@@ -618,7 +679,7 @@ function showAnswersPic(){if(!loaded.matchPic)return;(postData.matchingPictures|
 function initMatchSyn(){
   const items=postData.matchingSynonyms||[];
   const body=document.getElementById('matchSynBody');
-  if(!items.length){body.innerHTML='<div class="lazy-placeholder">Không có dữ liệu</div>';return;}
+  if(!items.length){body.innerHTML='';return;}
   const shuffledB=items.map((item,i)=>({syn:item.synonym,origIdx:i})).sort(()=>Math.random()-0.5);
   matchSynAnswers=[];
   items.forEach((_,i)=>{matchSynAnswers[i]=shuffledB.findIndex(b=>b.origIdx===i);});
@@ -660,24 +721,22 @@ function initMatchHeading(){
   const headings = data.headings || [];
   const questions = data.questions || [];
   const body = document.getElementById('matchHeadingBody');
-  if(!headings.length || !questions.length){body.innerHTML='<div class="lazy-placeholder">Không có dữ liệu</div>';return;}
+  if(!headings.length || !questions.length){body.innerHTML='';return;}
   
   const romanNumerals = ['I','II','III','IV','V','VI','VII','VIII','IX','X','XI','XII','XIII','XIV','XV'];
   const headingLabels = headings.map((_,i) => romanNumerals[i] || (i+1));
   
   matchHeadingAnswers = [];
   questions.forEach((q,i) => {
-    matchHeadingAnswers[i] = q.answer; // index of correct heading
+    matchHeadingAnswers[i] = q.answer;
   });
   
-  // Build headings box
   let headingsHtml = `<div class="headings-box"><h4>📋 Headings</h4><div class="headings-list">`;
   headings.forEach((h,i) => {
     headingsHtml += `<div class="heading-item"><span class="h-label">${headingLabels[i]}</span><span class="h-text">${h}</span></div>`;
   });
   headingsHtml += `</div></div>`;
   
-  // Build questions with dropdowns
   let questionsHtml = `<div class="match-questions-list">`;
   questions.forEach((q,i) => {
     let opts = `<option value="">--</option>`;
@@ -751,23 +810,21 @@ function initMatchFeature(){
   const features = data.features || [];
   const questions = data.questions || [];
   const body = document.getElementById('matchFeatureBody');
-  if(!features.length || !questions.length){body.innerHTML='<div class="lazy-placeholder">Không có dữ liệu</div>';return;}
+  if(!features.length || !questions.length){body.innerHTML='';return;}
   
-  const featureLabels = features.map((_,i) => String.fromCharCode(65+i)); // A, B, C...
+  const featureLabels = features.map((_,i) => String.fromCharCode(65+i));
   
   matchFeatureAnswers = [];
   questions.forEach((q,i) => {
-    matchFeatureAnswers[i] = q.answer; // index of correct feature
+    matchFeatureAnswers[i] = q.answer;
   });
   
-  // Build features box
   let featuresHtml = `<div class="features-box"><h4>🏷️ Features</h4><div class="features-list">`;
   features.forEach((f,i) => {
     featuresHtml += `<div class="feature-item"><span class="f-label">${featureLabels[i]}</span><span class="f-text">${f}</span></div>`;
   });
   featuresHtml += `</div></div>`;
   
-  // Build questions with dropdowns
   let questionsHtml = `<div class="match-questions-list">`;
   questions.forEach((q,i) => {
     let opts = `<option value="">--</option>`;
@@ -839,7 +896,7 @@ function showAnswersFeature(){
 function initMCQ(){
   const items=postData.mcqQuestions||[];
   const body=document.getElementById('mcqBody');
-  if(!items.length){body.innerHTML='<div class="lazy-placeholder">Không có câu hỏi</div>';return;}
+  if(!items.length){body.innerHTML='';return;}
   body.innerHTML=`<div class="mcq-list">${items.map((q,qi)=>`
     <div class="mcq-item"><div class="q-text">${qi+1}. ${q.q}</div>
       <div class="mcq-options">${q.options.map((opt,oi)=>`<label class="mcq-option" data-qi="${qi}"><input type="radio" name="mcq${qi}" value="${oi}"/><span>${String.fromCharCode(65+oi)}. ${opt}</span></label>`).join('')}</div>
@@ -890,7 +947,7 @@ function showAnswersMCQ(){
 function initFill(){
   const text=postData.fillInBlank;
   const body=document.getElementById('fillBody');
-  if(!text){body.innerHTML='<div class="lazy-placeholder">Không có bài tập</div>';return;}
+  if(!text){body.innerHTML='';return;}
   fillBlanks=[];let idx=0;
   const html=text.replace(/___(.*?)___/g,function(match,answer){
     fillBlanks.push({answer:answer,attempts:0});
