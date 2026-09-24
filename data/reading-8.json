@@ -28,7 +28,7 @@
   ],
   "mcqQuestions": [
     {
-      "q": "Planning a party or starting a new job can be just as stressful as being called to the principal's office.",
+      "q": "Planning a party or starting a new job can be just as stressful as being called to the principal's office. What does 'principal' mean? ",
       "options": [
         "teacher",
         "headmaster",
@@ -37,7 +37,7 @@
       "answer": 1
     },
     {
-      "q": "A deadline, a poor test performance, or bothersome noises all may be thought of as stressors.",
+      "q": "A deadline, a poor test performance, or bothersome noises all may be thought of as stressors. What does 'bothersome' mean?",
       "options": [
         "annoying",
         "surprising",
@@ -46,7 +46,7 @@
       "answer": 0
     },
     {
-      "q": "Depending on how people appraise, or judge, circumstances, they may or may not consider them stressful.",
+      "q": "Depending on how people appraise, or judge, circumstances, they may or may not consider them stressful. What does 'judge' mean?",
       "options": [
         "feel about",
         "judge",
@@ -55,7 +55,7 @@
       "answer": 1
     },
     {
-      "q": "The circumstances that cause stress vary from one person to another.",
+      "q": "The circumstances that cause stress vary from one person to another. What does 'vary' mean?",
       "options": [
         "differ",
         "move",
